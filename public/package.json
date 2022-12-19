@@ -1,0 +1,27 @@
+{
+  "name": "suncraft",
+  "version": "1.0.0",
+  "description": "An ecommerce site for Lochen Furnitures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k1au3/lochen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k1au3/lochen/issues"
+  },
+  "homepage": "https://github.com/k1au3/lochen#readme",
+  "devDependencies": {
+    "eslint": "^8.29.0"
+  }
+  
+}
+script:{
+  "lint":"eslint"
+}
