@@ -663,9 +663,10 @@ body.active { overflow: hidden; }
 .product-list > * { display: none; }
 
 .product-list[data-filter="all"] > *,
-.product-list[data-filter="accessory"] > .accessory,
-.product-list[data-filter="decoration"] > .decoration,
-.product-list[data-filter="furniture"] > .furniture {
+.product-list[data-filter="bedroom"] > .bedroom,
+.product-list[data-filter="livingroom"] > .livingroom,
+.product-list[data-filter="other"] > .other,
+.product-list[data-filter="diningroom"] > .diningroom{
   display: block;
   animation: fadeUp 1s ease forwards;
 }
