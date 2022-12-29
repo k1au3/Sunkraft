@@ -83,6 +83,27 @@
 
   <!-- products detail page  -->
 
+  <section class="product-details">
+    <h2> Product Details</h2>
+    <div class="small-container single-product">
+      <div class="row">
+        <div class="col-2">
+          <img src="" width="100%" id="productImage" alt="">
+        </div>
+        <div class="col-2">
+          <p>Home / Furniture</p>
+          <h1>Bohemian upholstered chair</h1>
+          <h4>$29.99</h4>
+          <input type="number" value="1" class="cart-quantity">
+          <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
+          <h3>Details <ion-icon class="indent"</ion></h3>
+          <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis deleniti illo nihil ipsa eaque. Doloribus ratione temporibus quos id doloremque officiis. Repellendus, laborum voluptates ratione voluptatem accusamus tempora est quo!</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 
 
 
