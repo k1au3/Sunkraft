@@ -88,8 +88,7 @@
     <div class="small-container single-product">
       <div class="row">
         <div class="col-2">
-          <img src="" width="100%" id="productImage" alt="">
-        </div>
+          <img src="/public/images/product-details.jpg
         <div class="col-2">
           <p>Home / Furniture</p>
           <h1>Bohemian upholstered chair</h1>
