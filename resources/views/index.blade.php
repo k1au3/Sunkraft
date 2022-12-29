@@ -244,16 +244,16 @@
               <div class="hero-card">
 
                 <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
-                  <img src="./assets/img/decor/9.jpg" loading="lazy" width="285" height="396" alt="Art Deco Home"
+                  <img src="/public/images/banner-bed.jpg" loading="lazy" width="285" height="396" alt="Art Deco Home"
                     class="img-cover">
                 </figure>
 
                 <div class="card-content">
                   <h3>
-                    <a href="#" style="color: #fff ;" class="card-title">Art Deco Home</a>
+                    <a href="#" style="color: #fff ;" class="card-title">Bedroom</a>
                   </h3>
 
-                  <p style="color: #fff;" class="card-text">Decoration</p>
+                  <p style="color: #fff;" class="card-text">Furniture</p>
                 </div>
 
               </div>
@@ -263,16 +263,16 @@
               <div class="hero-card">
 
                 <figure class="card-banner img-holder" style="--width: 568; --height: 389;">
-                  <img src="./assets/sunkraft/SAM_1361.JPG" loading="lazy"  width="568" height="389" alt="Bed"
+                  <img src="/public/images/sofa-banner.jpg" loading="lazy"  width="568" height="389" alt="Bed"
                     class="img-cover">
                 </figure>
 
                 <div class="card-content">
                   <h3>
-                    <a href="#" class="card-title">Bed</a>
+                    <a href="#" class="card-title">Sofa</a>
                   </h3>
 
-                  <p class="card-text">Furniture</p>
+                  <p class="card-text">Living Room</p>
                 </div>
 
               </div>
@@ -282,16 +282,16 @@
               <div class="hero-card">
 
                 <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
-                  <img src="./assets/sunkraft/SAM_1388.JPG" width="285" height="396" loading="lazy" alt="Vase Of Flowers"
+                  <img src="/public/images/night-stand-banner.jpg" width="285" height="396" loading="lazy" alt="Vase Of Flowers"
                     class="img-cover">
                 </figure>
 
                 <div class="card-content">
                   <h3>
-                    <a href="#" class="card-title">Diner</a>
+                    <a href="#" class="card-title">Night Stand</a>
                   </h3>
 
-                  <p class="card-text">Furniture</p>
+                  <p class="card-text">Bedroom</p>
                 </div>
 
               </div>
@@ -301,16 +301,16 @@
               <div class="hero-card">
 
                 <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
-                  <img src="./assets/sunkraft/SAM_1452.JPG" loading="lazy" width="580" height="213" alt="Wood Eggs"
+                  <img src="/public/images/diner-banner.jpg" loading="lazy" width="580" height="213" alt="Wood Eggs"
                     class="img-cover">
                 </figure>
 
                 <div class="card-content">
                   <h3>
-                    <a href="#" class="card-title">Tables & Stools</a>
+                    <a href="#" class="card-title">Dining Table</a>
                   </h3>
 
-                  <p class="card-text">Furniture</p>
+                  <p class="card-text">Dining</p>
                 </div>
 
               </div>
@@ -320,16 +320,16 @@
               <div class="hero-card">
 
                 <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
-                  <img src="./assets/sunkraft/hero-product-5.jpg" width="580" height="213" alt="Table Wood Pine"
+                  <img src="/public/images/shelf-banner.jpg" width="580" height="213" alt="Table Wood Pine"
                     class="img-cover">
                 </figure>
 
                 <div class="card-content">
                   <h3>
-                    <a href="#" class="card-title">Table Wood Pine</a>
+                    <a href="#" class="card-title">Book Shelf</a>
                   </h3>
 
-                  <p class="card-text">Furniture</p>
+                  <p class="card-text">Other</p>
                 </div>
 
               </div>
@@ -420,73 +420,73 @@
         
           <ul class="shop-content product-list" data-filter="all">
 
-          <li class="product-box bed bedroom" >
-            <img src="/assets/sunkraft/SAM_1367.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Bed</h2>
-            <span class="price">$50</span>
+          <li class="product-box livingroom" >
+            <img src="/public/images/product-1.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Bohemian Chair</h2>
+            <span class="price">$20</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
 
-          <li class="product-box livingroom">
-            <img src="/assets/sunkraft/SAM_1411.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Helen Chair</h2>
+          <li class="product-box bedroom">
+            <img src="/public/images/product-2.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Bed</h2>
             <span class="price">$30</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
 
           <li class="product-box livingroom">
-            <img src="/assets/sunkraft/SAM_1407.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Arm Chair</h2>
+            <img src="/public/images/product-3.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Lamp Table</h2>
             <span class="price">$23</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
 
-          <li class="product-box other">
-            <img src="./assets/img/decor/banner.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Wall Decor</h2>
+          <li class="product-box livingroom">
+            <img src="/public/images/product-4.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Table</h2>
             <span class="price">$17</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
         </li>
 
           <li class="product-box livingroom">
-            <img src="/assets/sunkraft/SAM_1436.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Sofa</h2>
+            <img src="/public/images/product-5.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Stools</h2>
             <span class="price">$50</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
 
           <li class="product-box other">
-            <img src="/assets/sunkraft/SAM_1438.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Wall Decor</h2>
+            <img src="/public/images/product-7.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Side Table</h2>
             <span class="price">$16</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
 
-          <li class="product-box diningroom">
-            <img src="/assets/sunkraft/SAM_1397.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Diner</h2>
+          <li class="product-box livingroom">
+            <img src="/public/images/product-8.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Sofa</h2>
             <span class="price">$40</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
 
-          <li class="product-box other bedroom">
-            <img src="/assets/sunkraft/SAM_1368.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Bed</h2>
+          <li class="product-box other diningroom">
+            <img src="/public/images/product-9.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Dining Set</h2>
             <span class="price">50</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
 
           <li class="product-box other">
-            <img src="/assets/img/decor/3.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Wall Decor</h2>
+            <img src="/public/images/product-10.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Decoration</h2>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
 
           
 
-          <li class="product-box livingroom">
-            <img src="/assets/sunkraft/SAM_1413.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Wing Chair</h2>
+          <li class="product-box bedroom">
+            <img src="/public/images/product-11.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Bed</h2>
             <span class="price">$20</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
@@ -494,8 +494,8 @@
           
 
           <li class="product-box livingroom">
-            <img src="/assets/sunkraft/SAM_1447.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">sofa</h2>
+            <img src="/public/images/product-12.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">upholstered Armchair</h2>
             <span class="price">$50</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
@@ -503,36 +503,36 @@
           
 
           <li class="product-box livingroom">
-            <img src="/assets/sunkraft/SAM_1436.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Green Velvet Sofa</h2>
+            <img src="/public/images/product-13.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Velvet Chair</h2>
             <span class="price">50</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
 
           <li class="product-box bedroom">
-            <img src="/assets/sunkraft/SAM_1420.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Night Stand</h2>
+            <img src="/public/images/product-14.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">BabyCot</h2>
             <span class="price">50</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
 
           <li class="product-box livingroom">
-            <img src="/assets/sunkraft/SAM_1445.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <img src="/public/images/product-15.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
             <h2 class="product-title">Bohemian Upholstered chair</h2>
             <span class="price">$25</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
 
           <li class="product-box other">
-            <img src="/assets/img/decor/4.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Squirrel Decor</h2>
+            <img src="/public/images/product-16.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Office Table</h2>
             <span class="price">$20</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
 
           <li class="product-box other">
-            <img src="/assets/img/mirror.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Wall Mirror</h2>
+            <img src="/public/images/product-17.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            <h2 class="product-title">Night Stand</h2>
             <span class="price">$27</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </li>
@@ -655,7 +655,7 @@
               <div class="blog-card">
 
                 <div class="card-banner img-holder" style="--width: 374; --height: 243;">
-                  <img src="#fixed" width="374" height="243" loading="lazy"
+                  <img src="/public/images/staff.jpg" width="374" height="243" loading="lazy"
                     alt="staff-required" class="img-cover">
 
                   <a href="#" class="card-btn">
