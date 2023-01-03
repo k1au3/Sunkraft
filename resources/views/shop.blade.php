@@ -4,110 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
+    <title>Shop</title>
+        <link rel="icon" href="images/favicon.ico" />
+        
      <!-- Fonts -->
-         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
          
          {{-- favicon   --}}
-         <link rel="shortcut icon" href="/public/favicon.svg" type="image/svg+xml">
+        <link rel="shortcut icon" href="/public/favicon.svg" type="image/svg+xml">
 
           {{-- custom css link --}}
-         <link rel="stylesheet" href="/public/assets/css/style.css">
+        <link rel="stylesheet" href="/public/assets/css/style.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Roboto:wght@400;500;700&display=swap"
           rel="stylesheet">
 </head>
+
+
 <body>
+    <!-- 
+        header
+    -->
+    <header class="header" data-header>
+        <div class="container">
 
+            <div class="input-wrapper">
+                <input type="search" name="search" placeholder="Search Anything..." class="input-field">
 
-<!-- Nav section  -->
+                <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+            </div>
 
-  <header class="header" data-header>
-    <div class="container">
+            <a href="#" class="logo">SunKraft</a>
 
-      <div class="input-wrapper">
-        <input type="search" name="search" placeholder="Search Anything..." class="input-field">
+            <div class="header-action">
 
-        <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-      </div>
+                <button class="header-action-btn" aria-label="user">
+                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                </button>
 
-      <a href="#" class="logo">SunKraft</a>
+                <button class="header-action-btn" aria-label="favorite list">
+                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
 
-      <div class="header-action">
+                    <span class="btn-badge">0</span>
+                </button>
 
-        <button class="header-action-btn" aria-label="user">
-          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-        </button>
+                <button class="header-action-btn" id="cart-icon" aria-label="cart">
+                    <ion-icon name="bag-handle-outline" aria-hidden="true" id="cart-icon"></ion-icon>
 
-        <button class="header-action-btn" aria-label="favorite list">
-          <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    <!-- <span class="btn-badge">0</span> -->
+                </button>
 
-          <span class="btn-badge">0</span>
-        </button>
+                 <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+                    <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+                </button> 
 
-        <button class="header-action-btn" id="cart-icon" aria-label="cart">
-          <ion-icon name="bag-handle-outline" aria-hidden="true" id="cart-icon"></ion-icon>
-
-          <!-- <span class="btn-badge">0</span> -->
-        </button>
-
-        
-
-        <!-- Cart -->
-        <div class="cart"> 
-          <h2 class="cart-title">Shopping Cart</h2>
-          <!-- content  -->
-          <div class="cart-content">
-            
-            
-          </div>
-          <!-- total -->
-          <div class="total">
-            <div class="total-title">Total</div>
-            <div class="total-price">$0</div>
-          </div>
-          <!-- buy button  -->
-          <a href="#/templates/payment.html"><button class="btn-buy" type="button">Checkout</button>
-            <!-- cart close  -->
-            <button id="close-cart"><ion-icon name="exit"></ion-icon></button></a>
+            </div>
         </div>
-
-      </div>
-
-    </div>
-  </header>
+    </header>
 
 
+    <!-- 
+        main shop content
+    -->
 
-  <!-- products detail page  -->
+    
 
-  <section class="product-details">
-    <h2> Product Details</h2>
-    <div class="small-container single-product">
-      <div class="row">
-        <div class="col-2">
-          <img src="/public/images/product-details.jpg
-        <div class="col-2">
-          <p>Home / Furniture</p>
-          <h1>Bohemian upholstered chair</h1>
-          <h4>$29.99</h4>
-          <input type="number" value="1" class="cart-quantity">
-          <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          <h3>Details <ion-icon class="indent"</ion></h3>
-          <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis deleniti illo nihil ipsa eaque. Doloribus ratione temporibus quos id doloremque officiis. Repellendus, laborum voluptates ratione voluptatem accusamus tempora est quo!</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
+    
 
 
-  
 
 
-  <!-- footer section  -->
+
+
+
+
+    <!-- 
+    - #FOOTER
+  -->
 
   <footer class="footer" id="footer">
     <div class="container">
@@ -116,7 +91,7 @@
 
         <div class="footer-brand">
 
-          <a href="#" class="logo">SunCraft</a>
+          <a href="#" class="logo">SunKraft</a>
 
           <ul>
 
@@ -124,7 +99,7 @@
               <ion-icon name="location-sharp" aria-hidden="true"></ion-icon>
 
               <address class="address">
-                SunCraft, Eldoret, Kenya 2022
+                SunCraft, Eldoret, Kenya 2023
               </address>
             </li>
 
@@ -237,7 +212,7 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2022 All Rights Reserved by <a href="#" class="copyright-link">SunKraft</a>.
+          &copy; 2023 All Rights Reserved by <a href="#" class="copyright-link">SunKraft</a>.
         </p>
 
       </div>
@@ -246,13 +221,20 @@
   </footer>
 
 
-   <!-- 
+
+
+
+  <!-- 
     - #BACK TO TOP
   -->
 
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
     <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
   </a>
+
+
+
+
 
   <!-- 
     - custom js link
@@ -268,6 +250,7 @@
 
 
 
-    
+        
+
 </body>
 </html>

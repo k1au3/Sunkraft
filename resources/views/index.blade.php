@@ -745,7 +745,7 @@
 
         <div class="footer-brand">
 
-          <a href="#" class="logo">SunCraft</a>
+          <a href="#" class="logo">SunKraft</a>
 
           <ul>
 
@@ -753,7 +753,7 @@
               <ion-icon name="location-sharp" aria-hidden="true"></ion-icon>
 
               <address class="address">
-                SunCraft, Eldoret, Kenya 2022
+                SunCraft, Eldoret, Kenya 2023
               </address>
             </li>
 
@@ -866,7 +866,7 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2022 All Rights Reserved by <a href="#" class="copyright-link">SunKraft</a>.
+          &copy; 2023 All Rights Reserved by <a href="#" class="copyright-link">SunKraft</a>.
         </p>
 
       </div>
