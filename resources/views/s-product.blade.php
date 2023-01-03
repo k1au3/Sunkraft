@@ -83,7 +83,7 @@
 
   <!-- products detail page  -->
 
-  <section class="product-details">
+  <!-- <section class="product-details">
     <h2> Product Details</h2>
     <div class="small-container single-product">
       <div class="row">
@@ -100,6 +100,40 @@
         </div>
 
       </div>
+    </div>
+  </section> -->
+
+  <!-- 
+    new section
+  -->
+  <section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+      <img src="/public/images/product-details.jpg" width="100%" alt="" id="mainImg">
+
+      <div class="small-img-group">
+        <div class="small-img-col">
+          <img src="#" alt="" width="100%" class="small-img">
+        </div>
+        <div class="small-img-col">
+          <img src="#" alt="" width="100%" class="small-img">
+        </div>
+        <div class="small-img-col">
+          <img src="#" alt="" width="100%" class="small-img">
+        </div>
+        <div class="small-img-col">
+          <img src="#" alt="" width="100%" class="small-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="single-pro-details">
+      <h6>Home / Furniture</h6>
+      <h4>Bohemian Upholstered Chair</h4>
+      <h2>$123.00</h2>
+      <input type="number" value="1">
+      <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
+      <h4>Product Details</h4>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque perferendis hic quod dolore ratione aspernatur natus labore animi architecto. Deleniti cumque dicta voluptate sed eligendi iusto necessitatibus sunt ad consequatur!</p>
     </div>
   </section>
 
