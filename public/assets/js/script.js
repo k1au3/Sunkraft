@@ -243,3 +243,22 @@ var smallImg = document.getElementsByClassName("small-img");
 smallImg[0].onclick = function(){
   mainImg.src = smallImg[0].src;
 }
+smallImg[1].onclick = function(){
+  mainImg.src = smallImg[1].src;
+}
+smallImg[2].onclick = function(){
+  mainImg.src = smallImg[2].src;
+}
+smallImg[3].onclick = function(){
+  mainImg.src = smallImg[3].src;
+}
+
+
+// s product details 
+
+var detailPage = document.getElementsByClassName('product-box');
+detailPage[0].onclick= () =>{
+  for (var i = 0; i < detailPage.length; i++){
+  window.location.href = 'resources/views/s-product.blade.php'
+  }
+}

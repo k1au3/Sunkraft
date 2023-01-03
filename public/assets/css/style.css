@@ -1257,9 +1257,21 @@ a.card-meta-text:is(:hover, :focus) { color: var(--tan-crayola); }
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 477px) {
   .cart{
     width: 320px;
+  }
+  /* single product   */
+  #prodetails{
+    display: flex;
+    flex-direction: column;
+  }
+  #prodetails .single-pro-image{
+    width: 100%;
+    margin-right: 0;
+  }
+  #prodetails .single-pro-details {
+    width: 100%;
   }
 }
 @media (max-width: 360px) {
