@@ -50,9 +50,10 @@ Route::get('/', function () {
 });
 
 // Single Listing
-Route::get('/products/{id}', function($id) {
+Route::get('/products/{listing}', function(Listing $listing) {
+    
     return view('products', [
-        'listing' => Listing::find($id)
+        'listing' => $listing
     ]);
 });
 
