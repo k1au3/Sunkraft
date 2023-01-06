@@ -418,124 +418,19 @@
         
           <ul class="shop-content product-list" data-filter="all">
 
-        <a href="/products">
-          <li class="product-box bed bedroom" >
-            <img src="/images/Sun_Craft_Artistic-2.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Bed</h2>
-            <span class="price">$50</span>
+        
+
+@foreach ($listings as $listing)
+        
+          <div class="product-box bed bedroom" >
+            <a href="/products/{{$listing['id']}}">
+              <img src="/images/Sun_Craft_Artistic-10.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
+            </a>
+            <h2 class="product-title">{{$listing['name']}}</h2>
+            <span class="price">${{$listing['amount']}}</span>
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-        </a>
-
-          <li class="product-box livingroom">
-            <img src="/images/Sun_Craft_Artistic-3.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Helen Chair</h2>
-            <span class="price">$30</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          <li class="product-box livingroom">
-            <img src="/images/Sun_Craft_Artistic-4.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Arm Chair</h2>
-            <span class="price">$23</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          <li class="product-box other">
-            <img src="/images/Sun_Craft_Artistic-5.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Wall Decor</h2>
-            <span class="price">$17</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-        </li>
-
-          <li class="product-box livingroom">
-            <img src="/images/Sun_Craft_Artistic-6.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Sofa</h2>
-            <span class="price">$50</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          <li class="product-box other">
-            <img src="/images/Sun_Craft_Artistic-7.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Wall Decor</h2>
-            <span class="price">$16</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          <li class="product-box diningroom">
-            <img src="/assets/sunkraft/SAM_1397.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Diner</h2>
-            <span class="price">$40</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          <li class="product-box other bedroom">
-            <img src="/assets/sunkraft/SAM_1368.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Bed</h2>
-            <span class="price">50</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          <li class="product-box other">
-            <img src="/assets/img/decor/3.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Wall Decor</h2>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          
-
-          <li class="product-box livingroom">
-            <img src="/assets/sunkraft/SAM_1413.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Wing Chair</h2>
-            <span class="price">$20</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          
-
-          <li class="product-box livingroom">
-            <img src="/assets/sunkraft/SAM_1447.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">sofa</h2>
-            <span class="price">$50</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          
-
-          <li class="product-box livingroom">
-            <img src="/assets/sunkraft/SAM_1436.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Green Velvet Sofa</h2>
-            <span class="price">50</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          <li class="product-box bedroom">
-            <img src="/assets/sunkraft/SAM_1420.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Night Stand</h2>
-            <span class="price">50</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          <li class="product-box livingroom">
-            <img src="/assets/sunkraft/SAM_1445.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Bohemian Upholstered chair</h2>
-            <span class="price">$25</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          <li class="product-box other">
-            <img src="/assets/img/decor/4.JPG" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Squirrel Decor</h2>
-            <span class="price">$20</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
-
-          <li class="product-box other">
-            <img src="/assets/img/mirror.jpg" alt="" class="product-img" width="300" height="300" loading="lazy" >
-            <h2 class="product-title">Wall Mirror</h2>
-            <span class="price">$27</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          </li>
+          </div>
+@endforeach
 
 
           </ul>

@@ -17,26 +17,41 @@ use PhpParser\Node\Stmt\Return_;
 */
 
 // Return Index page
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
 // Return Products Page
-Route::get('/products', function () {
-    return view('products');
-});
+// Route::get('/products', function () {
+//     return view('products');
+// });
 
 // Route the Listings from the Modal
-Route::get('/listings', function () {
-    return view('listings', [
+// Route::get('/listings', function () {
+//     return view('listings', [
+//         'heading' => 'Latest Listing',
+//         'listings' => Listing::all()
+//     ]);
+// });
+
+// Single Listing
+// Route::get('/listings/{id}', function($id) {
+//     return view('listing', [
+//         'listing' => Listing::find($id)
+//     ]);
+// });
+
+// Route the Listings from the Modal
+Route::get('/', function () {
+    return view('index', [
         'heading' => 'Latest Listing',
         'listings' => Listing::all()
     ]);
 });
 
 // Single Listing
-Route::get('/listings/{$id}', function($id) {
-    return view('listing', [
+Route::get('/products/{id}', function($id) {
+    return view('products', [
         'listing' => Listing::find($id)
     ]);
 });

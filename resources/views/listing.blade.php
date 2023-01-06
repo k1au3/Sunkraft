@@ -1,3 +1,7 @@
-<h2>{{$listing['title']}}</h2>
-<p>{{$listing['description']}}</p>
-Hello
+
+<h2>
+    {{$listing['title']}}
+</h2>
+<p>
+    {{$listing['description']}}
+</p>
