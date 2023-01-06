@@ -9,10 +9,10 @@
          <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
          
          {{-- favicon   --}}
-         <link rel="shortcut icon" href="/public/favicon.svg" type="image/svg+xml">
+         <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
 
           {{-- custom css link --}}
-         <link rel="stylesheet" href="/public/assets/css/style.css">
+         <link rel="stylesheet" href="/assets/css/style.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
