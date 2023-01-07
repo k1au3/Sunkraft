@@ -9,10 +9,10 @@
          <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
          
          {{-- favicon   --}}
-         <link rel="shortcut icon" href="/public/favicon.svg" type="image/svg+xml">
+         <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
 
           {{-- custom css link --}}
-         <link rel="stylesheet" href="/public/assets/css/style.css">
+         <link rel="stylesheet" href="/assets/css/style.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,7 @@
           <!-- total -->
           <div class="total">
             <div class="total-title">Total</div>
-            <div class="total-price">$0</div>
+            <div class="total-price">{{$listing['amount']}}</div>
           </div>
           <!-- buy button  -->
           <a href="#/templates/payment.html"><button class="btn-buy" type="button">Checkout</button>
@@ -88,16 +88,16 @@
     <div class="small-container single-product">
       <div class="row">
         <div class="col-2">
-          <img src="" width="100%" id="productImage" alt="">
+          <img src="/images/Sun_Craft_Artistic-11.jpg" width="100%" id="productImage" alt="">
         </div>
         <div class="col-2">
           <p>Home / Furniture</p>
-          <h1>Bohemian upholstered chair</h1>
-          <h4>$29.99</h4>
-          <input type="number" value="1" class="cart-quantity">
+          <h1>{{$listing->name}}</h1>
+          <h4>${{$listing->amount}}</h4>
+          <input type="number" value="{{$listing->quantity}}" class="cart-quantity">
           <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
-          <h3>Details <ion-icon class="indent"</ion></h3>
-          <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis deleniti illo nihil ipsa eaque. Doloribus ratione temporibus quos id doloremque officiis. Repellendus, laborum voluptates ratione voluptatem accusamus tempora est quo!</p>
+          <h3>Details <ion-icon class="indent"></ion-icon></h3>
+          <p> {{$listing->description}}</p>
         </div>
 
       </div>
