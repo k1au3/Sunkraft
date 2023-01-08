@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Listing;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -13,7 +14,11 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        // Show Index Page
+        return view('index', [
+            'listings' => Listing::latest()->filter(request(['search']))->get()
+            // 'listings' => Listing::all()
+        ]);
        
     }
 
@@ -24,7 +29,8 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        //show create form
+        return view('create');
     }
 
     /**
@@ -35,7 +41,18 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Store Products data
+        $formFields = $request->validate([
+            'name' => 'required',
+            'amount' => 'required',
+            'quantity' => 'required',
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        Listing::create($formFields);
+
+        return redirect('/');
     }
 
     /**
@@ -44,9 +61,12 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Listing $listing)
     {
-        //
+        // Show Single Product Listing
+        return view('products', [
+            'listing' => $listing
+        ]);
     }
 
     /**

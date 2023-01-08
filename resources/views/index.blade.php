@@ -250,6 +250,7 @@
   <div class="overlay" data-overlay data-nav-toggler></div>
 
   
+
   <main>
     <article>
 
@@ -650,9 +651,8 @@
     </article>
   </main>
 
-    <!-- 
-    - #FOOTER
-  -->
+
+  {{-- Footer --}}
 
   <footer class="footer" id="footer">
     <div class="container">
@@ -782,14 +782,13 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2022 All Rights Reserved by <a href="#" class="copyright-link">SunKraft</a>.
+          &copy; 2023 All Rights Reserved by <a href="#" class="copyright-link">SunKraft</a>.
         </p>
 
       </div>
 
     </div>
   </footer>
-
 
 
 

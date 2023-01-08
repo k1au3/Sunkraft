@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Models\Listing;
@@ -16,20 +17,19 @@ use PhpParser\Node\Stmt\Return_;
 |
 */
 
-// Show all Listing
-Route::get('/', function () {
-    return view('index', [
-        'listings' => Listing::latest()->filter(request(['search']))->get()
-    ]);
-});
+// Show Home Page
+Route::get('/', [ProductsController::class, 'index']);
 
-// Single Listing
-Route::get('/products/{listing}', function(Listing $listing) {
-    
-    return view('products', [
-        'listing' => $listing
-    ]);
-});
+// Show Product Create Form
+Route::get('/create', [ProductsController::class, 'create']);
+
+
+// Store Product Data
+ Route::post('/listings', [ProductsController::class, 'store']);
+
+// Single Product Page
+Route::get('/products/{listing}', [ProductsController::class, 'show']);
+
 
 // Return Index page
 // Route::get('/', function () {
