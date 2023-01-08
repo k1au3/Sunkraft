@@ -41,11 +41,33 @@
   <header class="header" data-header>
     <div class="container">
 
-      <div class="input-wrapper">
+      {{-- <div class="input-wrapper">
         <input type="search" name="search" placeholder="Search Anything..." class="input-field">
 
         <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-      </div>
+      </div> --}}
+
+      <form action="/">
+        
+        <div class="input-wrapper">
+          {{-- <ion-icon name="search-outline" aria-hidden="true"></ion-icon> --}}
+          <input 
+            type="text"
+            name="search"
+            class="input-field"
+            placeholder="Search Product ..."
+            >
+            <div class="input-wrapper">
+              <button 
+                  type="submit"
+                  class="text-white"
+              ><ion-icon name="search-outline" aria-hidden="true"></ion-icon></button>
+            </div>
+        </div>
+       
+
+      </form>
+      
 
       <a href="#" class="logo">SunKraft</a>
 

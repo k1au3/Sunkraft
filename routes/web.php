@@ -16,6 +16,21 @@ use PhpParser\Node\Stmt\Return_;
 |
 */
 
+// Show all Listing
+Route::get('/', function () {
+    return view('index', [
+        'listings' => Listing::latest()->filter(request(['search']))->get()
+    ]);
+});
+
+// Single Listing
+Route::get('/products/{listing}', function(Listing $listing) {
+    
+    return view('products', [
+        'listing' => $listing
+    ]);
+});
+
 // Return Index page
 // Route::get('/', function () {
 //     return view('index');
@@ -41,21 +56,6 @@ use PhpParser\Node\Stmt\Return_;
 //     ]);
 // });
 
-// Route the Listings from the Modal
-Route::get('/', function () {
-    return view('index', [
-        'heading' => 'Latest Listing',
-        'listings' => Listing::all()
-    ]);
-});
-
-// Single Listing
-Route::get('/products/{listing}', function(Listing $listing) {
-    
-    return view('products', [
-        'listing' => $listing
-    ]);
-});
 
 
 // Single Listing route

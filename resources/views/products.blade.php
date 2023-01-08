@@ -98,6 +98,9 @@
           <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           <h3>Details <ion-icon class="indent"></ion-icon></h3>
           <p> {{$listing->description}}</p>
+          <h3>Category <ion-icon class="indent"></ion-icon></h3>
+          <p> {{$listing->title}}</p>
+
         </div>
 
       </div>
