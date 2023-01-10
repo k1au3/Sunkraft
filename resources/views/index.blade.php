@@ -440,6 +440,9 @@
 
         
           <ul class="shop-content product-list" data-filter="all">
+            <div class="row">
+
+            <div class="row">
 
         
 
@@ -454,11 +457,19 @@
             <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </div>
 @endforeach
+</div>
+
+<div class="row">
+
+<div class="mt-6 p-4">
+  {{$listings->links()}}
+</div>
+</div>
+</div>
 
           </ul>
-          
 
-         
+          
           
         </div>
       </section>
