@@ -16,7 +16,7 @@ class ProductsController extends Controller
     {
         // Show Index Page
         return view('index', [
-            'listings' => Listing::latest()->filter(request(['search']))->get()
+            'listings' => Listing::latest()->filter(request(['search']))->simplePaginate(6)
             // 'listings' => Listing::all()
         ]);
        
