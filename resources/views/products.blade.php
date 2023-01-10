@@ -92,7 +92,7 @@
         </div>
         <div class="col-2">
 
-          <p>{{$listing->title}}</p>
+          <p>Home / Furiture</p>
 
           <h1>{{$listing->name}}</h1>
 
