@@ -44,11 +44,16 @@ class ProductsController extends Controller
         // Store Products data
         $formFields = $request->validate([
             'name' => 'required',
+            'logo' => 'required',
             'amount' => 'required',
             'quantity' => 'required',
             'title' => 'required',
             'description' => 'required'
         ]);
+
+        if($request->hasFile('logo')) {
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        }
 
         Listing::create($formFields);
 

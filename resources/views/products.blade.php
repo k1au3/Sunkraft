@@ -88,11 +88,11 @@
     <div class="small-container single-product">
       <div class="row">
         <div class="col-2">
-          <img src="/images/Sun_Craft_Artistic-11.jpg" width="100%" id="productImage" alt="">
+          <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-17.jpg')}}" width="100%" id="productImage" alt="">
         </div>
         <div class="col-2">
 
-          <p>Home / Furiture</p>
+          <p>Home / Furniture</p>
 
           <h1>{{$listing->name}}</h1>
 
