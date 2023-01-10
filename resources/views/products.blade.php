@@ -91,13 +91,24 @@
           <img src="/images/Sun_Craft_Artistic-11.jpg" width="100%" id="productImage" alt="">
         </div>
         <div class="col-2">
-          <p>Home / Furniture</p>
+
+          <p>Home / Furiture</p>
+
           <h1>{{$listing->name}}</h1>
+
           <h4>${{$listing->amount}}</h4>
+
           <input type="number" value="{{$listing->quantity}}" class="cart-quantity">
+          
           <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
+
+          <h3>Category <ion-icon class="indent"></ion-icon></h3>
+          <p> {{$listing->title}}</p>
+
           <h3>Details <ion-icon class="indent"></ion-icon></h3>
           <p> {{$listing->description}}</p>
+          
+
         </div>
 
       </div>

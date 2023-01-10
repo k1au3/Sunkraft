@@ -41,11 +41,33 @@
   <header class="header" data-header>
     <div class="container">
 
-      <div class="input-wrapper">
+      {{-- <div class="input-wrapper">
         <input type="search" name="search" placeholder="Search Anything..." class="input-field">
 
         <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-      </div>
+      </div> --}}
+
+      <form action="/">
+        
+        <div class="input-wrapper">
+          {{-- <ion-icon name="search-outline" aria-hidden="true"></ion-icon> --}}
+          <input 
+            type="text"
+            name="search"
+            class="input-field"
+            placeholder="Search Product ..."
+            >
+            <div class="input-wrapper">
+              <button 
+                  type="submit"
+                  class="text-white"
+              ><ion-icon name="search-outline" aria-hidden="true"></ion-icon></button>
+            </div>
+        </div>
+       
+
+      </form>
+      
 
       <a href="#" class="logo">SunKraft</a>
 
@@ -228,6 +250,7 @@
   <div class="overlay" data-overlay data-nav-toggler></div>
 
   
+
   <main>
     <article>
 
@@ -628,9 +651,8 @@
     </article>
   </main>
 
-    <!-- 
-    - #FOOTER
-  -->
+
+  {{-- Footer --}}
 
   <footer class="footer" id="footer">
     <div class="container">
@@ -760,14 +782,13 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2022 All Rights Reserved by <a href="#" class="copyright-link">SunKraft</a>.
+          &copy; 2023 All Rights Reserved by <a href="#" class="copyright-link">SunKraft</a>.
         </p>
 
       </div>
 
     </div>
   </footer>
-
 
 
 

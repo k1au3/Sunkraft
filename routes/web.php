@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Models\Listing;
@@ -15,6 +16,20 @@ use PhpParser\Node\Stmt\Return_;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Show Home Page
+Route::get('/', [ProductsController::class, 'index']);
+
+// Show Product Create Form
+Route::get('/create', [ProductsController::class, 'create']);
+
+
+// Store Product Data
+ Route::post('/listings', [ProductsController::class, 'store']);
+
+// Single Product Page
+Route::get('/products/{listing}', [ProductsController::class, 'show']);
+
 
 // Return Index page
 // Route::get('/', function () {
@@ -41,21 +56,6 @@ use PhpParser\Node\Stmt\Return_;
 //     ]);
 // });
 
-// Route the Listings from the Modal
-Route::get('/', function () {
-    return view('index', [
-        'heading' => 'Latest Listing',
-        'listings' => Listing::all()
-    ]);
-});
-
-// Single Listing
-Route::get('/products/{listing}', function(Listing $listing) {
-    
-    return view('products', [
-        'listing' => $listing
-    ]);
-});
 
 
 // Single Listing route
