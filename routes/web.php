@@ -23,6 +23,8 @@ Route::get('/', [ProductsController::class, 'index']);
 // Show Product Create Form
 Route::get('/create', [ProductsController::class, 'create']);
 
+// Show Product Edit Form
+Route::get('/listigs/{listing}/edit', [ProductsController::class, 'edit']);
 
 // Store Product Data
  Route::post('/listings', [ProductsController::class, 'store']);
