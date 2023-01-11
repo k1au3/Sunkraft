@@ -70,7 +70,7 @@
                     <label
                         for="location"
                         class="inline-block text-lg mb-2"
-                        >Quantity available</label
+                        >Quantity Edit</label
                     >
                     <input
                         type="text"
