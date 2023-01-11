@@ -50,7 +50,7 @@
 
                 <div class="mb-6">
                     <label for="title" class="inline-block text-lg mb-2"
-                        >Product Price</label
+                        >Product Price Edit</label
                     >
                     <input
                         type="text"
