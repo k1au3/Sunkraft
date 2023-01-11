@@ -265,8 +265,9 @@
               <div class="hero-card">
 
                 <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
-                  <img src="./assets/img/decor/9.jpg" loading="lazy" width="285" height="396" alt="Art Deco Home"
+                  <img src="/images/Sun_Craft_Artistic-17.jpg" loading="lazy" width="285" height="396" alt="Art Deco Home"
                     class="img-cover">
+                    {{-- {{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-17.jpg')}} --}}
                 </figure>
 
                 <div class="card-content">
@@ -303,7 +304,7 @@
               <div class="hero-card">
 
                 <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
-                  <img src="./assets/sunkraft/SAM_1388.JPG" width="285" height="396" loading="lazy" alt="Vase Of Flowers"
+                  <img src="/images/Sun_Craft_Artistic-18.jpg" width="285" height="396" loading="lazy" alt="Vase Of Flowers"
                     class="img-cover">
                 </figure>
 
@@ -322,7 +323,7 @@
               <div class="hero-card">
 
                 <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
-                  <img src="./assets/sunkraft/SAM_1452.JPG" loading="lazy" width="580" height="213" alt="Wood Eggs"
+                  <img src="/images/Sun_Craft_Artistic-20.jpg" loading="lazy" width="580" height="213" alt="Wood Eggs"
                     class="img-cover">
                 </figure>
 
@@ -341,7 +342,7 @@
               <div class="hero-card">
 
                 <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
-                  <img src="./assets/sunkraft/hero-product-5.jpg" width="580" height="213" alt="Table Wood Pine"
+                  <img src="/images/Sun_Craft_Artistic-21.jpg" width="580" height="213" alt="Table Wood Pine"
                     class="img-cover">
                 </figure>
 
@@ -384,7 +385,7 @@
 
           <div class="about-card">
             <figure class="card-banner img-holder" style="--width: 1170; --height: 450;">
-              <img src="./assets/img/logo/IMG_20221209_113231.jpg" width="1170" height="450" loading="lazy" alt="Woodex promo"
+              <img src="/images/Sun_Craft_Artistic-22.jpg" width="1170" height="450" loading="lazy" alt="Woodex promo"
                 class="img-cover">
             </figure>
 
