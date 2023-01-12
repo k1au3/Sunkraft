@@ -108,12 +108,26 @@
           <h3>Details <ion-icon class="indent"></ion-icon></h3>
           <p> {{$listing->description}}</p>
 
+          <div class="row">
+            <div class="row">
           <div class="mt-4 p-2 flex space-x-6">
             <a href="/products/{{$listing->id}}/edit">
-              <i class="i fa-solid fa-pencil"></i> Edit
+              {{-- <i class="i fa-solid fa-pencil"></i> --}}
+              <button class="text-red-500"><i class="fa-solid fa-trash"></i>Edit</button>
             </a>
           </div>
-          
+          <form method="POST" action="/{{$listing->id}}">
+            @csrf
+            @method('DELETE')
+
+            <button class="text-red-500"><i class="fa-solid fa-trash"></i>Delete</button>
+        
+
+          </form>
+        </div>
+
+        </div>
+        
 
         </div>
 
