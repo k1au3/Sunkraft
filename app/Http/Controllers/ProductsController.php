@@ -82,19 +82,38 @@ class ProductsController extends Controller
      */
     public function edit(Listing $listing)
     {
-        return view('listings.edit', ['listing' => $listing]);
+        return view('edit', ['listing' => $listing]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Listing $listing)
     {
-        //
+        // Update Products data
+        $formFields = $request->validate([
+            'name' => 'required',
+            'logo' => 'required',
+            'amount' => 'required',
+            'quantity' => 'required',
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        if($request->hasFile('logo')) {
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        }
+
+        $listing->update($formFields);
+
+        // return redirect('/');
+        return back()->with('message', 'Listing Updated Successfully');
+        // return back();
+        
     }
 
     /**

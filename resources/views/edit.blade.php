@@ -1,13 +1,14 @@
 
             <header class="text-center">
                 <h2 class="text-2xl font-bold uppercase mb-1">
-                    Adding products
+                    Edit product
                 </h2>
                 <p class="mb-4">Add a Product</p>
             </header>
 
-            <form method="POST" action="/listings" enctype="multipart/form-data">
+            <form method="POST" action="/{{$listing->id}}" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 {{-- @method('PUT') --}}
                 <div class="mb-6">
                     <label
@@ -19,7 +20,7 @@
                         type="text"
                         class="border border-gray-200 rounded p-2 w-full"
                         name="name"
-                        value="{{old('company')}}"
+                        value="{{$listing->name}}"
                         placeholder="Chair"
                     />
                     {{-- @error('company')
@@ -38,8 +39,11 @@
                         type="file"
                         class="border border-gray-200 rounded p-2 w-full"
                         name="logo"
-                        {{-- value="{{old('logo')}}" --}}
+                        {{-- value="{{$listing->logo}}" --}}
                     />
+
+                    <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-17.jpg')}}" width="100%" id="productImage" alt="">
+
                     {{-- @error('logo')
                         <p class="text-red-500 text-xs mt-1">
                             {{$message}}
@@ -57,7 +61,7 @@
                         class="border border-gray-200 rounded p-2 w-full"
                         name="amount"
                         placeholder="Example: 2000"
-                        {{-- value="{{old('title')}}" --}}
+                        value="{{$listing->amount}}"
                     />
                     {{-- @error('title')
                         <p class="text-red-500 text-xs mt-1">
@@ -77,7 +81,7 @@
                         class="border border-gray-200 rounded p-2 w-full"
                         name="quantity"
                         placeholder="Example: 20"
-                        {{-- value="{{old('location')}}" --}}
+                        value="{{$listing->quantity}}"
                     />
                     {{-- @error('location')
                         <p class="text-red-500 text-xs mt-1">
@@ -94,7 +98,7 @@
                         type="text"
                         class="border border-gray-200 rounded p-2 w-full"
                         name="title"
-                        {{-- value="{{old('email')}}" --}}
+                        value="{{$listing->title}}"
                     />
                     {{-- @error('email')
                         <p class="text-red-500 text-xs mt-1">
@@ -115,8 +119,9 @@
                         name="description"
                         rows="10"
                         placeholder="Wooden, Rounded, Metallic, etc"
+                        {{-- value="{{$listing->description}}" --}}
                     >
-                    {{-- {{old('company')}} --}}
+                    {{$listing->description}}
                 </textarea>
                     {{-- @error('description')
                         <p class="text-red-500 text-xs mt-1">
@@ -130,9 +135,9 @@
                     <button
                         class="bg-laravel text-white rounded py-2 px-4 hover:bg-black"
                     >
-                        Add Product
+                        Edit Product
                     </button>
 
-                    <a href="/" class="text-black ml-4"> Back </a>
+                    <a href="/products/{$id}" class="text-black ml-4"> Back </a>
                 </div>
             </form>
