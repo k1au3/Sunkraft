@@ -107,9 +107,17 @@
 
           <h3>Details <ion-icon class="indent"></ion-icon></h3>
           <p> {{$listing->description}}</p>
+
+          <div class="mt-4 p-2 flex space-x-6">
+            <a href="/products/{{$listing->id}}/edit">
+              <i class="i fa-solid fa-pencil"></i> Edit
+            </a>
+          </div>
           
 
         </div>
+
+
 
       </div>
     </div>
@@ -118,20 +126,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 
 
   <!-- footer section  -->
