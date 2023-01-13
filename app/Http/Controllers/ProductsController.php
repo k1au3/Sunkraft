@@ -113,7 +113,6 @@ class ProductsController extends Controller
         // return redirect('/');
         return back()->with('message', 'Listing Updated Successfully');
         // return back();
-        
     }
 
     /**
@@ -122,8 +121,11 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Listing $listing)
     {
-        //
+        // Delete Product
+        $listing->delete();
+        return redirect('/')->with('message', 'Listing Deleted Sucessfully');
+
     }
 }

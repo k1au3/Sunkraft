@@ -29,12 +29,20 @@ Route::get('/products/{listing}/edit', [ProductsController::class, 'edit']);
 // Update Product
 Route::put('/{listing}/', [ProductsController::class, 'update']);
 
+// Delete Product
+Route::delete('/{listing}/', [ProductsController::class, 'destroy']);
+
 // Store Product Data
  Route::post('/listings', [ProductsController::class, 'store']);
 
 // Single Product Page
 Route::get('/products/{listing}', [ProductsController::class, 'show']);
 
+// Show Register Form
+Route::get('/register', [UserController::class, 'create']);
+
+// Create New User
+Route::post('/users', [UserController::class, 'store']);
 
 // Return Index page
 // Route::get('/', function () {
