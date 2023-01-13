@@ -38,6 +38,11 @@ Route::delete('/{listing}/', [ProductsController::class, 'destroy']);
 // Single Product Page
 Route::get('/products/{listing}', [ProductsController::class, 'show']);
 
+// Show Register Form
+Route::get('/register', [UserController::class, 'create']);
+
+// Create New User
+Route::post('/users', [UserController::class, 'store']);
 
 // Return Index page
 // Route::get('/', function () {
