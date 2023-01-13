@@ -33,7 +33,7 @@
 
               </div>
               <div class="form-group first">
-                <label for="phoneNumber">Phone Number</label>
+                <label for="phoneNumber">Phone Number/ Email</label>
                 <input type="text" class="form-control" id="phoneNumber" name="phoneNumber">
 
                 @error('phoneNumber')
