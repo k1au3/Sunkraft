@@ -73,9 +73,11 @@
 
       <div class="header-action">
 
-        <button class="header-action-btn" aria-label="user">
-          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-        </button>
+        <a href="./admin/index.blade.php">
+          <button class="header-action-btn" aria-label="user">
+            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </a>
 
         <button class="header-action-btn" aria-label="favorite list">
           <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
