@@ -44,7 +44,16 @@ Route::get('/register', [UserController::class, 'create']);
 // Create New User
 Route::post('/users', [UserController::class, 'store']);
 
-// Return Index page
+// Show Login Form
+Route::get('/login', [UserController::class, 'login']);
+
+// Log User Out
+Route::post('/logout', [UserController::class, 'logout']);
+
+// Login User
+Route::post('/users/authenticate', [ UserController::class, 'authenticate']);
+
+// Return Index pageb
 // Route::get('/', function () {
 //     return view('index');
 // });

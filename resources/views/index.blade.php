@@ -71,6 +71,29 @@
 
       <a href="#" class="logo">SunKraft</a>
 
+      @auth
+      <li>
+        <span class="font-bold uppercase">
+          Welcome {{auth()->user()->name}}
+        </span>
+      </li>
+      <li>
+        <a href="/manage" class="hover:text-laravel"><i class="fa-solid fa-gear"></i>Manage Listings</a>
+      </li>
+      <form action="/logout" class="inline" method="POST">
+        @csrf
+        <button type="submit"><i class="fa-solid fa-door-closed"></i> Logout</button>
+      </form>
+      @else
+      <li>
+        <a href="/register" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i>Register</a>
+      </li>
+      <li>
+        <a href="/login" class="hover:text-laravel"><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</a>
+      </li>
+      @endauth
+
+
       <div class="header-action">
 
         <button class="header-action-btn" aria-label="user">
@@ -389,7 +412,7 @@
                 class="img-cover">
             </figure>
 
-            <button class="play-btn" aria-label="play video">
+             <button class="play-btn" aria-label="play video">
               <ion-icon name="play-circle-outline" aria-hidden="true"></ion-icon>
             </button>
           </div>
