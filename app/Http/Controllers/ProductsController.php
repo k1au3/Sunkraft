@@ -128,4 +128,35 @@ class ProductsController extends Controller
         return redirect('/')->with('message', 'Listing Deleted Sucessfully');
 
     }
+
+    
+        /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    // public function allproducts(Listing $listing)
+    // {
+    //     // Show all products
+    //     return view('allProducts', [
+    //         'listing' => $listing
+    //     ]);
+    // }
+
+        /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function allproducts()
+    {
+        // Show Index Page
+        return view('allProducts', [
+            'listings' => Listing::latest()->filter(request(['search']))->simplePaginate(6)
+            // 'listings' => Listing::all()
+        ]);
+       
+    }
+
 }

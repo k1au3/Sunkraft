@@ -14,12 +14,12 @@
               {{-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> --}}
             </div>
 
-            <form action="/users/authenticate" method="POST">
+      <form action="/users/authenticate" method="POST">
               @csrf
               <div class="form-group first">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" name="username" value="{{old('username')}}">
-                @error('username')
+                <label for="name">Username</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}">
+                @error('name')
                   <p class="text-red-500 text-xl mt-1">{{$message}}</p>
                 @enderror
               </div>
@@ -76,7 +76,7 @@
 
               
 
-            </form>
+      </form>
             </div>
           </div>
           

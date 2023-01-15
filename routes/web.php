@@ -45,13 +45,16 @@ Route::get('/register', [UserController::class, 'create']);
 Route::post('/users', [UserController::class, 'store']);
 
 // Show Login Form
-Route::get('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login'])->name('login');
 
 // Log User Out
 Route::post('/logout', [UserController::class, 'logout']);
 
 // Login User
 Route::post('/users/authenticate', [ UserController::class, 'authenticate']);
+
+// Show All Products
+Route::get('/allProducts', [ProductsController::class, 'allproducts']);
 
 // Return Index pageb
 // Route::get('/', function () {

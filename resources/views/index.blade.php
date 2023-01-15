@@ -47,6 +47,8 @@
         <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
       </div> --}}
 
+      <a href="#" class="logo">SunKraft</a>
+
       <form action="/">
         
         <div class="input-wrapper">
@@ -69,7 +71,9 @@
       </form>
       
 
-      <a href="#" class="logo">SunKraft</a>
+      <li>
+        <a href="/allProducts" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i>Products</a>
+      </li>
 
       @auth
       <li>
@@ -310,7 +314,7 @@
               <div class="hero-card">
 
                 <figure class="card-banner img-holder" style="--width: 568; --height: 389;">
-                  <img src="./images/Sun_Craft_Artistic-1.jpg" loading="lazy"  width="568" height="389" alt="Bed"
+                <img src="./images/Sun_Craft_Artistic-106.jpg" loading="lazy"  width="568" height="389" alt="Bed"
                     class="img-cover">
                 </figure>
 
@@ -463,8 +467,6 @@
 
           
           <!-- products  -->
-
-        
           <ul class="shop-content product-list" data-filter="all">
             <div class="row">
 
