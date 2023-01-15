@@ -27,6 +27,8 @@
   <header class="header" data-header>
     <div class="container">
 
+      <a href="/">Back</a>
+
       <div class="input-wrapper">
         <input type="search" name="search" placeholder="Search Anything..." class="input-field">
 
