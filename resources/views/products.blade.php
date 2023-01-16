@@ -6,10 +6,13 @@
   <section class="product-details">
     <h2> Product Details</h2>
     <div class="small-container single-product">
+      
       <div class="row">
+        
         <div class="col-2">
           <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-17.jpg')}}" width="100%" id="productImage" alt="">
         </div>
+        
         <div class="col-2">
 
           <p>Home / Furniture</p>
