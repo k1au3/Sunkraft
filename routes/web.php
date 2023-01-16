@@ -39,13 +39,13 @@ Route::delete('/{listing}/', [ProductsController::class, 'destroy']);
 Route::get('/products/{listing}', [ProductsController::class, 'show']);
 
 // Show Register Form
-Route::get('/register', [UserController::class, 'create']);
+Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 
 // Create New User
 Route::post('/users', [UserController::class, 'store']);
 
 // Show Login Form
-Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('auth');
 
 // Log User Out
 Route::post('/logout', [UserController::class, 'logout']);
@@ -55,6 +55,13 @@ Route::post('/users/authenticate', [ UserController::class, 'authenticate']);
 
 // Show All Products
 Route::get('/allProducts', [ProductsController::class, 'allproducts']);
+
+
+// Show Admin Panel
+Route::get('/adminpanel', [AdminController::class, 'adminpanel']);
+
+// Show Users and User Info
+Route::get('/userdata', [AdminController::class, 'userdata']);
 
 // Return Index pageb
 // Route::get('/', function () {
