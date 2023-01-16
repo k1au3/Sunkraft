@@ -121,11 +121,7 @@
               <h2 class="section-title">SunKraft Store</h2>
     
               <p class="section-text">
-                When you start with a portrait and search for a pure form, a clear volume, through successive eliminations,
-                you arrive
-                inevitably at the egg. Likewise, starting with the egg and following the same process in reverse, one
-                finishes with the
-                portrait.
+                Sunkraft is a furniture shop located along Nairobi Highway next to Shell Petrol Station, near Rupas Mall specializing in bespoke furniture at an affordable price while still ensuring that our pieces strike the perfect balance between aesthetics and comfort. Here at Sunkraft we are dedicated to our customers needs before, during and even after the purchase process with one of our members being available to answer any questions or address any concerns you may have. With a highly trained staff using only local wood we can guarantee that not only is our work unique and beautiful but it is also eco-friendly. Sunkraft, Artfully Designed.
               </p>
     
               <div class="about-card">
