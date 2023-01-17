@@ -121,7 +121,7 @@
               <h2 class="section-title">SunKraft Store</h2>
     
               <p class="section-text">
-                Sunkraft is a furniture shop located along Nairobi Highway next to Shell Petrol Station, near Rupas Mall specializing in bespoke furniture at an affordable price while still ensuring that our pieces strike the perfect balance between aesthetics and comfort. Here at Sunkraft we are dedicated to our customers needs before, during and even after the purchase process with one of our members being available to answer any questions or address any concerns you may have. With a highly trained staff using only local wood we can guarantee that not only is our work unique and beautiful but it is also eco-friendly. Sunkraft, Artfully Designed.
+                <em>SunKraft is a furniture shop located along Nairobi Highway next to Shell Petrol Station, near Rupa's Mall specializing in bespoke furniture at an affordable price while still ensuring that our pieces strike the perfect balance between aesthetics and comfort. Here at SunKraft we are dedicated to our customers needs before, during and even after the purchase process with one of our members being available to answer any questions or address any concerns you may have. With a highly trained staff using only local wood we can guarantee that not only is our work unique and beautiful but it is also eco-friendly.</em> <br> <strong>SunKraft, Artfully Designed.</strong>
               </p>
     
               <div class="about-card">
