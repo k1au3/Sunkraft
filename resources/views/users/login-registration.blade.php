@@ -50,7 +50,7 @@
       </form>
     </div>
     
-    </div> 
+  </div> 
 
 <script>
   var usrLogin = document.getElementById("login");
