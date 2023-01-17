@@ -18,7 +18,6 @@ class AdminController extends Controller
        
     }
 
-
     public function userdata(Listing $listing)
     {
         // Show User Details
