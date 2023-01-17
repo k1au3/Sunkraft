@@ -54,20 +54,22 @@
         <button type="submit"><i class="fa-solid fa-door-closed"></i> Logout</button>
       </form>
       @else
-      <li>
+      {{-- <li>
         <a href="/register" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i>Register</a>
       </li>
       <li>
         <a href="/login" class="hover:text-laravel"><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</a>
-      </li>
+      </li> --}}
       @endauth
 
 
       <div class="header-action">
 
+        <a href="/login-registration">
         <button class="header-action-btn" aria-label="user">
           <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
         </button>
+        </a>
 
         <button class="header-action-btn" aria-label="favorite list">
           <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>

@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProductsController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 use App\Models\Listing;
 use PhpParser\Node\Stmt\Return_;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,7 @@ Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 Route::post('/users', [UserController::class, 'store']);
 
 // Show Login Form
-Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('auth');
+// Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('auth');
 
 // Log User Out
 Route::post('/logout', [UserController::class, 'logout']);
@@ -62,6 +63,15 @@ Route::get('/adminpanel', [AdminController::class, 'adminpanel']);
 
 // Show Users and User Info
 Route::get('/userdata', [AdminController::class, 'userdata']);
+
+
+
+// Show USER Login + Register Form
+Route::get('/login-registration', [UserController::class, 'login']);
+
+// Show Admin LOGIN
+Route::get('/admin-login', [AdminController::class, 'adminlogin']);
+
 
 // Return Index pageb
 // Route::get('/', function () {

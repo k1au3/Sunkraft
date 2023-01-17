@@ -30,6 +30,54 @@
          <link rel="preload" as="image" href="/images/hero-product-5.jpg">
     
          <link rel="preload" as="image" href="./images/Sun_Craft_Artistic-1.jpg">
+
+{{-- USER LOGIN AND REGISTER --}}
+
+         <link rel="stylesheet" href="/public/assets/css/account/account.css">
+         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Roboto:wght@400;500;700&display=swap"
+               rel="stylesheet">
+
+          <!-- 
+    - custom js link
+  -->
+  <script src="/public/assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  {{-- ADMIN LOGIN --}}
+
+  
+    {{-- custom css link  --}}
+    <link rel="stylesheet" href="/public/assets/css/account/account.css">
+    {{-- fonts  --}}
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Roboto:wght@400;500;700&display=swap"
+          rel="stylesheet">
+
+          
+    <!-- 
+      - custom js link
+    -->
+    <script src="/public/assets/js/script.js" defer></script>
+  
+    <!-- 
+      - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+
+          
 </head>
 
 <body>

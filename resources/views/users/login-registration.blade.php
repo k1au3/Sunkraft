@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Account</title>
+@extends('layout')
 
-    {{-- custom css link  --}}
-    <link rel="stylesheet" href="/public/assets/css/account/account.css">
-    {{-- fonts  --}}
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Roboto:wght@400;500;700&display=swap"
-          rel="stylesheet">
-</head>
 
-<body>
    <div class="hero">
     <div class="form-box">
         <div class="button-box">
@@ -25,28 +9,58 @@
             <button class="toggle-btn" type="button" onclick="register()">Register</button>
         </div>
         <div class="social-icons">
-            <img src="/public/images/loginlogo/apple.png" alt="tw">
-            <img src="/public/images/loginlogo/google.png" alt="Fb">
-            <img src="/public/images/loginlogo/xiaomi.png" alt="google">
+            <img src="/loginlogo/apple.png" alt="tw">
+            <img src="/loginlogo/google.png" alt="Fb">
+            <img src="/loginlogo/xiaomi.png" alt="google">
         </div>
-        <form id="login" class="input-group">
+        <form id="login" class="input-group" action="/users/authenticate" method="POST">
+          @csrf
+
+          {{-- <div class="form-group first">
+            <label for="name">Username</label>
+            <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}">
+            @error('name')
+              <p class="text-red-500 text-xl mt-1">{{$message}}</p>
+            @enderror
+          </div> --}}
             
-            <input type="email" class="input-field" placeholder="email" required>
-            <input type="text" class="input-field" placeholder="enter pasword" required>
+            <input type="text" class="input-field" placeholder="Username" id="name" name="name" value="{{old('name')}}" required>
+            @error('name')
+              <p class="text-red-500 text-xl mt-1">{{$message}}</p>
+            @enderror
+
+            <input type="text" class="input-field" placeholder="enter pasword" id="password" name="password" required>
+            @error('password')
+              <p class="text-red-500 text-xl mt-1">{{$message}}</p>
+            @enderror
             <label for="check">Remember me</label>
             <input type="checkbox" class="check-boxx" id="check">
             
             <button class="submit-btn" type="submit">Log In</button>
         </form>
 
-        <form id="register" class="input-group">
-           <input type="text" class="input-field" placeholder="Full Name"> 
-          <input type="email" class="input-field" placeholder="email" required>
-          <input type="text" class="input-field" placeholder="enter Pasword" required>
+        <form id="register" class="input-group" action="/users" method="POST">
+          @csrf
+
+          {{-- <div class="input-field">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="name">
+
+            @error('name')
+              <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+            @enderror
+
+          </div> --}}
+
+          <input type="text" class="input-field" placeholder="Username" id="username" name="name"> 
+          <input type="text" class="input-field" placeholder="Phone Number" id="phoneNumber" name="phoneNumber" required>
+          <input type="password" class="input-field" placeholder="Enter Password" required id="password" name="password">
+          <input type="password" class="input-field" placeholder="Confirm Password" required id="password_confirmation" name="password_confirmation">
           <label for="check">I agree to the T/Cs</label>
           <input type="checkbox" class="check-box" id="check">
           
           <button class="submit-btn" type="submit">Register</button>
+          
       </form>
     </div>
     
@@ -71,18 +85,3 @@
     btns.style.left = "0px"
   }
 </script>
-    
-</body>
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="/public/assets/js/script.js" defer></script>
-
-  <!-- 
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</html>

@@ -47,7 +47,7 @@ class UserController extends Controller
 
     // Login User
     public function login() {
-        return view('users.login');
+        return view('users.login-registration');
     }
 
     // Authenticate User

@@ -26,4 +26,13 @@ class AdminController extends Controller
         ]);
     }
 
+    
+    // Show Main Page/Home
+    public function adminlogin() {
+        return view('admin.admin-login');
+    }
+    
+
+    
+
 }
