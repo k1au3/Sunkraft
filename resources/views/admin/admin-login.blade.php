@@ -1,7 +1,7 @@
 @extends('layout')
 
 
-   <div class="hero">
+   <div class="mainn">
     <div class="form-box">
         <div class="button-box">
             <div id="btn"></div>

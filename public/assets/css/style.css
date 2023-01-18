@@ -1348,7 +1348,9 @@ a.card-meta-text:is(:hover, :focus) { color: var(--tan-crayola); }
 
 } 
 
-
+/**
+* admin login -register 
+**/
 
 :root {
   --ff-roboto: "Roboto", sans-serif;
@@ -1476,7 +1478,7 @@ body.active {
   background-color: hsl(0deg, 0%, 70%);
 }
 
-.hero {
+.mainn {
   height: 100%;
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.4)), rgba(0, 0, 0, 0.4), url(#);
@@ -1484,7 +1486,7 @@ body.active {
   background-size: cover;
   position: absolute;
 }
-.hero .form-box {
+.mainn .form-box {
   width: 380px;
   height: 480px;
   position: relative;
@@ -1493,7 +1495,7 @@ body.active {
   padding: 5px;
   overflow: hidden;
 }
-.hero .form-box .button-box {
+.mainn .form-box .button-box {
   width: 220px;
   margin: 35px auto;
   position: relative;
@@ -1501,7 +1503,7 @@ body.active {
   border-radius: 30px;
   display: flex;
 }
-.hero .form-box .button-box .toggle-btn {
+.mainn .form-box .button-box .toggle-btn {
   padding: 10px 30px;
   cursor: pointer;
   background: transparent;
@@ -1511,7 +1513,7 @@ body.active {
   font-size: 1.2rem;
   font-weight: bold;
 }
-.hero .form-box .button-box #btn {
+.mainn .form-box .button-box #btn {
   top: 0;
   left: 0;
   position: absolute;
@@ -1521,26 +1523,26 @@ body.active {
   border-radius: 30px;
   transition: 0.5s;
 }
-.hero .form-box .social-icons {
+.mainn .form-box .social-icons {
   margin: 30px auto;
   text-align: center;
   display: flex;
   justify-content: space-evenly;
 }
-.hero .form-box .social-icons img {
+.mainn .form-box .social-icons img {
   width: 30px;
   margin: 0 12px;
   box-shadow: 0 0 20px 0 rgba(127, 127, 127, 0.2392156863);
   cursor: pointer;
   border-radius: 50%;
 }
-.hero .form-box .input-group {
+.mainn .form-box .input-group {
   top: 180px;
   position: absolute;
   width: 280px;
   transition: 0.5s;
 }
-.hero .form-box .input-group .input-field {
+.mainn .form-box .input-group .input-field {
   width: 100%;
   padding: 10px 0;
   margin: 5px 0;
@@ -1553,7 +1555,7 @@ body.active {
   background: transparent;
   opacity: 0.6;
 }
-.hero .form-box .input-group .submit-btn {
+.mainn .form-box .input-group .submit-btn {
   width: 85%;
   padding: 10px 30px;
   cursor: pointer;
@@ -1564,22 +1566,22 @@ body.active {
   outline: none;
   border-radius: 30px;
 }
-.hero .form-box .input-group .submit-btn:hover {
+.mainn .form-box .input-group .submit-btn:hover {
   background-color: burlywood;
 }
-.hero .form-box .input-group .check-box {
+.mainn .form-box .input-group .check-box {
   margin: -10px -10px 30px 0;
 }
-.hero .form-box .input-group .check-boxx {
+.mainn .form-box .input-group .check-boxx {
   margin: -10px -10px 30px 0;
 }
-.hero .form-box .input-group span {
+.mainn .form-box .input-group span {
   color: #777;
   font-size: 12px;
 }
-.hero .form-box #login {
+.mainn .form-box #login {
   left: 50px;
 }
-.hero .form-box #register {
+.mainn .form-box #register {
   left: 450px;
 }/*# sourceMappingURL=account.css.map */

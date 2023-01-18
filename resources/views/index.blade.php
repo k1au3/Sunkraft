@@ -2,9 +2,9 @@
 
 @include('components.navbar')
 
-{{-- @include('components.hero')
+@include('components.hero')
 
-@include('components.about') --}}
+@include('components.about')
 
 @include('allProducts')
 
