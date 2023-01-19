@@ -1,5 +1,6 @@
 @extends('layout')
 
+@include('components.navbar')
 
    <div class="mainn">
     <div class="form-box">
@@ -29,7 +30,7 @@
               <p class="text-red-500 text-xl mt-1">{{$message}}</p>
             @enderror
 
-            <input type="text" class="input-field" placeholder="enter pasword" id="password" name="password" required>
+            <input type="password" class="input-field" placeholder="enter pasword" id="password" name="password" required>
             @error('password')
               <p class="text-red-500 text-xl mt-1">{{$message}}</p>
             @enderror

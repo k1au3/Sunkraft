@@ -65,6 +65,5 @@ class UserController extends Controller
 
         return back()->withErrors(['name' => 'Invalid Credentials'])->onlyInput('name');
 
-    }
-    
+    }   
 }

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin;
 use App\Models\Listing;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -19,6 +20,8 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(5)->create();
 
         Listing::factory(6)->create();
+
+        \App\Models\Admin::factory(1)->create();
 
         // Listing::create([
         //     'id' => 1,

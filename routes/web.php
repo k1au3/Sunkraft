@@ -69,11 +69,17 @@ Route::get('/userdata', [AdminController::class, 'userdata']);
 // Show USER Login + Register Form
 Route::get('/login-registration', [UserController::class, 'login']);
 
+// Create/ Register Admin
+Route::post('/admin', [AdminController::class, 'store']);
+
 // Show Admin LOGIN
 Route::get('/admin-login', [AdminController::class, 'adminlogin']);
 
+// Login Admin
+Route::post('/authenticate', [ AdminController::class, 'authenticate']);
 
-// Return Index pageb
+
+// Return Index page
 // Route::get('/', function () {
 //     return view('index');
 // });

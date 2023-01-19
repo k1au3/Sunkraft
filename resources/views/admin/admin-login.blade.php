@@ -1,5 +1,6 @@
 @extends('layout')
 
+@include('components.navbar')
 
    <div class="mainn">
     <div class="form-box">
@@ -13,24 +14,55 @@
             <img src="/loginlogo/google.png" alt="Fb">
             <img src="/loginlogo/xiaomi.png" alt="google">
         </div>
-        <form id="login" class="input-group">
+        <form id="login" class="input-group" action="/authenticate" method="POST">
+          @csrf
+
+          {{-- <div class="form-group first">
+            <label for="name">Username</label>
+            <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}">
+            @error('name')
+              <p class="text-red-500 text-xl mt-1">{{$message}}</p>
+            @enderror
+          </div> --}}
             
-            <input type="email" class="input-field" placeholder="email" required>
-            <input type="text" class="input-field" placeholder="enter pasword" required>
-            <label for="check">Remember me</label>
-            <input type="checkbox" class="check-boxx" id="check">
+            <input type="text" class="input-field" placeholder="Username" id="name" name="name" value="{{old('name')}}" required>
+            @error('name')
+              <p class="text-red-500 text-l mt-1">{{$message}}</p>
+            @enderror
+
+            <input type="password" class="input-field" placeholder="enter pasword" id="password" name="password" required>
+            @error('password')
+              <p class="text-red-500 text-l mt-1">{{$message}}</p>
+            @enderror
+
+            {{-- <label for="check">Remember me</label> --}}
+            {{-- <input type="checkbox" class="check-boxx" id="check"> --}}
             
             <button class="submit-btn" type="submit">Log In</button>
         </form>
 
-        <form id="register" class="input-group">
-           <input type="text" class="input-field" placeholder="Full Name"> 
-          <input type="email" class="input-field" placeholder="email" required>
-          <input type="text" class="input-field" placeholder="enter Pasword" required>
+        <form id="register" class="input-group" action="/admin" method="POST">
+          @csrf
+
+          {{-- <div class="input-field">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="name">
+
+            @error('name')
+              <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+            @enderror
+
+          </div> --}}
+
+          <input type="text" class="input-field" placeholder="Username" id="username" name="name"> 
+          <input type="text" class="input-field" placeholder="Phone Number" id="phoneNumber" name="phoneNumber" required>
+          <input type="password" class="input-field" placeholder="Enter Password" required id="password" name="password">
+          <input type="password" class="input-field" placeholder="Confirm Password" required id="password_confirmation" name="password_confirmation">
           <label for="check">I agree to the T/Cs</label>
           <input type="checkbox" class="check-box" id="check">
           
           <button class="submit-btn" type="submit">Register</button>
+          
       </form>
     </div>
     

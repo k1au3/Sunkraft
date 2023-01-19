@@ -33,7 +33,7 @@
 
 {{-- USER LOGIN AND REGISTER --}}
 
-         <link rel="stylesheet" href="/public/assets/css/account/account.css">
+         <link rel="stylesheet" href="/assets/css/account/account.css">
          <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
          <link rel="preconnect" href="https://fonts.googleapis.com">
          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +43,7 @@
           <!-- 
     - custom js link
   -->
-  <script src="/public/assets/js/script.js" defer></script>
+  <script src="/assets/js/script.js" defer></script>
 
   <!-- 
     - ionicon link
@@ -56,7 +56,7 @@
 
   
     {{-- custom css link  --}}
-    <link rel="stylesheet" href="/public/assets/css/account/account.css">
+    <link rel="stylesheet" href="/assets/css/account/account.css">
     {{-- fonts  --}}
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,7 +68,7 @@
     <!-- 
       - custom js link
     -->
-    <script src="/public/assets/js/script.js" defer></script>
+    <script src="/assets/js/script.js" defer></script>
   
     <!-- 
       - ionicon link
