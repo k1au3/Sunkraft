@@ -10,7 +10,7 @@
                   <div class="hero-card">
     
                     <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
-                      <img src="/images/Sun_Craft_Artistic-17.jpg" loading="lazy" width="285" height="396" alt="Art Deco Home"
+                      <img src="/images/Sun_Craft_Artistic-19.jpg" loading="lazy" width="285" height="396" alt="Art Deco Home"
                         class="img-cover">
                         {{-- {{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-17.jpg')}} --}}
                     </figure>
@@ -30,13 +30,13 @@
                   <div class="hero-card">
     
                     <figure class="card-banner img-holder" style="--width: 568; --height: 389;">
-                    <img src="./images/Sun_Craft_Artistic-106.jpg" loading="lazy"  width="568" height="389" alt="Bed"
+                    <img src="./images/Sun_Craft_Artistic-66.jpg" loading="lazy"  width="568" height="389" alt="Bed"
                         class="img-cover">
                     </figure>
     
                     <div class="card-content">
                       <h3>
-                        <a href="#" class="card-title">Bed</a>
+                        <a href="#" class="card-title">Dining</a>
                       </h3>
     
                       <p class="card-text">Furniture</p>
@@ -87,7 +87,7 @@
                   <div class="hero-card">
     
                     <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
-                      <img src="/images/Sun_Craft_Artistic-21.jpg" width="580" height="213" alt="Table Wood Pine"
+                      <img src="/images/Sun_Craft_Artistic-6.jpg" width="580" height="213" alt="Table Wood Pine"
                         class="img-cover">
                     </figure>
     

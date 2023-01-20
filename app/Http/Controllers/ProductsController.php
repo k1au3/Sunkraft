@@ -57,7 +57,7 @@ class ProductsController extends Controller
  
         Listing::create($formFields);
 
-        return redirect('/allProducts');
+        return redirect('/allProducts')->with('message', 'Listing Created Successfully');
     }
 
     /**
@@ -111,7 +111,7 @@ class ProductsController extends Controller
         $listing->update($formFields);
 
         // return redirect('/');
-        return back()->with('message', 'Listing Updated Successfully');
+        return redirect('/allProducts')->with('message', 'Listing Updated Successfully');
         // return back();
     }
 
@@ -125,7 +125,7 @@ class ProductsController extends Controller
     {
         // Delete Product
         $listing->delete();
-        return redirect('/')->with('message', 'Listing Deleted Sucessfully');
+        return redirect('/allProducts')->with('message', 'Listing Deleted Sucessfully');
 
     }
 

@@ -28,7 +28,9 @@
               <button 
                   type="submit"
                   class="text-white"
-              ><ion-icon name="search-outline" aria-hidden="true"></ion-icon></button>
+              >
+              {{-- <ion-icon name="search-outline" aria-hidden="true"></ion-icon> --}}
+            </button>
             </div>
         </div>
        

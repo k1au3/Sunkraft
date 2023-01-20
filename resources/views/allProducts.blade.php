@@ -10,6 +10,29 @@
 
             <h5><a href="/create">Add Product</a></h5>
 
+            <form action="/">
+        
+              <div class="input-wrapper">
+                {{-- <ion-icon name="search-outline" aria-hidden="true"></ion-icon> --}}
+                <input 
+                  type="text"
+                  name="search"
+                  class="input-field"
+                  placeholder="Search Product ..."
+                  >
+                  <div class="input-wrapper">
+                    <button 
+                        type="submit"
+                        class="text-white"
+                    >
+                    {{-- <ion-icon name="search-outline" aria-hidden="true"></ion-icon> --}}
+                  </button>
+                  </div>
+              </div>
+             
+      
+            </form>
+
             <ul class="filter-btn-list">
 
               <li class="filter-btn-item">

@@ -87,4 +87,6 @@
         @yield('content')
     </main>
 
+    <x-flash-message/>
+
 </body>

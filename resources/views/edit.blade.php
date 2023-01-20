@@ -12,7 +12,6 @@
             <form method="POST" action="/{{$listing->id}}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
-                {{-- @method('PUT') --}}
 
 
                 <div class="mb-6">
@@ -101,8 +100,8 @@
 
                 <div class="mb-6">
                     <label for="email" class="inline-block text-lg mb-2"
-                        >Additional info about Product</label
-                    >
+                        >Additional info about Product
+                        </label>
                     <input
                         type="text"
                         class="border border-gray-200 rounded p-2 w-full"
@@ -155,7 +154,7 @@
                     </button>
                     
 
-                    <a href="/products/{$id}" class="text-black ml-4"> Back </a>
+                    <a href="/" class="text-black ml-4"> Back </a>
                 </div>
             </form>
 

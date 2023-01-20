@@ -12,11 +12,24 @@
             <form method="POST" action="/listings" enctype="multipart/form-data">
                 @csrf
 
-                {{-- @method('PUT') --}}
 
+                <div class="mb-6">
+                    <label for="logo" class="inline-block text-lg mb-2">
+                        Add Product Image
+                    </label>
+                    <input
+                        type="file"
+                        class="border border-gray-200 rounded p-2 w-full"
+                        name="logo"
+                        {{-- value="{{old('logo')}}" --}}
+                        style="width: 200px"
+                    />
 
+                    {{-- <div class="col-2">
+                        <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-17.jpg')}}" width="40%" id="productImage" alt="">
+                      </div> --}}
 
-
+                </div>
 
 
                 <div class="mb-6">
@@ -41,24 +54,6 @@
 
                 </div>
 
-                <div class="mb-6">
-                    <label for="logo" class="inline-block text-lg mb-2">
-                        Add Product Image
-                    </label>
-                    <input
-                        type="file"
-                        class="border border-gray-200 rounded p-2 w-full"
-                        name="logo"
-                        {{-- value="{{old('logo')}}" --}}
-                        style="width: 200px"
-                    />
-
-                    {{-- <div class="col-2">
-                        <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-17.jpg')}}" width="40%" id="productImage" alt="">
-                      </div> --}}
-
-                </div>
-
 
 
                 <div class="mb-6">
@@ -68,7 +63,7 @@
                     <input
                         type="text"
                         class="border border-gray-200 rounded p-2 w-full"
-                        name="name"
+                        name="amount"
                         {{-- value="{{old('company')}}" --}}
                         placeholder="Chair"
                         style="width: 200px"
