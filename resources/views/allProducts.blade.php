@@ -6,7 +6,9 @@
         <div class="container">
 
           <div class="title-wrapper">
-            <h2 class="h2 section-title">Popular Products</h2>
+            <h2 class="h2 section-title"> <a href="/" class="logo">SunKraft</a></h2>
+
+            <h5><a href="/create">Add Product</a></h5>
 
             <ul class="filter-btn-list">
 
