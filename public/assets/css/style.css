@@ -256,6 +256,7 @@ body.active { overflow: hidden; }
 .logo {
   font-size: 3.3rem;
   font-weight: var(--fw-700);
+  font-family: 'Secular One', sans-serif;
 }
 
 .header-action {
