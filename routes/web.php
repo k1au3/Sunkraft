@@ -5,7 +5,9 @@ use PhpParser\Node\Stmt\Return_;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,6 +81,27 @@ Route::get('/admin-login', [AdminController::class, 'adminlogin']);
 Route::post('/authenticate', [ AdminController::class, 'authenticate']);
 
 
+Auth::routes();
+
+// User Route
+Route::middleware(['auth', 'user-role:user'])->group(function()
+{
+    Route::get("/home", [HomeController::class, 'userHome'])->name('home');
+});
+
+// Editor Route
+Route::middleware(['auth', 'user-role:editor'])->group(function()
+{
+    Route::get("/editor/home", [HomeController::class, 'editorHome'])->name('home.editor');
+});
+
+// Admin Route
+Route::middleware(['auth', 'user-role:admin'])->group(function()
+{
+    Route::get("/admin/home", [HomeController::class, 'adminHome'])->name('home.admin');
+});
+
+
 // Return Index page
 // Route::get('/', function () {
 //     return view('index');
@@ -135,3 +158,6 @@ Route::post('/authenticate', [ AdminController::class, 'authenticate']);
         
 //     ]);
 // });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
