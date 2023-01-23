@@ -61,10 +61,10 @@ Route::get('/allProducts', [ProductsController::class, 'allproducts']);
 
 
 // Show Admin Panel
-Route::get('/adminpanel', [AdminController::class, 'adminpanel']);
+// Route::get('/adminpanel', [AdminController::class, 'adminpanel']);
 
 // Show Users and User Info
-Route::get('/userdata', [AdminController::class, 'userdata']);
+// Route::get('/userdata', [AdminController::class, 'userdata']);
 
 
 
@@ -72,13 +72,13 @@ Route::get('/userdata', [AdminController::class, 'userdata']);
 Route::get('/login-registration', [UserController::class, 'login']);
 
 // Create/ Register Admin
-Route::post('/admin', [AdminController::class, 'store']);
+// Route::post('/admin', [AdminController::class, 'store']);
 
 // Show Admin LOGIN
-Route::get('/admin-login', [AdminController::class, 'adminlogin']);
+// Route::get('/admin-login', [AdminController::class, 'adminlogin']);
 
 // Login Admin
-Route::post('/authenticate', [ AdminController::class, 'authenticate']);
+// Route::post('/authenticate', [ AdminController::class, 'authenticate']);
 
 
 Auth::routes();
