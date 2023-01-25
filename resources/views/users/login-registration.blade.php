@@ -25,10 +25,21 @@
             @enderror
           </div> --}}
             
-            <input type="text" class="input-field" placeholder="Username" id="name" name="name" value="{{old('name')}}" required>
+           {{-- <input type="text" class="input-field" placeholder="Username" id="name" name="name" value="{{old('name')}}" required>
             @error('name')
               <p class="text-red-500 text-xl mt-1">{{$message}}</p>
             @enderror
+            
+            better email authetication rather than username
+            --}} 
+
+            {{--
+              changes: add email input
+              --}}
+            
+            <input type="email" class="input-field" placeholder="email" id="email" name="email" required>
+            
+             
 
             <input type="password" class="input-field" placeholder="enter pasword" id="password" name="password" required>
             @error('password')
@@ -54,6 +65,7 @@
           </div> --}}
 
           <input type="text" class="input-field" placeholder="Username" id="username" name="name"> 
+          <input type="email" class="input-field" placeholder="email" id="email" name="email" required>
           <input type="text" class="input-field" placeholder="Phone Number" id="phoneNumber" name="phoneNumber" required>
           <input type="password" class="input-field" placeholder="Enter Password" required id="password" name="password">
           <input type="password" class="input-field" placeholder="Confirm Password" required id="password_confirmation" name="password_confirmation">
