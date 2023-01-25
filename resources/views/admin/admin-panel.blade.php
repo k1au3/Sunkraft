@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('content')
+
     <section class="sidebar">
         <div class="logoo">
             <div class="img">
@@ -21,3 +23,4 @@
         </div>
     </section>
 
+@endsection

@@ -42,7 +42,7 @@ Route::delete('/{listing}/', [ProductsController::class, 'destroy']);
 Route::get('/products/{listing}', [ProductsController::class, 'show']);
 
 // Show Register Form
-Route::get('/register', [UserController::class, 'create'])->middleware('guest');
+Route::get('/register', [UserController::class, 'create']);
 
 // Create New User
 Route::post('/users', [UserController::class, 'store']);
@@ -81,28 +81,10 @@ Route::get('/login-registration', [UserController::class, 'login']);
 // Route::post('/authenticate', [ AdminController::class, 'authenticate']);
 
 
-Auth::routes();
-
-// User Route
-Route::middleware(['auth', 'user-role:user'])->group(function()
-{
-    Route::get("/home", [HomeController::class, 'userHome'])->name('home');
-});
-
-// Editor Route
-Route::middleware(['auth', 'user-role:editor'])->group(function()
-{
-    Route::get("/editor/home", [HomeController::class, 'editorHome'])->name('home.editor');
-});
-
-// Admin Route
-Route::middleware(['auth', 'user-role:admin'])->group(function()
-{
-    Route::get("/admin/home", [HomeController::class, 'adminHome'])->name('home.admin');
-});
-
-
 // Admin Panel Frontend
 
-// Show Admin Index Form
-Route::get('/admin/admin-index', [ProductsController::class, 'adminIndex']);
+// Show Admin Panel
+Route::get('/admin/admin-login', [AdminController::class, 'show']);
+
+// Show Admin Add Products
+Route::get('/admin/create-products', [AdminController::class, 'addproducts']);

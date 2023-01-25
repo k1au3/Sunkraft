@@ -160,10 +160,18 @@ class ProductsController extends Controller
     }
 
     // Show Admin Index Form
-    public function adminIndex()
+    // public function adminpanel()
+    // {
+    //     //show Admin Index form
+    //     return view('admin.admin-panel');
+    // }
+
+    
+    // Show Admin Index Form
+    public function addproducts()
     {
         //show Admin Index form
-        return view('/admin/admin-index');
+        return view('/admin/add-products');
     }
 
 
