@@ -39,7 +39,7 @@
       
 
       <li>
-        <a href="/allProducts" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i>Products</a>
+        <a href="/allProducts" class="hover:text-laravel"><ion-icon name="storefront-outline"></ion-icon></a>
       </li>
 
       @auth
