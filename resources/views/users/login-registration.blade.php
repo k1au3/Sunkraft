@@ -37,7 +37,7 @@
               changes: add email input
               --}}
             
-            <input type="email" class="input-field" placeholder="email" id="email" name="email" required>
+            <input type="text" class="input-field" placeholder="Username" id="name" name="name" required>
             
              
 

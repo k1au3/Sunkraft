@@ -170,8 +170,26 @@ class ProductsController extends Controller
     // Show Admin Index Form
     public function addproducts()
     {
-        //show Admin Index form
         return view('/admin/add-products');
+    }
+
+
+    // Add Products to Cart
+    public function addToCart(Request $request, Listing $listing)
+    {
+
+        if($request->session()->has('user'))
+        {
+            return view('/cart', ['listing' => $listing]);
+        }
+        else
+        {
+            return redirect('/login-registration');
+            // return "Heello!!";
+        }
+
+        
+        // return "Heello!!";
     }
 
 

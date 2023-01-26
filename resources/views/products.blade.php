@@ -10,10 +10,12 @@
       <div class="row">
         
         <div class="col-2">
-          <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-17.jpg')}}" width="100%" id="productImage" alt="">
+          <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-4.jpg')}}" width="100%" id="productImage" alt="">
         </div>
         
         <div class="col-2">
+
+          {{-- <button class="btn btn-primary"><a href="/allProducts">Back</a></button> --}}
 
           <p>Home / Furniture / Wood</p>
 
@@ -32,6 +34,19 @@
           <p> {{$listing->description}}</p>
 
           <div class="row">
+
+            <form action="/cart" method="">
+              @csrf
+
+
+              <input type="hidden" name="product_id" value={{$listing->id}}>
+              <button class="btn btn-primary">Add to Cart</button>
+
+            </form>
+
+            <button class="btn btn-success">Buy Now</button>
+
+
             <div class="row">
           <div class="mt-4 p-2 flex space-x-6">
             <a href="/products/{{$listing->id}}/edit">

@@ -69,9 +69,9 @@
 
 @foreach ($listings as $listing)
         
-          <div class="product-box bed bedroom" >
+          <div class="product-box bed bedroom">
             <a href="/products/{{$listing['id']}}">
-              <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-17.jpg')}}" alt="" class="product-img" width="300" height="300" loading="lazy" >
+              <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-4.jpg')}}" alt="" class="product-img" width="300" height="300" loading="lazy" >
             </a>
             <h2 class="product-title">{{$listing['name']}}</h2>
             <span class="price">${{$listing['amount']}}</span>

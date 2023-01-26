@@ -88,3 +88,9 @@ Route::get('/admin/admin-login', [AdminController::class, 'show']);
 
 // Show Admin Add Products
 Route::get('/admin/create-products', [AdminController::class, 'addproducts']);
+
+// Add to Cart
+Route::post('/cart', [ProductsController::class, 'addToCart'])->name('login')->middleware('auth');
+
+// Show cart
+// Route::get('/cart', [ProductsController::class, 'addToCart']);
