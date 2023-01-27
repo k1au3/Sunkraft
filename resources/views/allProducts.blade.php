@@ -1,5 +1,7 @@
 @extends('layout')
 
+@include('components.navbar')
+
 
 
       <section class="section product" id="product" aria-label="product">
@@ -94,3 +96,6 @@
           
         </div>
       </section>
+
+
+@include('components.footer')

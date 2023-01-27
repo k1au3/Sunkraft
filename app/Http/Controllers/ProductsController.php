@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
+use App\Models\User;
 use App\Models\Listing;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\Session;
 
 class ProductsController extends Controller
 {
@@ -66,12 +70,18 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Listing $listing)
+    public function show(Listing $listing, User $user)
     {
         // Show Single Product Listing
         return view('products', [
             'listing' => $listing
         ]);
+
+        $user = User::find(
+            $id = $user->id
+        );
+
+
     }
 
     /**
@@ -159,38 +169,36 @@ class ProductsController extends Controller
        
     }
 
-    // Show Admin Index Form
-    // public function adminpanel()
-    // {
-    //     //show Admin Index form
-    //     return view('admin.admin-panel');
-    // }
-
-    
-    // Show Admin Index Form
-    public function addproducts()
-    {
-        return view('/admin/add-products');
-    }
-
 
     // Add Products to Cart
-    public function addToCart(Request $request, Listing $listing)
+    public function addToCart(Request $request, Listing $listing, User $user)
     {
 
+        $request->session()->put('user', $user);
+        $request->session()->put('user_id', $user->id);
+
         if($request->session()->has('user'))
-        {
-            return view('/cart', ['listing' => $listing]);
+        { 
+            $cart = new Cart;
+            $cart-> user_id=$request->user_id;
+            $cart-> product_id=$request->product_id;
+            $cart->save();
+
+            return redirect('/allProducts');
         }
         else
         {
-            return redirect('/login-registration');
-            // return "Heello!!";
-        }
-
-        
-        // return "Heello!!";
+            return redirect('/login-registration');  
+        }   
     }
+
+    public static function cartItem(Request $request)
+    {
+        $user_id=Session::get('user')['id'];
+        return Cart::where('user_id')->count();
+        
+    }
+    
 
 
 

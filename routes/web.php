@@ -60,25 +60,8 @@ Route::post('/users/authenticate', [ UserController::class, 'authenticate']);
 Route::get('/allProducts', [ProductsController::class, 'allproducts']);
 
 
-// Show Admin Panel
-// Route::get('/adminpanel', [AdminController::class, 'adminpanel']);
-
-// Show Users and User Info
-// Route::get('/userdata', [AdminController::class, 'userdata']);
-
-
-
 // Show USER Login + Register Form
 Route::get('/login-registration', [UserController::class, 'login']);
-
-// Create/ Register Admin
-// Route::post('/admin', [AdminController::class, 'store']);
-
-// Show Admin LOGIN
-// Route::get('/admin-login', [AdminController::class, 'adminlogin']);
-
-// Login Admin
-// Route::post('/authenticate', [ AdminController::class, 'authenticate']);
 
 
 // Admin Panel Frontend
@@ -91,6 +74,11 @@ Route::get('/admin/create-products', [AdminController::class, 'addproducts']);
 
 // Add to Cart
 Route::post('/cart', [ProductsController::class, 'addToCart'])->name('login')->middleware('auth');
+// Route::post('/cart', [ProductsController::class, 'addToCart'])->name('login')->middleware('auth');
 
 // Show cart
 // Route::get('/cart', [ProductsController::class, 'addToCart']);
+
+// Cart Query Route
+// Route::get('cart', [ProductsController::class,    'cartId')->name('cart');
+// Route::post('/cart', [ProductsController::class, 'cartId'])->name('cart')->name('login')->middleware('auth');

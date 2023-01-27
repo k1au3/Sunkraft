@@ -38,11 +38,28 @@
             <form action="/cart" method="">
               @csrf
 
+              <input type="text" name="user_id" value= {{ Auth::user()->id }}>
 
-              <input type="hidden" name="product_id" value={{$listing->id}}>
+              <input type="text" name="product_id" value={{$listing->id}}>
+              
               <button class="btn btn-primary">Add to Cart</button>
 
+              {{-- <a href="{{ route('cart') }}?product_id={{ $product->id }}">Add to Cart</a> --}}
+
+              {{-- $listing-id = product_id; --}}
+              {{-- product_id={{ $listing->id }} --}}
+
+              {{-- <a href="product_id={{ $listing->id }}">Add to Cart</a> --}}
+
+
             </form>
+
+            {{-- <form action="/cart" method="">
+              @csrf
+              <input type="hidden" name="product_id" value="{{ $listing->id }}">
+              <button type="submit">Add to Cart</button>
+          </form> --}}
+          
 
             <button class="btn btn-success">Buy Now</button>
 
