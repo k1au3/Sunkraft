@@ -35,7 +35,7 @@
 
           <div class="row">
 
-            <form action="/allProducts" method="">
+            <form action="/cart" method="">
               @csrf
 
               <?php

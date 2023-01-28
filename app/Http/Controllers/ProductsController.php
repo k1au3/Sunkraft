@@ -8,7 +8,6 @@ use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-// use Illuminate\Support\Facades\Session;
 
 class ProductsController extends Controller
 {
@@ -202,7 +201,7 @@ class ProductsController extends Controller
         // return Cart::where('user_id')->count();
 
         $user = auth()->user();
-        $count=cart::where('user_id', $user->user_id)->count();
+        $count=Cart::where('user_id', $user->user_id)->count();
         return $count;
         
     }
@@ -219,7 +218,7 @@ class ProductsController extends Controller
 
         // If there are no items in the cart, set the count to 0
         if (!$cartItems) {
-            $itemCount = 0;
+            $itemCount = 404;
         } else {
             // Get the total number of items in the cart
             // $itemCount = array_sum(array_column($cartItems, 'user_id'));
@@ -231,10 +230,6 @@ class ProductsController extends Controller
         return $itemCount;
         return redirect('/allProducts');
 
+        }
     }
-    }
-    
-
-
-
 }

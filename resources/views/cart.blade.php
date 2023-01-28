@@ -4,16 +4,16 @@
 <?php
 // session_start();
 
-use App\Http\Controllers\ProductsController;
-$itemCount= ProductsController::cartItem();
+// use App\Http\Controllers\ProductsController;
+// $itemCount= ProductsController::cartItem();
 
 ?>
 
 <h3>Hello, I am Cart</h3>
 
-<input type="text" name="user_id" value= {{ Auth::user()->id }}>              
+{{-- <input type="text" name="user_id" value= {{ Auth::user()->id }}>              
 
-<input type="text" name="product_id" value={{$listing->id}}>
+<input type="text" name="product_id" value={{$listing->id}}> --}}
 
 
 <table style="margin-top:100px">
@@ -35,5 +35,8 @@ $itemCount= ProductsController::cartItem();
     </tbody>
 </table>
 
-        {{$itemCount}}
+        {{-- {{$itemCount}} --}}
 
+
+
+@include('components.footer')
