@@ -35,8 +35,12 @@
 
           <div class="row">
 
-            <form action="/cart" method="">
+            <form action="/allProducts" method="">
               @csrf
+
+              <?php
+              if(Auth::check()){
+              ?>
 
               <input type="text" name="user_id" value= {{ Auth::user()->id }}>
 
@@ -51,6 +55,9 @@
 
               {{-- <a href="product_id={{ $listing->id }}">Add to Cart</a> --}}
 
+              <?php
+              }
+              ?>
 
             </form>
 

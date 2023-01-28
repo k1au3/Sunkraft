@@ -1,6 +1,8 @@
 <?php
+// session_start();
+
 use App\Http\Controllers\ProductsController;
-$total= ProductsController::cartItem();
+$itemCount= ProductsController::showCart();
 
 ?>
 
@@ -57,7 +59,11 @@ $total= ProductsController::cartItem();
       </li>
       <li>
         {{-- <a href="/manage" class="hover:text-laravel"><i class="fa-solid fa-gear"></i>Manage Listings</a> --}}
-        Cart({{$total}})
+        
+
+        <a href="/cart"><i class="fas fa-shopping-cart"></i>
+          Cart({{$itemCount}})</a>
+
       </li>
       <form action="/logout" class="inline" method="POST">
         @csrf

@@ -73,7 +73,7 @@ Route::get('/admin/admin-login', [AdminController::class, 'show']);
 Route::get('/admin/create-products', [AdminController::class, 'addproducts']);
 
 // Add to Cart
-Route::post('/cart', [ProductsController::class, 'addToCart'])->name('login')->middleware('auth');
+Route::post('/cart', [ProductsController::class, 'addToCart']);
 // Route::post('/cart', [ProductsController::class, 'addToCart'])->name('login')->middleware('auth');
 
 // Show cart

@@ -6,6 +6,7 @@ use App\Models\Cart;
 use App\Models\User;
 use App\Models\Listing;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 // use Illuminate\Support\Facades\Session;
 
@@ -122,6 +123,7 @@ class ProductsController extends Controller
 
         // return redirect('/');
         return redirect('/allProducts')->with('message', 'Listing Updated Successfully');
+        // return redirect()->back();
         // return back();
     }
 
@@ -184,7 +186,9 @@ class ProductsController extends Controller
             $cart-> product_id=$request->product_id;
             $cart->save();
 
-            return redirect('/allProducts');
+            // return redirect()->back();
+            // return "Hello";
+            return view('/cart');
         }
         else
         {
@@ -194,9 +198,40 @@ class ProductsController extends Controller
 
     public static function cartItem(Request $request)
     {
-        $user_id=Session::get('user')['id'];
-        return Cart::where('user_id')->count();
+        // $user_id=Session::get('user')['id'];
+        // return Cart::where('user_id')->count();
+
+        $user = auth()->user();
+        $count=cart::where('user_id', $user->user_id)->count();
+        return $count;
         
+    }
+
+    public static function showCart()
+    {
+
+        if(Auth::check()){
+
+        $cartItems = Cart::where('user_id',Auth::user()->id)->get()->toArray();
+        $cartItems = array_column($cartItems, 'product_id');
+        // dd($cartItems);
+        
+
+        // If there are no items in the cart, set the count to 0
+        if (!$cartItems) {
+            $itemCount = 0;
+        } else {
+            // Get the total number of items in the cart
+            // $itemCount = array_sum(array_column($cartItems, 'user_id'));
+            $itemCount = count($cartItems);
+            
+        }
+
+        // return view('cart', compact('itemCount'));
+        return $itemCount;
+        return redirect('/allProducts');
+
+    }
     }
     
 
