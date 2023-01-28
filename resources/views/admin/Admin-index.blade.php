@@ -9,7 +9,7 @@
     <!--
         links
     -->
-    <link rel="stylesheet" href="public/assets/adminstyle/dashboard.css">
+    <link rel="stylesheet" href="/public/assets/css/adminstyle/dashboard.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -53,20 +53,18 @@
 </head>
 <body>
 
-    <section class="nav">
-        <div class="logo">
-            <h3>SunKraft</h3>
-        </div>
+    <section class="navv">
+      <div class="logo">
+        <h3>SunKraft</h3>
+      </div>
 
-        <div class="nav-icons">
-            <div class="user">
-                <a href="#"><ion-icon name="person"></ion-icon>Log Out</a>
-            </div>
-        </div>
-    </section>
+      <button class="user">
+        <a href="#logout"><ion-icon name="person"></ion-icon></a>
+      </button>
+    </section>  
 
-     <div class="container-fluid">
-        <div class="row">
+    <div class="container-fluid">
+      <div class="row">
             
         <!--
             sidebar
@@ -114,7 +112,7 @@
           </nav>
       
       
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-1">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
               <h1 class="h2">Hello</h1>
               <div class="btn-toolbar mb-2 mb-md-0">
@@ -136,7 +134,7 @@
 
             <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
 
-            <h2>Other Admins</h2>
+            <h2 class="titl">logged in accounts</h2>
             <div class="table-responsive">
                 <table class="table table-striped table-sm">
                 <thead>

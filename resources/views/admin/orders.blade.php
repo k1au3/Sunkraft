@@ -9,7 +9,7 @@
     <!--
         links
     -->
-    <link rel="stylesheet" href="public/assets/adminstyle/dashboard.css">
+    <link rel="stylesheet" href="/public/assets/css/adminstyle/dashboard.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -52,16 +52,14 @@
 </head>
 <body>
 
-    <section class="nav">
+    <section class="navv">
         <div class="logo">
             <h3>SunKraft</h3>
         </div>
 
-        <div class="nav-icons">
-            <div class="user">
-                <a href="#"><ion-icon name="person-outline"></ion-icon>Log In</a>
-            </div>
-        </div>
+        <button class="user">
+          <a href="#logout"><ion-icon name="person"></ion-icon></a>
+        </button>
     </section>
 
     
@@ -140,7 +138,7 @@
       
             <div class="row">
                 <div class="col-10">
-                    <h2>Customers</h2>
+                    <h2 class="titl">Customers</h2>
                 </div>
             </div>
             
