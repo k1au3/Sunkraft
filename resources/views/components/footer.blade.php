@@ -8,7 +8,7 @@
 
         <div class="footer-brand">
 
-          <a href="#" class="logo">SunCraft</a>
+          <a href="#" class="logo">SunKraft</a>
 
           <ul>
 
