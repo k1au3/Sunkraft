@@ -76,9 +76,30 @@ Route::get('/admin/create-products', [AdminController::class, 'addproducts']);
 Route::post('/cart', [ProductsController::class, 'addToCart']);
 // Route::post('/cart', [ProductsController::class, 'addToCart'])->name('login')->middleware('auth');
 
-// Show cart
-// Route::get('/cart', [ProductsController::class, 'addToCart']);
 
-// Cart Query Route
-// Route::get('cart', [ProductsController::class,    'cartId')->name('cart');
-// Route::post('/cart', [ProductsController::class, 'cartId'])->name('cart')->name('login')->middleware('auth');
+// Admin Panel Frontend
+
+// Show Admin Panel
+Route::get('/admin/admin-panel', [AdminController::class, 'show']);
+
+// Show Admin Add Products
+Route::get('/admin/create-products', [AdminController::class, 'addproducts']);
+
+// Show Admin Panel
+Route::get('/admin/admin-login', [AdminController::class, 'adminLogin']);
+
+// Show Admin Panel
+Route::get('/admin/customers-index', [AdminController::class, 'customersIndex']);
+
+// Show Admin Panel
+Route::get('/admin/edit-products', [AdminController::class, 'editProducts']);
+
+// Show Admin Panel
+Route::get('/admin/orders', [AdminController::class, 'orders']);
+
+// Show Admin Panel
+Route::get('/admin/suncraft-products', [AdminController::class, 'suncraftProducts']);
+
+
+// Show Admin Panel
+Route::get('/admin/category', [AdminController::class, 'category']);
