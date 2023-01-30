@@ -1,6 +1,6 @@
 @extends('layout')
 
-@include('admin.sidebar')
+@include('admin.navbar')
 
 
 {{-- @include('allProducts') --}}
