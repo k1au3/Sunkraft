@@ -52,88 +52,78 @@
 </head>
 <body>
 
-    <section class="navv">
-        <div class="logo">
-            <h3>SunKraft</h3>
-        </div>
-
-        <button class="user">
-          <a href="#logout"><ion-icon name="person"></ion-icon></a>
-        </button>
-    </section>
-
-  
+    <!--
+      nav
+    -->
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">SunKraft</a>
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+      <ul class="navbar-nav px-3">
+        
+        <a class="nav-link" href="#admin dropdown"><ion-icon name="person-circle-outline"></ion-icon></a>
+              
+      </ul>
+    </nav>
 
     <div class="container-fluid">
         <div class="row">
-          
-
-                    <!--
-            sidebar
-        -->
-
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-          <div class="sidebar-sticky">
-            <ul class="nav flex-column">
-    
-              <li class="nav-item">
-                <a class="nav-link"  href="Admin-index.blade.php">
-                  <ion-icon name="home"></ion-icon>
-                  Dashboard 
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#orders.blade.php">
-                  <ion-icon name="document"></ion-icon>
-                  Orders
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="products.blade.php">
-                  <ion-icon name="cart"></ion-icon>
-                  Products
-                </a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link" href="category.blade.php">
-                  <ion-icon name="file-tray-stacked"></ion-icon>
-                  Categories
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="customers-index.blade.php">
-                  <ion-icon name="people"></ion-icon>
-                  Customers<span class="sr-only">(current)</span>
-                </a>
-              </li>
-            </ul>
-    
-           
-          </div>
-        </nav>
-    
-    
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Hello</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-              </div>
-              <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-              </button>
+          <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+              <ul class="nav flex-column">
+      
+                <li class="nav-item">
+                  <a class="nav-link"  href="Admin-index.blade.php">
+                    <ion-icon name="home"></ion-icon>
+                    Dashboard 
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#orders.blade.php">
+                    <ion-icon name="document"></ion-icon>
+                    Orders
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="products.blade.php">
+                    <ion-icon name="cart"></ion-icon>
+                    Products
+                  </a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="category.blade.php">
+                    <ion-icon name="file-tray-stacked"></ion-icon>
+                    Categories
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="customers-index.blade.php">
+                    <ion-icon name="people"></ion-icon>
+                    Customers<span class="sr-only">(current)</span>
+                  </a>
+                </li>
+              </ul>
+      
+             
             </div>
-          </div>
+          </nav>
+      
+      
+          <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+              <h1 class="h2">Hello</h1>
+              <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group mr-2">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                </div>
+                <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                  <span data-feather="calendar"></span>
+                  This week
+                </button>
+              </div>
+            </div>
         
-
-        <!--
-          sidebar end
-        -->
-
             <div class="row">
                 <div class="col-10">
                     <h2 class="titl">Customers</h2>
@@ -164,9 +154,9 @@
                 </tbody>
               </table>
             </div>
-          </main>
-        </div>
+        </main>
       </div>
+    </div>
       
       
       
