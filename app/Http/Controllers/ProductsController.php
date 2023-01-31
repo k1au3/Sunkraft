@@ -175,23 +175,31 @@ class ProductsController extends Controller
     public function addToCart(Request $request, Listing $listing, User $user)
     {
 
+        // obtain the user object
+        $user = Auth::user();
+
         $request->session()->put('user', $user);
         $request->session()->put('user_id', $user->id);
-
-        if($request->session()->has('user'))
-        { 
-            $cart = new Cart;
-            $cart-> user_id=$request->user_id;
-            $cart-> product_id=$request->product_id;
-            $cart->save();
-
-            // return redirect()->back();
-            // return "Hello";
-            return view('/cart');
-        }
-        else
-        {
-            return redirect('/login-registration');  
+        
+        $product_id = $request->input('product_id');
+        
+        // Check if user exists
+        if (Auth::check()) {
+            $prod_check = Cart::where('id',$product_id)->first();
+        
+            // Check if product already in cart
+            if ($prod_check) {
+                if (Cart::where('product_id',$product_id)->where('user_id',Auth::id())->exists()) {
+                    // return response()->json(['status' => $prod_check->name." already added to cart"]);
+                    return "Already in Cart";
+                } else {
+                    $cart = new Cart;
+                    $cart->user_id = $request->user_id;
+                    $cart->product_id = $request->product_id;
+                    $cart->save();
+                    return view('/cart');
+                }
+            }
         }   
     }
 
@@ -218,7 +226,7 @@ class ProductsController extends Controller
 
         // If there are no items in the cart, set the count to 0
         if (!$cartItems) {
-            $itemCount = 404;
+            $itemCount = 0;
         } else {
             // Get the total number of items in the cart
             // $itemCount = array_sum(array_column($cartItems, 'user_id'));
