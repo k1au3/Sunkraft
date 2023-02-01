@@ -16,7 +16,7 @@
               <ion-icon name="location-sharp" aria-hidden="true"></ion-icon>
 
               <address class="address">
-                SunCraft, Eldoret, Kenya 2022
+                SunKraft, Eldoret, Kenya 2022
               </address>
             </li>
 

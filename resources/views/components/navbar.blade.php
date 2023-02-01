@@ -32,6 +32,7 @@ $itemCount= ProductsController::showCart();
             name="search"
             class="input-field"
             placeholder="Search Product ..."
+            style="font-size: 1rem"
             >
             <div class="input-wrapper">
               <button 
@@ -48,7 +49,7 @@ $itemCount= ProductsController::showCart();
       
 
       <li>
-        <a href="/allProducts" class="hover:text-laravel"><ion-icon name="storefront-outline"></ion-icon>Products</a>
+        <a href="/allProducts" class="hover:text-laravel"><ion-icon name="storefront-outline" class="header-action-btn storr"></ion-icon></a>
       </li>
 
       @auth
@@ -82,17 +83,19 @@ $itemCount= ProductsController::showCart();
       <div class="header-action">
 
         <a href="/login-registration">
-        <button class="header-action-btn" aria-label="user">
-          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-        </button>
+          <div class="dropdown">
+            <button class="dropdown-button header-action-btn" aria-label="user"><ion-icon name="person-outline" aria-hidden="true"></ion-icon></button>
+            <div class="dropdown-content">
+              <p>User Name</p>
+              <p>john.doe@example.com</p>
+              <p><a href="#">Edit Profile</a></p>
+              <p><a href="#">Log Out</a></p>
+            </div>
+          </div>
+        
         </a>
 
-        <button class="header-action-btn" aria-label="favorite list">
-          <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-
-          <span class="btn-badge">0</span>
-        </button>
-
+        
         <button class="header-action-btn" id="cart-icon" aria-label="cart">
           <ion-icon name="bag-handle-outline" aria-hidden="true" id="cart-icon"></ion-icon>
 
