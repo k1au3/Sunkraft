@@ -15,7 +15,7 @@
         
         <div class="col-2">
 
-          {{-- <button class="btn btn-primary"><a href="/allProducts">Back</a></button> --}}
+          <button class="btn btn-primary"><a href="/allProducts">Back</a></button>
 
           <p>Home / Furniture / Wood</p>
 
@@ -44,6 +44,8 @@
 
               <input type="text" name="user_id" value= {{ Auth::user()->id }}>
 
+              <input type="text" name="user_id" value= {{ Auth::user()->phoneNumber }}>
+
               <input type="text" name="product_id" value={{$listing->id}}>
               
               <button class="btn btn-primary">Add to Cart</button>
@@ -68,7 +70,48 @@
           </form> --}}
           
 
-            <button class="btn btn-success">Buy Now</button>
+            {{-- <button class="btn btn-success">Buy Now</button> --}}
+
+            <form action="./dir/daraja.php" method="POST">
+
+              {{-- <label for="phone">Phone Number</label><br>
+              <input type="hidden" name="phone" id="phone" value="{{$user->phoneNumber}}"><br>  <br>
+              
+              <label for="amount">Amount</label> <br>
+              <input type="hidden" name="amount" id="amount" value="{{$amount=1}}"> <br><br>
+          
+              <button type="submit" name="submit" value="submit">Buy Now</button> --}}
+
+              <?php
+              if(Auth::check()){
+              ?>
+
+              <input type="text" name="user_id" value= {{ Auth::user()->id }}>
+
+              <input type="text" name="user_id" value= {{ Auth::user()->phoneNumber }}>
+
+              <input type="text" name="amount" value="1">
+              
+              <button class="btn btn-primary">Buy Now</button>
+
+
+              <?php
+              }
+              ?>
+          
+          </form>
+
+          <form action="./dir/daraja.php" method="POST">
+
+            <label for="phone">Phone Number</label><br>
+            <input type="text" name="phone" id="phone"><br>  <br>
+            
+            <label for="amount">Amount</label> <br>
+            <input type="text" name="amount" id="amount"> <br><br>
+        
+            <button type="submit" name="submit" value="submit">Send</button>
+        
+        </form>
 
 
             <div class="row">
