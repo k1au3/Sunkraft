@@ -10,7 +10,7 @@
           <div class="title-wrapper">
             <h4 class="h5 section-title"> <a href="/" class="logo">Popular Products</a></h4>
 
-            <h5><a href="/create">Add or Create Product</a></h5>
+            <h5><a href="/create">Add / Create Product</a></h5>
 
             <form action="/">
         
