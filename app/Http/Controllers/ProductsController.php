@@ -171,6 +171,8 @@ class ProductsController extends Controller
     }
 
 
+
+
     // Add Products to Cart
     public function addToCart(Request $request, Listing $listing, User $user)
     {
@@ -202,6 +204,7 @@ class ProductsController extends Controller
             }
         }   
     }
+
 
     public static function cartItem(Request $request)
     {

@@ -76,11 +76,16 @@ Route::get('/admin/create-products', [AdminController::class, 'addproducts']);
 Route::post('/cart', [ProductsController::class, 'addToCart']);
 // Route::post('/cart', [ProductsController::class, 'addToCart'])->name('login')->middleware('auth');
 
+// Payment
+Route::post('/buy-now', [ProductsController::class, 'buyNow']);
 
 // Admin Panel Frontend
 
 // Show Admin Panel
 Route::get('/admin/admin-panel', [AdminController::class, 'show']);
+
+// Show Admin Index
+Route::get('/admin/admin-index', [AdminController::class, 'adminIndex']);
 
 // Show Admin Add Products
 Route::get('/admin/create-products', [AdminController::class, 'addproducts']);

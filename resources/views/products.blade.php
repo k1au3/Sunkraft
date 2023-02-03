@@ -35,7 +35,7 @@
 
           <div class="row">
 
-            <form action="/cart" method="post">
+            <form action="/cart" method="POST">
               @csrf
 
               <?php
@@ -44,18 +44,11 @@
 
               <input type="text" name="user_id" value= {{ Auth::user()->id }}>
 
-              <input type="text" name="user_id" value= {{ Auth::user()->phoneNumber }}>
+              {{-- <input type="text" name="user_id" value= {{ Auth::user()->phoneNumber }}> --}}
 
               <input type="text" name="product_id" value={{$listing->id}}>
               
               <button class="btn btn-primary">Add to Cart</button>
-
-              {{-- <a href="{{ route('cart') }}?product_id={{ $product->id }}">Add to Cart</a> --}}
-
-              {{-- $listing-id = product_id; --}}
-              {{-- product_id={{ $listing->id }} --}}
-
-              {{-- <a href="product_id={{ $listing->id }}">Add to Cart</a> --}}
 
               <?php
               }
@@ -63,64 +56,34 @@
 
             </form>
 
-            {{-- <form action="/cart" method="">
-              @csrf
-              <input type="hidden" name="product_id" value="{{ $listing->id }}">
-              <button type="submit">Add to Cart</button>
-          </form> --}}
           
 
-            {{-- <button class="btn btn-success">Buy Now</button> --}}
+  {{-- @auth
+      
+      <li>
 
-            <form action="./dir/daraja.php" method="POST">
+        <a href="/buy-now"><i class="fas fa-shopping-cart"></i>
+           Buy Now
+        </a>
 
-              {{-- <label for="phone">Phone Number</label><br>
-              <input type="hidden" name="phone" id="phone" value="{{$user->phoneNumber}}"><br>  <br>
-              
-              <label for="amount">Amount</label> <br>
-              <input type="hidden" name="amount" id="amount" value="{{$amount=1}}"> <br><br>
-          
-              <button type="submit" name="submit" value="submit">Buy Now</button> --}}
+      </li>
 
-              <?php
-              if(Auth::check()){
-              ?>
-
-              <input type="text" name="user_id" value= {{ Auth::user()->id }}>
-
-              <input type="text" name="user_id" value= {{ Auth::user()->phoneNumber }}>
-
-              <input type="text" name="amount" value="1">
-              
-              <button class="btn btn-primary">Buy Now</button>
+      @else
+      <li>
+        <a href="/login-registration" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i>Register</a>
+      </li>
+     
+  @endauth --}}
 
 
-              <?php
-              }
-              ?>
-          
-          </form>
-
-          <form action="./dir/daraja.php" method="POST">
-
-            <label for="phone">Phone Number</label><br>
-            <input type="text" name="phone" id="phone"><br>  <br>
-            
-            <label for="amount">Amount</label> <br>
-            <input type="text" name="amount" id="amount"> <br><br>
-        
-            <button type="submit" name="submit" value="submit">Send</button>
-        
-        </form>
-
-
-            <div class="row">
+        <div class="row">
           <div class="mt-4 p-2 flex space-x-6">
             <a href="/products/{{$listing->id}}/edit">
               {{-- <i class="i fa-solid fa-pencil"></i> --}}
               <button class="text-red-500"><i class="fa-solid fa-trash"></i>Edit</button>
             </a>
-          </div>
+        </div>
+
           <form method="POST" action="/{{$listing->id}}">
             @csrf
             @method('DELETE')

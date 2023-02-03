@@ -53,11 +53,11 @@ $itemCount= ProductsController::showCart();
       </li>
 
       @auth
-      <li>
+      {{-- <li>
         <span class="font-bold uppercase">
           Welcome {{auth()->user()->name}}
         </span>
-      </li>
+      </li> --}}
       <li>
         {{-- <a href="/manage" class="hover:text-laravel"><i class="fa-solid fa-gear"></i>Manage Listings</a> --}}
         
@@ -66,10 +66,10 @@ $itemCount= ProductsController::showCart();
           Cart({{$itemCount}})</a>
 
       </li>
-      <form action="/logout" class="inline" method="POST">
+      {{-- <form action="/logout" class="inline" method="POST">
         @csrf
         <button type="submit"><i class="fa-solid fa-door-closed"></i> Logout</button>
-      </form>
+      </form> --}}
       @else
       {{-- <li>
         <a href="/register" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i>Register</a>
@@ -86,10 +86,22 @@ $itemCount= ProductsController::showCart();
           <div class="dropdown">
             <button class="dropdown-button header-action-btn" aria-label="user"><ion-icon name="person-outline" aria-hidden="true"></ion-icon></button>
             <div class="dropdown-content">
-              <p>User Name</p>
-              <p>john.doe@example.com</p>
-              <p><a href="#">Edit Profile</a></p>
-              <p><a href="#">Log Out</a></p>
+              @auth
+                <p>{{auth()->user()->name}}</p>
+                <p>john.doe@example.com</p>
+                <p><a href="#">Edit Profile</a></p>
+                <form action="/logout" class="inline" method="POST">
+                  @csrf
+                  <button type="submit">Log Out</button>
+                </form>
+                
+              @else
+                <a href="/login-registration"><p>Register/ Login</p></a>
+                <p>john.doe@example.com</p>
+                <p><a href="#">Edit Profile</a></p>
+                <p><a href="#">Log Out</a></p>
+              @endauth
+
             </div>
           </div>
         

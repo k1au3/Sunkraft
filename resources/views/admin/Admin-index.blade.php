@@ -1,3 +1,7 @@
+@extends('layout')
+
+@include('admin.admin-index')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,6 +1,5 @@
 @extends('layout')
 
-@include('admin.navbar')
+@include('admin.bar')
 
-
-{{-- @include('allProducts') --}}
+@include('allProducts')

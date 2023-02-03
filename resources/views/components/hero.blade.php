@@ -49,7 +49,7 @@
                   <div class="hero-card">
     
                     <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
-                      <img src="/images/Sun_Craft_Artistic-18.jpg" width="285" height="396" loading="lazy" alt="Vase Of Flowers"
+                      <img src="/images/Sun_Craft_Artistic-6.jpg" width="285" height="396" loading="lazy" alt="Vase Of Flowers"
                         class="img-cover">
                     </figure>
     
