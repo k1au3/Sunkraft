@@ -4,7 +4,7 @@
   <!-- products detail page  -->
 
   <section class="product-details">
-    <h2> Product Details Page</h2>
+    <h2> Product Details</h2>
     <div class="small-container single-product">
       
       <div class="row">
