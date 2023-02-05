@@ -5,7 +5,9 @@ use PhpParser\Node\Stmt\Return_;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +42,7 @@ Route::delete('/{listing}/', [ProductsController::class, 'destroy']);
 Route::get('/products/{listing}', [ProductsController::class, 'show']);
 
 // Show Register Form
-Route::get('/register', [UserController::class, 'create'])->middleware('guest');
+Route::get('/register', [UserController::class, 'create']);
 
 // Create New User
 Route::post('/users', [UserController::class, 'store']);
@@ -58,80 +60,51 @@ Route::post('/users/authenticate', [ UserController::class, 'authenticate']);
 Route::get('/allProducts', [ProductsController::class, 'allproducts']);
 
 
-// Show Admin Panel
-Route::get('/adminpanel', [AdminController::class, 'adminpanel']);
-
-// Show Users and User Info
-Route::get('/userdata', [AdminController::class, 'userdata']);
-
-
-
 // Show USER Login + Register Form
 Route::get('/login-registration', [UserController::class, 'login']);
 
-// Create/ Register Admin
-Route::post('/admin', [AdminController::class, 'store']);
 
-// Show Admin LOGIN
-Route::get('/admin-login', [AdminController::class, 'adminlogin']);
+// Admin Panel Frontend
 
-// Login Admin
-Route::post('/authenticate', [ AdminController::class, 'authenticate']);
+// Show Admin Panel
+Route::get('/admin/admin-login', [AdminController::class, 'show']);
+
+// Show Admin Add Products
+Route::get('/admin/create-products', [AdminController::class, 'addproducts']);
+
+// Add to Cart
+Route::post('/cart', [ProductsController::class, 'addToCart']);
+// Route::post('/cart', [ProductsController::class, 'addToCart'])->name('login')->middleware('auth');
+
+// Payment
+Route::post('/buy-now', [ProductsController::class, 'buyNow']);
+
+// Admin Panel Frontend
+
+// Show Admin Panel
+Route::get('/admin/admin-panel', [AdminController::class, 'show']);
+
+// Show Admin Index
+Route::get('/admin/admin-index', [AdminController::class, 'adminIndex']);
+
+// Show Admin Add Products
+Route::get('/admin/create-products', [AdminController::class, 'addproducts']);
+
+// Show Admin Panel
+Route::get('/admin/admin-login', [AdminController::class, 'adminLogin']);
+
+// Show Admin Panel
+Route::get('/admin/customers-index', [AdminController::class, 'customersIndex']);
+
+// Show Admin Panel
+Route::get('/admin/edit-products', [AdminController::class, 'editProducts']);
+
+// Show Admin Panel
+Route::get('/admin/orders', [AdminController::class, 'orders']);
+
+// Show Admin Panel
+Route::get('/admin/suncraft-products', [AdminController::class, 'suncraftProducts']);
 
 
-// Return Index page
-// Route::get('/', function () {
-//     return view('index');
-// });
-
-// Return Products Page
-// Route::get('/products', function () {
-//     return view('products');
-// });
-
-// Route the Listings from the Modal
-// Route::get('/listings', function () {
-//     return view('listings', [
-//         'heading' => 'Latest Listing',
-//         'listings' => Listing::all()
-//     ]);
-// });
-
-// Single Listing
-// Route::get('/listings/{id}', function($id) {
-//     return view('listing', [
-//         'listing' => Listing::find($id)
-//     ]);
-// });
-
-
-
-// Single Listing route
-// Route::get('/listings/{listing}', [ListingController::class, 'show']);
-
-// Route::get('/', function () {
-//     return view('listings', [
-//         'heading' => 'Latest Listing',
-//         'listings' => [
-//             'id' => 1,
-//             'title' => 'Listing One',
-//             'description' => 'rytyliu;o egfwhejhughfugiw gygcwy
-//             ctvybunuyctuoib vbuoivguhb ifyutyfcxfyufcy
-//             wcfycwtcfvax;u qxqutftdugof ytultfytuylidtu uidtkufydtkfyicgl
-//             fylukcjflcgyi cghjhflcghjf cghfcglcxfhkccg hfyucg
-//             fyfycgjifylc gjgu;ifyl;ui fycgjlhfydcglgu hvg
-//             ltdcglfcghl ;iclgjvh;guc jhlvguvhkcgjvhgucjhflcg'
-//         ],
-//         [
-//             'id' => 2,
-//             'title' => 'Listing Two',
-//             'description' => 'rytyliu;o egfwhejhughfugiw gygcwy
-//             ctvybunuyctuoib vbuoivguhb ifyutyfcxfyufcy
-//             wcfycwtcfvax;u qxqutftdugof ytultfytuylidtu uidtkufydtkfyicgl
-//             fylukcjflcgyi cghjhflcghjf cghfcglcxfhkccg hfyucg
-//             fyfycgjifylc gjgu;ifyl;ui fycgjlhfydcglgu hvg
-//             ltdcglfcghl ;iclgjvh;guc jhlvguvhkcgjvhgucjhflcg'
-//         ]
-        
-//     ]);
-// });
+// Show Admin Panel
+Route::get('/admin/category', [AdminController::class, 'category']);

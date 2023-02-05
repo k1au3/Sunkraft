@@ -1,162 +1,107 @@
-@extends('layout')
 
-@include('components.navbar')
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Sunkraft- Shopping Cart</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+		<script src="../js/jquery2.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="/assets/js/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="/assets/css/cart-style.css"/>
+	</head>
+<body>
+<!-- <div class="wait overlay">
+	<div class="loader"></div>
+</div> -->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">	
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+					<span class="sr-only">navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">Sunkraft</a>
+			</div>
+		<div class="collapse navbar-collapse" id="collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#index.blade.php"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+				<li><a href="#products.blade.php"><span class="glyphicon glyphicon-modal-window"></span>Product</a></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+	<p><br/></p>
+	<p><br/></p>
+	<p><br/></p>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8" id="cart_msg">
+				<!--Cart Message--> 
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Cart Checkout</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-2 col-xs-2"><b>Action</b></div>
+							<div class="col-md-2 col-xs-2"><b>Product Image</b></div>
+							<div class="col-md-2 col-xs-2"><b>Product Name</b></div>
+							<div class="col-md-2 col-xs-2"><b>Quantity</b></div>
+							<div class="col-md-2 col-xs-2"><b>Product Price</b></div>
+							<div class="col-md-2 col-xs-2"><b>Price in $</b></div>
+						</div>
+						<div id="cart_checkout"></div>
+						<!--<div class="row">
+							<div class="col-md-2">
+								<div class="btn-group">
+									<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+									<a href="" class="btn btn-primary"><span class="glyphicon glyphicon-ok-sign"></span></a>
+								</div>
+							</div>
+							<div class="col-md-2"><img src='product_images/imges.jpg'></div>
+							<div class="col-md-2">Product Name</div>
+							<div class="col-md-2"><input type='text' class='form-control' value='1' ></div>
+							<div class="col-md-2"><input type='text' class='form-control' value='5000' disabled></div>
+							<div class="col-md-2"><input type='text' class='form-control' value='5000' disabled></div>
+						</div> -->
+						<!--<div class="row">
+							<div class="col-md-8"></div>
+							<div class="col-md-4">
+								<b>Total $500000</b>
+							</div> -->
+						</div> 
+					</div>
+					<div class="panel-footer"></div>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+			
+		</div>
 
-
-            <section class="product-details">
-                <h2> Create Products Page</h2>
-                <div class="small-container single-product">
-
-                    <div class="row">
-
-            <form method="POST" action="/listings" enctype="multipart/form-data">
-                @csrf
-
-
-                <div class="mb-6">
-                    <label for="logo" class="inline-block text-lg mb-2">
-                        Add Product Image
-                    </label>
-                    <input
-                        type="file"
-                        class="border border-gray-200 rounded p-2 w-full"
-                        name="logo"
-                        {{-- value="{{old('logo')}}" --}}
-                        style="width: 200px"
-                    />
-
-                    {{-- <div class="col-2">
-                        <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-17.jpg')}}" width="40%" id="productImage" alt="">
-                      </div> --}}
-
-                </div>
-
-
-                <div class="mb-6">
-                    <label
-                        for="company"
-                        class="inline-block text-lg mb-2"
-                        >Add Product Name</label
-                    >
-                    <input
-                        type="text"
-                        class="border border-gray-200 rounded p-2 w-full"
-                        name="name"
-                        {{-- value="{{old('company')}}" --}}
-                        placeholder="Chair"
-                        style="width: 200px"
-                    />
-                    {{-- @error('company')
-                        <p class="text-red-500 text-xs mt-1">
-                            {{$message}}
-                        </p>
-                    @enderror --}}
-
-                </div>
-
-
-
-                <div class="mb-6">
-                    <label for="title" class="inline-block text-lg mb-2"
-                        >Add Product Price</label
-                    >
-                    <input
-                        type="text"
-                        class="border border-gray-200 rounded p-2 w-full"
-                        name="amount"
-                        {{-- value="{{old('company')}}" --}}
-                        placeholder="Chair"
-                        style="width: 200px"
-                    />
-                    {{-- @error('title')
-                        <p class="text-red-500 text-xs mt-1">
-                            {{$message}}
-                        </p>
-                    @enderror --}}
-                </div>
-
-                <div class="mb-6">
-                    <label
-                        for="location"
-                        class="inline-block text-lg mb-2"
-                        >Add Quantity Available</label
-                    >
-                    <input
-                        type="text"
-                        class="border border-gray-200 rounded p-2 w-full"
-                        name="quantity"
-                        placeholder="Example: 20"
-                        {{-- value="{{old('location')}}" --}}
-                    />
-                    {{-- @error('location')
-                        <p class="text-red-500 text-xs mt-1">
-                            {{$message}}
-                        </p>
-                    @enderror --}}
-                </div>
-
-                <div class="mb-6">
-                    <label for="email" class="inline-block text-lg mb-2"
-                        >Add Additional Info</label
-                    >
-                    <input
-                        type="text"
-                        class="border border-gray-200 rounded p-2 w-full"
-                        name="title"
-                        style="width: 200px"
-                        {{-- value="{{old('email')}}" --}}
-                    />
-                    {{-- @error('email')
-                        <p class="text-red-500 text-xs mt-1">
-                            {{$message}}
-                        </p>
-                    @enderror --}}
-                </div>
-
-                <div class="mb-6">
-                    <label
-                        for="description"
-                        class="inline-block text-lg mb-2"
-                    >
-                        Product Description
-                    </label>
-
-                    <div class="mb-2">
-
-                        <textarea
-                        class="border border-gray-200 rounded p-2 w-full"
-                        name="description"
-                        rows="10"
-                        placeholder="Wooden, Rounded, Metallic, etc"
-                    >
-                    {{-- {{old('company')}} --}}
-                </textarea>
-            </div>
-                    {{-- @error('description')
-                        <p class="text-red-500 text-xs mt-1">
-                            {{$message}}
-                        </p>
-                    @enderror --}}
-                </div>
-
-                
+</body>	
+</html>
 
 
-                <div class="mb-6">
-                    <button
-                        class="bg-laravel text-white rounded py-2 px-4 hover:bg-black"
-                    >
-                        Create Product
-                    </button>
-
-                    <a href="/appProducts" class="text-black ml-4"> Back </a>
-                </div>
-            </form>
-
-                    </div>
-
-                </div>
-            </section>
 
 
-@include('components.footer')
+
+
+
+
+
+
+
+
+
+
+
+
+		

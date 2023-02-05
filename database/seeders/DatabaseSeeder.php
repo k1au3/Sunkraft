@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
 
         Listing::factory(6)->create();
 
-        \App\Models\Admin::factory(1)->create();
+        // \App\Models\Admin::factory(1)->create();
 
         // Listing::create([
         //     'id' => 1,

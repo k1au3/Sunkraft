@@ -125,7 +125,7 @@ address { font-style: normal; }
 
 html {
   font-family: var(--ff-roboto);
-  font-size: 10px;
+  font-size: 1rem;
   scroll-behavior: smooth;
 }
 
@@ -254,14 +254,14 @@ body.active { overflow: hidden; }
 }
 
 .logo {
-  font-size: 3.3rem;
+  font-size: 2.3rem;
   font-weight: var(--fw-700);
   font-family: 'Secular One', sans-serif;
 }
 
 .header-action {
   display: flex;
-  gap: 15px;
+  gap: 25px;
 }
 
 .header-action-btn {
@@ -499,7 +499,7 @@ body.active { overflow: hidden; }
 .hero-card :is(.card-title, .card-text) { font-weight: var(--fw-500); }
 
 .hero-card .card-title {
-  font-size: var(--fs-3);
+  font-size: 1.3rem;
   transition: var(--transition-1);
 }
 
@@ -517,7 +517,7 @@ body.active { overflow: hidden; }
 
 .about .section-title {
   font-family: var(--ff-mr_de_haviland);
-  font-size: var(--fs-1);
+  font-size: 2.5rem;
   font-weight: var(--fw-500);
 }
 
@@ -760,6 +760,9 @@ body.active { overflow: hidden; }
   gap: 10px 50px;
   margin-block-end: 50px;
 }
+.blog .title-wrapper .h2{
+  font-size: 1.7rem;
+}
 
 .blog .btn-link {
   display: flex;
@@ -791,7 +794,10 @@ body.active { overflow: hidden; }
 .blog-card .card-title {
   margin-block: 20px 10px;
   transition: var(--transition-1);
+  font-size: 1rem;
 }
+
+
 
 .blog-card .card-title:is(:hover, :focus) { color: var(--tan-crayola); }
 
@@ -803,7 +809,7 @@ body.active { overflow: hidden; }
 .card-meta-item {
   position: relative;
   color: var(--granite-gray);
-  font-size: var(--fs-5);
+  font-size: .8rem;
 }
 
 .card-meta-item:not(:last-child)::after {
@@ -890,6 +896,10 @@ a.card-meta-text:is(:hover, :focus) { color: var(--tan-crayola); }
 .footer-link:is(:hover, :focus) { color: var(--tan-crayola); }
 
 .footer-brand .social-list { margin-block-start: 30px; }
+
+.social-link{
+  font-size: 1.3rem;
+}
 
 .footer-list-title {
   color: var(--smokey-black);
@@ -1442,7 +1452,7 @@ address {
 
 html {
   font-family: var(--ff-roboto);
-  font-size: 10px;
+  /* font-size: 10px; */
   scroll-behavior: smooth;
 }
 
@@ -1587,5 +1597,38 @@ body.active {
   left: 50px;
 }
 .mainn .form-box #register {
-  left: 450px;
-}/*# sourceMappingURL=account.css.map */
+  left: 450px
+}
+
+
+/* profile drop down */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content p a:hover{
+  color: burlywood;
+  transition: .2s;
+}
+
+.storr:hover{
+  color: burlywood;
+}
+
+
+

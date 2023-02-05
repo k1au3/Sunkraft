@@ -1,14 +1,16 @@
 @extends('layout')
 
+@include('components.navbar')
+
 
 
       <section class="section product" id="product" aria-label="product">
-        <div class="container">
+        <div class="container" style="margin-top: 30px">
 
           <div class="title-wrapper">
-            <h2 class="h2 section-title"> <a href="/" class="logo">SunKraft</a></h2>
+            <h4 class="h5 section-title"> <a href="/" class="logo">Popular Products</a></h4>
 
-            <h5><a href="/create">Add or Create Product</a></h5>
+            <h5><a href="/create">Add / Create Product</a></h5>
 
             <form action="/">
         
@@ -69,13 +71,13 @@
 
 @foreach ($listings as $listing)
         
-          <div class="product-box bed bedroom" >
+          <div class="product-box bed bedroom">
             <a href="/products/{{$listing['id']}}">
-              <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-17.jpg')}}" alt="" class="product-img" width="300" height="300" loading="lazy" >
+              <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-4.jpg')}}" alt="" class="product-img" width="300" height="300" loading="lazy" >
             </a>
-            <h2 class="product-title">{{$listing['name']}}</h2>
+            <h5 class="product-title">{{$listing['name']}}</h5>
             <span class="price">${{$listing['amount']}}</span>
-            <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
+            <button class="add-cart" ><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </div>
 @endforeach
 </div>
@@ -94,3 +96,6 @@
           
         </div>
       </section>
+
+
+@include('components.footer')

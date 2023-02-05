@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
+use App\Models\User;
 use App\Models\Listing;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class ProductsController extends Controller
 {
@@ -66,12 +70,18 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Listing $listing)
+    public function show(Listing $listing, User $user)
     {
         // Show Single Product Listing
         return view('products', [
             'listing' => $listing
         ]);
+
+        $user = User::find(
+            $id = $user->id
+        );
+
+
     }
 
     /**
@@ -112,6 +122,7 @@ class ProductsController extends Controller
 
         // return redirect('/');
         return redirect('/allProducts')->with('message', 'Listing Updated Successfully');
+        // return redirect()->back();
         // return back();
     }
 
@@ -159,4 +170,77 @@ class ProductsController extends Controller
        
     }
 
+
+
+
+    // Add Products to Cart
+    public function addToCart(Request $request, Listing $listing, User $user)
+    {
+
+        // obtain the user object
+        $user = Auth::user();
+
+        $request->session()->put('user', $user);
+        $request->session()->put('user_id', $user->id);
+        
+        $product_id = $request->input('product_id');
+        
+        // Check if user exists
+        if (Auth::check()) {
+            $prod_check = Cart::where('id',$product_id)->first();
+        
+            // Check if product already in cart
+            if ($prod_check) {
+                if (Cart::where('product_id',$product_id)->where('user_id',Auth::id())->exists()) {
+                    // return response()->json(['status' => $prod_check->name." already added to cart"]);
+                    return "Already in Cart";
+                } else {
+                    $cart = new Cart;
+                    $cart->user_id = $request->user_id;
+                    $cart->product_id = $request->product_id;
+                    $cart->save();
+                    return view('/cart');
+                }
+            }
+        }   
+    }
+
+
+    public static function cartItem(Request $request)
+    {
+        // $user_id=Session::get('user')['id'];
+        // return Cart::where('user_id')->count();
+
+        $user = auth()->user();
+        $count=Cart::where('user_id', $user->user_id)->count();
+        return $count;
+        
+    }
+
+    public static function showCart()
+    {
+
+        if(Auth::check()){
+
+        $cartItems = Cart::where('user_id',Auth::user()->id)->get()->toArray();
+        $cartItems = array_column($cartItems, 'product_id');
+        // dd($cartItems);
+        
+
+        // If there are no items in the cart, set the count to 0
+        if (!$cartItems) {
+            $itemCount = 0;
+        } else {
+            // Get the total number of items in the cart
+            // $itemCount = array_sum(array_column($cartItems, 'user_id'));
+            $itemCount = count($cartItems);
+            
+        }
+
+        // return view('cart', compact('itemCount'));
+        return $itemCount;
+        return redirect('/allProducts');
+
+        }
+    }
 }

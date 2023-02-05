@@ -1,3 +1,12 @@
+<?php
+// session_start();
+
+use App\Http\Controllers\ProductsController;
+$itemCount= ProductsController::showCart();
+
+?>
+
+
 {{-- @extends('layout') --}}
 
 {{-- Navbar --}}
@@ -23,6 +32,7 @@
             name="search"
             class="input-field"
             placeholder="Search Product ..."
+            style="font-size: 1rem"
             >
             <div class="input-wrapper">
               <button 
@@ -43,18 +53,23 @@
       </li>
 
       @auth
-      <li>
+      {{-- <li>
         <span class="font-bold uppercase">
           Welcome {{auth()->user()->name}}
         </span>
-      </li>
+      </li> --}}
       <li>
-        <a href="/manage" class="hover:text-laravel"><i class="fa-solid fa-gear"></i>Manage Listings</a>
+        {{-- <a href="/manage" class="hover:text-laravel"><i class="fa-solid fa-gear"></i>Manage Listings</a> --}}
+        
+
+        <a href="/cart"><i class="fas fa-shopping-cart"></i>
+          Cart({{$itemCount}})</a>
+
       </li>
-      <form action="/logout" class="inline" method="POST">
+      {{-- <form action="/logout" class="inline" method="POST">
         @csrf
         <button type="submit"><i class="fa-solid fa-door-closed"></i> Logout</button>
-      </form>
+      </form> --}}
       @else
       {{-- <li>
         <a href="/register" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i>Register</a>
@@ -68,17 +83,31 @@
       <div class="header-action">
 
         <a href="/login-registration">
-        <button class="header-action-btn" aria-label="user">
-          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-        </button>
+          <div class="dropdown">
+            <button class="dropdown-button header-action-btn" aria-label="user"><ion-icon name="person-outline" aria-hidden="true"></ion-icon></button>
+            <div class="dropdown-content">
+              @auth
+                <p>{{auth()->user()->name}}</p>
+                <p>john.doe@example.com</p>
+                <p><a href="#">Edit Profile</a></p>
+                <form action="/logout" class="inline" method="POST">
+                  @csrf
+                  <button type="submit">Log Out</button>
+                </form>
+                
+              @else
+                <a href="/login-registration"><p>Register/ Login</p></a>
+                <p>john.doe@example.com</p>
+                <p><a href="#">Edit Profile</a></p>
+                <p><a href="#">Log Out</a></p>
+              @endauth
+
+            </div>
+          </div>
+        
         </a>
 
-        <button class="header-action-btn" aria-label="favorite list">
-          <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-
-          <span class="btn-badge">0</span>
-        </button>
-
+        
         <button class="header-action-btn" id="cart-icon" aria-label="cart">
           <ion-icon name="bag-handle-outline" aria-hidden="true" id="cart-icon"></ion-icon>
 

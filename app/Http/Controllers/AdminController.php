@@ -2,101 +2,77 @@
 
 namespace App\Http\Controllers;
 
-// use auth;
-// use App\Models\User;
-use App\Models\Admin;
 use App\Models\Listing;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Auth;
-
-
 
 class AdminController extends Controller
 {
-    // Show Admin panel
-    public function adminpanel()
+    //Show admin Panel
+    public function show(Listing $listing)
     {
-        // Show Index Page
-        return view('adminpanel', [
+        //show Admin Index form
+        // return view('/admin/admin-panel');
+        return view('/admin/admin-panel', [
             'listings' => Listing::latest()->filter(request(['search']))->simplePaginate(6)
             // 'listings' => Listing::all()
         ]);
-       
     }
 
-    public function userdata(Listing $listing)
+    //Show admin index
+    public function adminIndex()
     {
-        // Show User Details
-        return view('userdata', [
-            'listing' => $listing
-        ]);
+        //show Admin Index form
+        return view('/admin/admin-index');
     }
 
-    
-    // Show Main Page/Home
-    public function adminlogin() {
-        return view('admin.admin-login');
-    }
-
-
-    // Store Admin data
-    public function store(Request $request) {
-        $formFields = $request->validate([
-            'name' => ['required'],
-            'phoneNumber' => ['required'],
-            'password' => 'required|confirmed|min:6'
-        ]);
-
-        // Hah Password
-        $formFields['password'] = bcrypt($formFields['password']);
-
-        // Create User
-        // $user = User::create($formFields);
-        $admin = Admin::create($formFields);
-
-        // Login
-        // auth()->login($admin);
-
-        return redirect('/allProducts')->with('message', 'Admin Created and Logged in');
-
-    }
-
-
-    // Login User
-    // public function login() {
-    //     return view('users.login-registration');
-    // }
-
-    // Authenticate Admin
-    // public function authenticate(Request $request) {
-    //     $formFields = $request->validate([
-    //         'name' => ['required'],
-    //         'password' => 'required'
-    //     ]);
-
-    //     if(auth()->attempt($formFields)) {
-    //         $request->session()->regenerate();
-
-    //         return redirect('/allProducts')->with('message', 'You are logged in');
-    //     }
-
-    //     return back()->withErrors(['name' => 'Invalid Credentials'])->onlyInput('name');
-
-    // }
-
-
-    public function authenticate(Request $request)
+    // Show Admin Add Products
+    public function addproducts()
     {
-        $credentials = $request->only('name', 'password');
-
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('allProducts');
-        }
-
-        return redirect()->back()->withInput($request->only('name'))->withErrors([
-            'name' => 'These credentials do not match our records.',
-        ]);
+        //show Admin Index form
+        return view('/admin/create-products');
     }
-    
+
+
+    // Show Admin Add Products
+    public function adminLogin()
+    {
+        //show Admin Index form
+        return view('/admin/admin-login');
+    }
+
+    // Show Admin Add Products
+    public function customersIndex()
+    {
+        //show Admin Index form
+        return view('/admin/customers-index');
+    }
+
+    // Show Admin Add Products
+    public function editProducts()
+    {
+        //show Admin Index form
+        return view('/admin/edit-products');
+    }
+
+    // Show Admin Add Products
+    public function orders()
+    {
+        //show Admin Index form
+        return view('/admin/orders');
+    }
+
+    // Show Admin Add Products
+    public function suncraftProducts()
+    {
+        //show Admin Index form
+        return view('/admin/suncraft-products');
+    }
+
+    // Show Admin Add Products
+    public function category()
+    {
+        //show Admin Index form
+        return view('/admin/category');
+    }
+
 }
