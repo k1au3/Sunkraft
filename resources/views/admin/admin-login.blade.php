@@ -68,8 +68,7 @@
           <input type="text" class="input-field" placeholder="Phone Number" id="phoneNumber" name="phoneNumber" required>
           <input type="password" class="input-field" placeholder="Enter Password" required id="password" name="password">
           <input type="password" class="input-field" placeholder="Confirm Password" required id="password_confirmation" name="password_confirmation">
-          <label for="check">I agree to the T/Cs</label>
-          <input type="checkbox" class="check-box" id="check">
+          
           
           <button class="submit-btn" type="submit">Register</button>
           

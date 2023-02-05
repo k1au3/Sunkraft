@@ -49,7 +49,7 @@ $itemCount= ProductsController::showCart();
       
 
       <li>
-        <a href="/allProducts" class="hover:text-laravel"><ion-icon name="storefront-outline" class="header-action-btn storr"></ion-icon></a>
+        <a href="/allProducts" class="hover:text-laravel stor"><ion-icon name="storefront-outline"></ion-icon></a>
       </li>
 
       @auth
