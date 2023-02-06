@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 
-use Illuminate\Validation\Rule;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -31,7 +32,17 @@ class UserController extends Controller
         // Login
         auth()->login($user);
 
-        return redirect('/')->with('message', 'User Created and Logged in');
+        // return redirect('/')->with('message', 'User Created and Logged in');
+ 
+        $usertype = Auth::user()->usertype;
+    
+        if ($usertype == '0') {
+            return redirect('/');
+        } else {
+            return redirect('/admin/admin-panel');
+        }
+    
+        
 
     }
 
@@ -60,7 +71,15 @@ class UserController extends Controller
         if(auth()->attempt($formFields)) {
             $request->session()->regenerate();
 
-            return redirect('/')->with('message', 'You are logged in');
+            $usertype = Auth::user()->usertype;
+    
+            if ($usertype == '0') {
+                return redirect('/');
+            } else {
+                return redirect('/admin/admin-panel');
+            }
+
+            // return redirect('/')->with('message', 'You are logged in');
         }
 
         return back()->withErrors(['name' => 'Invalid Credentials'])->onlyInput('name');

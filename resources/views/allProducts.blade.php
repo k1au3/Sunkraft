@@ -1,16 +1,40 @@
 @extends('layout')
 
-{{-- @include('components.navbar') --}}
+<?php
+$usertype = Auth::user()->usertype;
 
+if ($usertype == '1') {
+
+  ?>
+@include('components.navbar')
+
+<?php
+} else {
+?>
+@include('components.navbar')
+<?php
+}
+?>
 
 
       <section class="section product" id="product" aria-label="product">
-        <div class="container">
+        <div class="container" style="margin-top: 30px">
 
           <div class="title-wrapper">
             <h4 class="h5 section-title"> <a href="/" class="logo">Popular Products</a></h4>
 
+            <?php
+            $usertype = Auth::user()->usertype;
+            
+            if ($usertype == '1') {
+            
+              ?>
+
             <h5><a href="/create">Add / Create Product</a></h5>
+
+            <?php
+            }
+            ?>
 
 
             <ul class="filter-btn-list">

@@ -35,26 +35,26 @@
 
           <div class="row">
 
-            <form action="/cart" method="POST">
-              @csrf
+            {{-- <form action="/cart" method="POST">
+              @csrf --}}
 
               <?php
-              if(Auth::check()){
+              // if(Auth::check()){
               ?>
 
-              <input type="text" name="user_id" value= {{ Auth::user()->id }}>
+              {{-- <input type="text" name="user_id" value= {{ Auth::user()->id }}>
 
-              {{-- <input type="text" name="user_id" value= {{ Auth::user()->phoneNumber }}> --}}
+              <input type="text" name="user_id" value= {{ Auth::user()->phoneNumber }}>
 
               <input type="text" name="product_id" value={{$listing->id}}>
               
-              <button class="btn btn-primary">Add to Cart</button>
+              <button class="btn btn-primary">Add to Cart</button> --}}
 
               <?php
-              }
+              // }
               ?>
 
-            </form>
+            {{-- </form> --}}
 
           
 
@@ -75,8 +75,14 @@
      
   @endauth --}}
 
+  <?php
+    $usertype = Auth::user()->usertype;
 
-        <div class="row">
+    if ($usertype == '1') {
+
+      ?>
+
+      <div class="row">
           <div class="mt-4 p-2 flex space-x-6">
             <a href="/products/{{$listing->id}}/edit">
               {{-- <i class="i fa-solid fa-pencil"></i> --}}
@@ -93,6 +99,20 @@
 
           </form>
         </div>
+
+        <?php
+    } 
+
+    else {
+      
+      ?>
+
+      <button>Buy Now</button>
+
+      <?php
+    }
+    ?>
+
 
         </div>
         

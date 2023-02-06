@@ -49,7 +49,7 @@ $itemCount= ProductsController::showCart();
       
 
       <li>
-        <a href="/allProducts" class="hover:text-laravel"><ion-icon name="storefront-outline" class="header-action-btn storr"></ion-icon></a>
+        <a href="/allProducts" class="hover:text-laravel"><ion-icon name="storefront-outline" class="header-action-btn storr"></ion-icon>All Products</a>
       </li>
 
       @auth
@@ -58,14 +58,12 @@ $itemCount= ProductsController::showCart();
           Welcome {{auth()->user()->name}}
         </span>
       </li> --}}
-      <li>
-        {{-- <a href="/manage" class="hover:text-laravel"><i class="fa-solid fa-gear"></i>Manage Listings</a> --}}
-        
 
+      {{-- <li>
         <a href="/cart"><i class="fas fa-shopping-cart"></i>
           Cart({{$itemCount}})</a>
+      </li> --}}
 
-      </li>
       {{-- <form action="/logout" class="inline" method="POST">
         @csrf
         <button type="submit"><i class="fa-solid fa-door-closed"></i> Logout</button>
