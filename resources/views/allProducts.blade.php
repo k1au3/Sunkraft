@@ -5,35 +5,13 @@
 
 
       <section class="section product" id="product" aria-label="product">
-        <div class="container" style="margin-top: 30px">
+        <div class="container">
 
           <div class="title-wrapper">
             <h4 class="h5 section-title"> <a href="/" class="logo">Popular Products</a></h4>
 
             <h5><a href="/create">Add / Create Product</a></h5>
 
-            <form action="/">
-        
-              <div class="input-wrapper">
-                {{-- <ion-icon name="search-outline" aria-hidden="true"></ion-icon> --}}
-                <input 
-                  type="text"
-                  name="search"
-                  class="input-field"
-                  placeholder="Search Product ..."
-                  >
-                  <div class="input-wrapper">
-                    <button 
-                        type="submit"
-                        class="text-white"
-                    >
-                    {{-- <ion-icon name="search-outline" aria-hidden="true"></ion-icon> --}}
-                  </button>
-                  </div>
-              </div>
-             
-      
-            </form>
 
             <ul class="filter-btn-list">
 

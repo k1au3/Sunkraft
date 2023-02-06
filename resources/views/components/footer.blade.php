@@ -26,6 +26,12 @@
               <a href="tel:+254722319617" class="footer-link">(254) 722 319 617</a>
             </li>
 
+            <li class="footer-list-item">
+              <ion-icon name="call-sharp" aria-hidden="true"></ion-icon>
+
+              <a href="/admin/admin-panel">Admin</a>
+            </li>
+
             <li>
               <ul class="social-list">
 
