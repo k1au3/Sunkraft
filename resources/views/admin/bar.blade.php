@@ -15,11 +15,11 @@
       <header class="header" data-header>
     <div class="container">
 
-      <a href="/" class="logo">ADMIN</a>
+      <a href="/admin/admin-panel" class="logo">ADMIN</a>
 
 
       <li>
-        {{-- <a href="/allProducts" class="hover:text-laravel">All Products</a> --}}
+        <a href="/create" class="hover:text-laravel">Add products</a>
       </li>
 
 
