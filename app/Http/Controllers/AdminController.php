@@ -19,11 +19,20 @@ class AdminController extends Controller
     }
 
     //Show admin index
-    public function adminIndex()
+    public function prods()
     {
         //show Admin Index form
-        return view('/admin/admin-index');
+        return view('/admin/products');
     }
+
+    //Show admin index
+    public function index()
+    {
+        //show Admin Index form
+        return view('/admin/index');
+    }
+
+
 
     // Show Admin Add Products
     public function addproducts()
@@ -41,10 +50,10 @@ class AdminController extends Controller
     }
 
     // Show Admin Add Products
-    public function customersIndex()
+    public function customers()
     {
         //show Admin Index form
-        return view('/admin/customers-index');
+        return view('/admin/customers');
     }
 
     // Show Admin Add Products
@@ -73,6 +82,13 @@ class AdminController extends Controller
     {
         //show Admin Index form
         return view('/admin/category');
+    }
+
+    // Show Products
+    public function products()
+    {
+        //show Admin Index form
+        return view('/admin/products');
     }
 
 }

@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controller\PayController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +68,9 @@ Route::get('/login-registration', [UserController::class, 'login']);
 // Admin Panel Frontend
 
 // Show Admin Panel
+Route::get('/admin/index', [AdminController::class, 'index']);
+
+// Show Admin Panel
 Route::get('/admin/admin-login', [AdminController::class, 'show']);
 
 // Show Admin Add Products
@@ -82,7 +86,7 @@ Route::post('/buy-now', [ProductsController::class, 'buyNow']);
 // Admin Panel Frontend
 
 // Show Admin Panel
-Route::get('/admin/admin-panel', [AdminController::class, 'show']);
+// Route::get('/admin/products', [AdminController::class, 'prods']);
 
 // Show Admin Index
 Route::get('/admin/admin-index', [AdminController::class, 'adminIndex']);
@@ -94,7 +98,7 @@ Route::get('/admin/create-products', [AdminController::class, 'addproducts']);
 Route::get('/admin/admin-login', [AdminController::class, 'adminLogin']);
 
 // Show Admin Panel
-Route::get('/admin/customers-index', [AdminController::class, 'customersIndex']);
+Route::get('/admin/customers', [AdminController::class, 'customers']);
 
 // Show Admin Panel
 Route::get('/admin/edit-products', [AdminController::class, 'editProducts']);
@@ -105,6 +109,13 @@ Route::get('/admin/orders', [AdminController::class, 'orders']);
 // Show Admin Panel
 Route::get('/admin/suncraft-products', [AdminController::class, 'suncraftProducts']);
 
-
 // Show Admin Panel
 Route::get('/admin/category', [AdminController::class, 'category']);
+
+// Show Admin Panel
+Route::get('/admin/products', [AdminController::class, 'products']);
+
+
+// Route::get('/pay', [PayController::class, 'stk']);
+
+Route::get('/pay', [PayController::class, 'pay']);

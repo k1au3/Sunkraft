@@ -1,100 +1,63 @@
-{{-- https://www.youtube.com/watch?v=hoitQzG3qhw --}}
-
-@extends('layout')
+@extends('admin.layout')
 
 
-<section class="navv">
-  <div class="logo">
-    <h3>ADMIN</h3>
-  </div>
-
-<div class="container">
+  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">SunKraft</a>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <ul class="navbar-nav px-3">
+      
+      <a class="nav-link" href="#admin dropdown"><ion-icon name="person-circle-outline"></ion-icon></a>
+            
+    </ul>
+  </nav>
+  <div class="container-fluid">
     <div class="row">
-
-
-    </div>
-
-      <header class="header" data-header>
-    <div class="container">
-
-      <a href="/admin/admin-panel" class="logo">ADMIN</a>
-
-
-      <li>
-        <a href="/create" class="hover:text-laravel">Add products</a>
-      </li>
-
-
-
-
-      <div class="header-action">
-
-        <a href="/login-registration">
-          <div class="dropdown">
-            <button class="dropdown-button header-action-btn" aria-label="user"><ion-icon name="person-outline" aria-hidden="true"></ion-icon></button>
-            <div class="dropdown-content">
-              @auth
-                <p>{{auth()->user()->name}}</p>
-                <p>john.doe@example.com</p>
-                <p><a href="#">Edit Profile</a></p>
-                <form action="/logout" class="inline" method="POST">
-                  @csrf
-                  <button type="submit">Log Out</button>
-                </form>
-                
-              @else
-                <a href="/login-registration"><p>Register/ Login</p></a>
-                <p>john.doe@example.com</p>
-                <p><a href="#">Edit Profile</a></p>
-                <p><a href="#">Log Out</a></p>
-              @endauth
-
-            </div>
-          </div>
-        
-        </a>
-
-        
-        <button class="header-action-btn" id="cart-icon" aria-label="cart">
-          <ion-icon name="bag-handle-outline" aria-hidden="true" id="cart-icon"></ion-icon>
-
-          <!-- <span class="btn-badge">0</span> -->
-        </button>
-
-        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
-          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-        </button>
-
-        <!-- Cart -->
-        <div class="cart"> 
-          <h2 class="cart-title">Shopping Cart</h2>
-          <!-- content  -->
-          <div class="cart-content">
+      
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+  
+  
+  
+            <li class="nav-item">
+              <a class="nav-link"  href="/admin/index">
+                <ion-icon name="home"></ion-icon>
+                Dashboard 
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/orders">
+                <ion-icon name="document"></ion-icon>
+                Orders
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/products">
+                <ion-icon name="cart"></ion-icon>
+                Products
+              </a>
+            </li>
             
-            
-          </div>
-          <!-- total -->
-          <div class="total">
-            <div class="total-title">Total</div>
-            <div class="total-price">$0</div>
-          </div>
-          <!-- buy button  -->
-          <a href="#/templates/payment.html"><button class="btn-buy" type="button">Checkout</button>
-            <!-- cart close  -->
-            <button id="close-cart"><ion-icon name="exit"></ion-icon></button></a>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/category">
+                <ion-icon name="file-tray-stacked"></ion-icon>
+                Categories
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/customers">
+                <ion-icon name="people"></ion-icon>
+                Customers<span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+  
+         
         </div>
-
-      </div>
-
+      </nav>
+  
     </div>
-  </header>
+  </div>
+  
 
-
-
-
-</div>
-
-  {{-- <button class="user">
-    <a href="#logout"><ion-icon name="person"></ion-icon></a>
-  </button> --}}
-</section>
+  
