@@ -1,10 +1,10 @@
 @extends('layout')
 
-@include('components.navbar')
+@include('admin.bar')
 
 
             <section class="product-details">
-                <h2> Create Products Page</h2>
+                {{-- <h2> Create Products Page</h2> --}}
                 <div class="small-container single-product">
 
                     <div class="row">

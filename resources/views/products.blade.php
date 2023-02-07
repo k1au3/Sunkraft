@@ -1,10 +1,31 @@
 @extends('layout')
 
+{{-- @include('components.navbar') --}}
+
+<?php
+if(Auth::check()){
+
+$usertype = Auth::user()->usertype;
+
+if ($usertype == '1') {
+
+  ?>
+@include('admin.bar')
+
+<?php
+} else {
+?>
 @include('components.navbar')
+<?php
+}
+}
+?>
+
+
   <!-- products detail page  -->
 
   <section class="product-details">
-    <h2> Product Details Page</h2>
+    {{-- <h2> Product Details Page</h2> --}}
     <div class="small-container single-product">
       
       <div class="row">
@@ -76,6 +97,8 @@
   @endauth --}}
 
   <?php
+  if(Auth::check()){
+
     $usertype = Auth::user()->usertype;
 
     if ($usertype == '1') {
@@ -111,6 +134,11 @@
 
       <?php
     }
+  } else {
+    ?>
+    <button><a href="/login-registration">Buy Now</a></button>
+    <?php
+  }
     ?>
 
 

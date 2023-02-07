@@ -1,18 +1,21 @@
 @extends('layout')
 
 <?php
+if(Auth::check()){
+
 $usertype = Auth::user()->usertype;
 
 if ($usertype == '1') {
 
   ?>
-@include('components.navbar')
+@include('admin.bar')
 
 <?php
 } else {
 ?>
 @include('components.navbar')
 <?php
+}
 }
 ?>
 
@@ -21,19 +24,22 @@ if ($usertype == '1') {
         <div class="container" style="margin-top: 30px">
 
           <div class="title-wrapper">
-            <h4 class="h5 section-title"> <a href="/" class="logo">Popular Products</a></h4>
+            <h4 class="h5 section-title"> <a href="/allProducts" class="logo">Popular Products</a></h4>
 
             <?php
+            if(Auth::check()){
             $usertype = Auth::user()->usertype;
             
             if ($usertype == '1') {
             
               ?>
+            <h5><a href="/">Home</a></h5>
 
             <h5><a href="/create">Add / Create Product</a></h5>
 
             <?php
             }
+          }
             ?>
 
 
@@ -101,3 +107,4 @@ if ($usertype == '1') {
 
 
 @include('components.footer')
+
