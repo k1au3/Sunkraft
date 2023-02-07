@@ -292,7 +292,7 @@ body.active { overflow: hidden; }
   #SIDEBAR
 \*-----------------------------------*/
 
-.sidebar {
+.sidebarr {
   position: fixed;
   top: 0;
   right: -420px;
@@ -308,7 +308,7 @@ body.active { overflow: hidden; }
   transition: 0.25s var(--cubic-in);
 }
 
-.sidebar.active {
+.sidebarr.active {
   transform: translateX(-420px);
   visibility: visible;
   transition: 0.5s var(--cubic-out);
@@ -316,7 +316,7 @@ body.active { overflow: hidden; }
 
 .nav-close-btn { font-size: 30px; }
 
-.sidebar .wrapper {
+.sidebarr .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-block: 40px 75px;
@@ -349,11 +349,11 @@ body.active { overflow: hidden; }
 }
 
 .navbar-link:is(:hover, :focus),
-.sidebar :is(.address, .contact-item) { color: var(--granite-gray); }
+.sidebarr :is(.address, .contact-item) { color: var(--granite-gray); }
 
-.sidebar .address { margin-block-start: 20px; }
+.sidebarr .address { margin-block-start: 20px; }
 
-.sidebar .social-wrapper {
+.sidebarr .social-wrapper {
   justify-content: space-between;
   margin-block-start: 50px;
 }

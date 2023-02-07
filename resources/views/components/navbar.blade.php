@@ -49,7 +49,7 @@ $itemCount= ProductsController::showCart();
       
 
       <li>
-        <a href="/allProducts" class="hover:text-laravel"><ion-icon name="storefront-outline" class="header-action-btn storr"></ion-icon>All Products</a>
+        <a href="/allProducts" class="hover:text-laravel"><ion-icon name="storefront-outline" class="header-action-btn storr"></ion-icon></a>
       </li>
 
       @auth
@@ -148,7 +148,7 @@ $itemCount= ProductsController::showCart();
     - #SIDEBAR
   -->
 
-  <div class="sidebar" data-navbar>
+  <div class="sidebarr" data-navbar>
 
     <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
       <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
