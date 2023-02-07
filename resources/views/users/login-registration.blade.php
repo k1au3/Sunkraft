@@ -3,7 +3,7 @@
 @include('components.navbar')
 
    <div class="mainn">
-    <div class="form-box">
+    <div class="form-box"> 
         <div class="button-box">
             <div id="btn"></div>
             <button class="toggle-btn" type="button" onclick="login()">Log In</button>
@@ -45,8 +45,7 @@
             @error('password')
               <p class="text-red-500 text-xl mt-1">{{$message}}</p>
             @enderror
-            <label for="check">Remember me</label>
-            <input type="checkbox" class="check-boxx" id="check">
+            
             
             <button class="submit-btn" type="submit">Log In</button>
         </form>
@@ -69,8 +68,6 @@
           <input type="text" class="input-field" placeholder="Phone Number" id="phoneNumber" name="phoneNumber" required>
           <input type="password" class="input-field" placeholder="Enter Password" required id="password" name="password">
           <input type="password" class="input-field" placeholder="Confirm Password" required id="password_confirmation" name="password_confirmation">
-          <label for="check">I agree to the T/Cs</label>
-          <input type="checkbox" class="check-box" id="check">
           
           <button class="submit-btn" type="submit">Register</button>
           
