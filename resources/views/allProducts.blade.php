@@ -83,7 +83,7 @@ if ($usertype == '1') {
             <a href="/products/{{$listing['id']}}">
               <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-4.jpg')}}" alt="" class="product-img" width="300" height="300" loading="lazy" >
             </a>
-            <h5 class="product-title">{{$listing['name']}}</h5>
+            <h5 style="font-size: 1rem" class="product-title">{{$listing['name']}}</h5>
             <span class="price">${{$listing['amount']}}</span>
             <button class="add-cart" ><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </div>

@@ -52,20 +52,62 @@
           font-size: 3.5rem;
         }
       }
+      /* nav  */
+      .navvbar{
+        padding: 1.3rem;
+        background-color: #f2f2f2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+      }
+      .navvbar a{
+        font-size: 2rem;
+        font-weight: bolder;
+        text-decoration: none;
+        color: rgb(66, 39, 4);
+      }
+      .navvbar .naav{
+        display: flex;
+        /* flex-direction: column; */
+        gap: 3rem;
+      }
+      .navvbar .naav a{
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      .navvbar .naav a:hover{
+        color: rgb(219, 156, 73);
+        transition: .5s;
+      }
+      .navvbar .prof button{
+        outline: none;
+        border: none;
+      }
+      .navvbar .prof button a{
+        font-size: 1.5rem;
+      }
+      .navvbar .prof button a:hover{
+        color: rgb(240, 170, 78);
+        transition: .5s;
+      }
+      
     </style>
 
 </head>
 <body>
 
-    <section class="navv">
-      <div class="logo">
-        <h3>SunKraft</h3>
-      </div>
+  <header class="navvbar">
+    <a href="#">SunKraft</a>
+    <nav class="naav">
+      <a href="/resources/views/index.blade.php">Home</a>
+      <a href="/resources/views/allProducts.blade.php">Products</a>
+    </nav>
+    <div class="prof">
+      <button><a href=""><ion-icon name="person"></ion-icon> </a></button>
+    </div>
+  </header>
 
-      <button class="user">
-        <a href="#logout"><ion-icon name="person"></ion-icon></a>
-      </button>
-    </section>  
 
     <div class="container-fluid">
       <div class="row">

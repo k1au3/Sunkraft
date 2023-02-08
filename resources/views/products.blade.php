@@ -36,17 +36,17 @@ if ($usertype == '1') {
         
         <div class="col-2">
 
-          <button class="btn btn-primary"><a href="/allProducts">Back</a></button>
+          <button class="btn btn-primary"><a href="/allProducts"><ion-icon name="exit-outline" style="font-size: 1rem;"></ion-icon></a></button>
 
           <p>Home / Furniture / Wood</p>
 
-          <h1>{{$listing->name}}</h1>
+          <h1 style="font-size: 1.6rem">{{$listing->name}}</h1>
 
           <h4>${{$listing->amount}}</h4>
 
           <input type="number" value="{{$listing->quantity}}" class="cart-quantity">
           
-          <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
+          {{-- <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button> --}}
 
           <h3>Category <ion-icon class="indent"></ion-icon></h3>
           <p> {{$listing->title}}</p>
@@ -130,7 +130,7 @@ if ($usertype == '1') {
       
       ?>
 
-      <button>Buy Now</button>
+      {{-- <button>Buy Now</button> --}}
 
       <?php
     }

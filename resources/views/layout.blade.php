@@ -4,7 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="public/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+    <link rel="manifest" href="/public/site.webmanifest">
 
     
         <title>Sunkraft</title>
@@ -16,10 +19,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet"> --}}
 
-         {{-- favicon   --}}
-
-         <link rel="shortcut icon" href="public/favicon/favicon.svg" type="image/svg+xml">
-
+  
           {{-- custom css link --}}
 
          <link rel="stylesheet" href="/assets/css/style.css">
