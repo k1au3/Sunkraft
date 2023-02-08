@@ -130,8 +130,9 @@ if ($usertype == '1') {
       
       ?>
 
-      {{-- <button>Buy Now</button> --}}
-
+    <form action="/pay" method="GET">
+      <button>Buy Now</button>
+    </form>
       <?php
     }
   } else {
