@@ -86,7 +86,7 @@ Route::post('/buy-now', [ProductsController::class, 'buyNow']);
 // Admin Panel Frontend
 
 // Show Admin Panel
-// Route::get('/admin/products', [AdminController::class, 'prods']);
+Route::get('/admin/products', [AdminController::class, 'prods']);
 
 // Show Admin Index
 Route::get('/admin/admin-index', [AdminController::class, 'adminIndex']);

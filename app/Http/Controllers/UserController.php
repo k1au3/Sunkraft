@@ -32,15 +32,15 @@ class UserController extends Controller
         // Login
         auth()->login($user);
 
-        // return redirect('/')->with('message', 'User Created and Logged in');
+        return redirect('/')->with('message', 'User Created and Logged in');
  
-        $usertype = Auth::user()->usertype;
+        // $usertype = Auth::user()->usertype;
     
-        if ($usertype == '0') {
-            return redirect('/');
-        } else {
-            return redirect('/admin/admin-panel');
-        }
+        // if ($usertype == '0') {
+        //     return redirect('/');
+        // } else {
+        //     return redirect('/admin/index');
+        // }
     
         
 
@@ -76,7 +76,7 @@ class UserController extends Controller
             if ($usertype == '0') {
                 return redirect('/');
             } else {
-                return redirect('/admin/admin-panel');
+                return redirect('/admin/index');
             }
 
             // return redirect('/')->with('message', 'You are logged in');

@@ -19,17 +19,25 @@ class AdminController extends Controller
     }
 
     //Show admin index
-    public function prods()
+    public function prods(Listing $listing)
     {
         //show Admin Index form
-        return view('/admin/products');
+        return view('/admin/products', [
+            'listings' => Listing::latest()->filter(request(['search']))->simplePaginate(6)
+            // 'listings' => Listing::all()
+        ]);
+        // return view('/admin/products');
     }
 
     //Show admin index
     public function index()
     {
         //show Admin Index form
-        return view('/admin/index');
+        return view('/admin/index', [
+            'listings' => Listing::latest()->filter(request(['search']))->simplePaginate(6)
+            // 'listings' => Listing::all()
+        ]);
+        // return view('/admin/index');
     }
 
 

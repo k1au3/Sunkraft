@@ -1,29 +1,7 @@
 @extends('layout')
 
-{{-- @include('components.navbar') --}}
-
-<?php
-if(Auth::check()){
-
-$usertype = Auth::user()->usertype;
-
-if ($usertype == '1') {
-
-  ?>
-@include('admin.bar')
-
-<?php
-} else {
-?>
 @include('components.navbar')
-<?php
-}
-}
-?>
-
-
   <!-- products detail page  -->
-
   <section class="product-details">
     {{-- <h2> Product Details Page</h2> --}}
     <div class="small-container single-product">
@@ -36,13 +14,35 @@ if ($usertype == '1') {
         
         <div class="col-2">
 
-          <button class="btn btn-primary"><a href="/allProducts"><ion-icon name="exit-outline" style="font-size: 1rem;"></ion-icon></a></button>
+          <?php
+          if(Auth::check()){
+        
+            $usertype = Auth::user()->usertype;
+        
+            if ($usertype == '1') {
+        
+              ?>
+
+<button class="btn btn-primary"><a href="/admin/index"><ion-icon name="exit-outline" style="font-size: 1rem;"></ion-icon></a></button>
+
+<?php
+            }else {
+              ?>
+              <button class="btn btn-primary"><a href="/allProducts"><ion-icon name="exit-outline" style="font-size: 1rem;"></ion-icon></a></button>
+
+              <?php
+            }
+          }
+            ?>
+
+
+          {{-- <button class="btn btn-primary"><a href="/allProducts"><ion-icon name="exit-outline" style="font-size: 1rem;"></ion-icon></a>Back</button> --}}
 
           <p>Home / Furniture / Wood</p>
 
           <h1 style="font-size: 1.6rem">{{$listing->name}}</h1>
 
-          <h4>${{$listing->amount}}</h4>
+          <h4>Ksh {{$listing->amount}}</h4>
 
           <input type="number" value="{{$listing->quantity}}" class="cart-quantity">
           

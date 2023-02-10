@@ -31,27 +31,46 @@
     <table class="table table-striped table-sm">
       <thead>
         <tr>
-          <th>#</th>
+          <th>id</th>
           <th>Name</th>
           <th>Image</th>
           <th>Price</th>
           <th>Quantity</th>
-          <th>Category</th>              
+          {{-- <th>Category</th> --}}
+          <th>Edit</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody id="product_list">
-        <tr>
-          <td>1</td>
-          <td>ABC</td>
-          <td>FDGR.JPG</td>
-          <td>122</td>
-          <td>Bedroom</td>
-          <td>aPPLE</td>
-          <td><a class="btn">
-            <ion-icon name="trash"></ion-icon>
-          </a></td>
-        </tr>
+        
+          @foreach ($listings as $listing)
+          <tr>
+            <td>{{$listing['id']}}</td>
+            {{-- <td>{{$listing['name']}}</td> --}}
+            <td><a href="/products/{{$listing['id']}}">
+              <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-4.jpg')}}" alt="" class="product-img" width="100" height="100" loading="lazy" ></a>
+            </td>
+            <td>{{$listing['name']}}</td>
+            <td>{{$listing['amount']}}</td>
+            <td>{{$listing['quantity']}}</td>
+            {{-- <td>{{$listing['description']}}</td> --}}
+            <td>
+              <a href="/products/{{$listing->id}}/edit">
+                {{-- <i class="i fa-solid fa-pencil"></i> --}}
+                <button class="text-red-500"><i class="fa-solid fa-trash"></i><i class="i fa-solid fa-pencil"></i></button>
+              </a>
+            </td>
+            <td><a class="btn">
+              {{-- <ion-icon name="trash"></ion-icon> --}}
+              <form method="POST" action="/{{$listing->id}}">
+                @csrf
+                @method('DELETE')
+                <button class="text-red-500"><ion-icon name="trash"></ion-icon></button>
+              </form>
+            </a></td>
+          </tr>
+          @endforeach
+        
       </tbody>
     </table>
   </div>
@@ -71,57 +90,68 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
+
   <div class="modal-body">
-    <form id="add-product-form" enctype="multipart/form-data">
+    <form method="POST" action="/listings" enctype="multipart/form-data">
+      @csrf
+
       <div class="row">
         <div class="col-12">
           <div class="form-group">
             <label>Product Name</label>
-            <input type="text" name="product_name" class="form-control" placeholder="Enter Product Name">
+            <input type="text" name="name" class="form-control" placeholder="Enter Product Name">
           </div>
         </div>
         
         <div class="col-12">
           <div class="form-group">
             <label>Category Name</label>
-            <select class="form-control category_list" name="category_id">
+            <select class="form-control category_list" name="title">
               <option value="">Select Category</option>
+              <option value="">Dining</option>
+              <option value="">Bed room</option>
             </select>
           </div>
         </div>
-        <div class="col-12">
-          <div class="form-group">
-            <label>Product Description</label>
-            <textarea class="form-control" name="product_desc" placeholder="Enter product desc"></textarea>
-          </div>
-        </div>
+        
         <div class="col-12">
           <div class="form-group">
             <label>Product Qty</label>
-            <input type="number" name="product_qty" class="form-control" placeholder="Enter Product Quantity">
+            <input type="number" name="quantity" class="form-control" placeholder="Enter Product Quantity">
           </div>
         </div>
         <div class="col-12">
           <div class="form-group">
             <label>Product Price</label>
-            <input type="number" name="product_price" class="form-control" placeholder="Enter Product Price">
+            <input type="number" name="amount" class="form-control" placeholder="Enter Product Price">
           </div>
         </div>
         <div class="col-12">
+          <div class="form-group">
+            <label>Product Description</label>
+            <textarea class="form-control" name="description" placeholder="Enter product desc"></textarea>
+          </div>
+        </div>
+        {{-- <div class="col-12">
           <div class="form-group">
             <label>Product Keywords <small>(eg: bedroom, dining table, curtains)</small></label>
             <input type="text" name="product_keywords" class="form-control" placeholder="Enter Product Keywords">
           </div>
-        </div>
+        </div> --}}
         <div class="col-12">
           <div class="form-group">
             <label>Product Image <small>(format: jpg, jpeg, png)</small></label>
-            <input type="file" name="product_image" class="form-control">
+            <input type="file" name="logo" class="form-control">
           </div>
         </div>
-        <input type="hidden" name="add_product" value="1">
+        {{-- <input type="hidden" name="add_product" value="1"> --}}
         <div class="col-12">
-          <button type="button" class="btn btn-primary add-product">Add Product</button>
+          {{-- <button type="button" class="btn btn-primary add-product">Add Product</button> --}}
+          <button
+                        class="btn btn-primary add-product"
+                    >
+                        Create Product
+                    </button>
         </div>
       </div>
       

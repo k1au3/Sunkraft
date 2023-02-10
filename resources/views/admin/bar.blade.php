@@ -6,7 +6,13 @@
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
     <ul class="navbar-nav px-3">
       
-      <a class="nav-link" href="#admin dropdown"><ion-icon name="person-circle-outline"></ion-icon></a>
+      <a class="nav-link" href="#admin dropdown"><ion-icon name="person-circle-outline"></ion-icon>
+        @auth
+          <p>{{auth()->user()->name}}</p>
+        @else
+          <a href="/login-registration"><p>Login</p></a>
+        @endauth
+      </a>
             
     </ul>
   </nav>

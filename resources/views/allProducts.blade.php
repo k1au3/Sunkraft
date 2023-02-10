@@ -1,24 +1,6 @@
 @extends('layout')
 
-<?php
-if(Auth::check()){
-
-$usertype = Auth::user()->usertype;
-
-if ($usertype == '1') {
-
-  ?>
-@include('admin.bar')
-
-<?php
-} else {
-?>
 @include('components.navbar')
-<?php
-}
-}
-?>
-
 
       <section class="section product" id="product" aria-label="product">
         <div class="container" style="margin-top: 30px">
