@@ -133,9 +133,10 @@
       </div>
 
       <div class="footer-bottom">
+        
 
         <p class="copyright">
-          &copy; 2023 All Rights Reserved by <a href="#" class="copyright-link">SunKraft</a>.
+          &copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved by <a href="#" class="copyright-link">SunKraft</a>.
         </p>
 
       </div>

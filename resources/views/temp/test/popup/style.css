@@ -1,0 +1,147 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: burlywood;
+    transition: .5s;
+    padding: 20px;
+}
+.container #blur.active
+{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+.container .content
+{
+    position: relative;
+    max-width: 800px;
+}
+h2
+{
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+.container .content img
+{
+    max-width: 100%;
+    display: block;
+}
+a{
+    position: relative;
+    padding: 5px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    columns: #fff;
+    background-color: black;
+}
+#popup
+{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0,0,0,.30);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    border-radius: 4%;
+}
+#popup.active 
+{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: .5s;
+}
+
+
+#popup .preview
+{
+    /* display: none; */
+    padding: 1rem;
+    text-align: center;
+    background: #fff;
+    /* position: relative; */
+    /* width: 40rem; */
+    margin: 1rem;
+
+}
+ #popup .preview img{
+    height: 10rem;
+ }
+ 
+ 
+ #popup .preview h3{
+    color: #444;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+ }
+
+ #popup .preview .stars{
+    padding: 1rem 0;
+    font-size: 1.7rem;
+ }
+ #popup .preview .stars icon{
+    color: rgb(143, 87, 13);
+ }
+ 
+ #popup .preview p{
+    line-height: 1.15rem;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: #777;
+ }
+
+#popup .preview .price{
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: rgb(138, 90, 28);
+ }
+ 
+#popup .preview .buttons{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+ }
+ #popup .preview .buttons a{
+    flex: 1 1 2rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: #444;
+    /* border: 1rem solid rgb(78, 46, 3); */
+ }
+ #popup .preview .buttons a.cart{
+    background: rgb(226, 199, 164);
+ }
+ #popup .preview .buttons a.cart:hover{
+    background: rgb(124, 85, 33);
+    transition: .3s;
+ }
+ #popup .preview .buttons a.buy:hover{
+    background: rgb(88, 51, 5);
+    color: #444;
+    transition: .3s;
+
+ }
+
+ 
+ 

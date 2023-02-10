@@ -20,7 +20,7 @@ if ($usertype == '1') {
 ?>
 
 
-      <section class="section product" id="product" aria-label="product">
+      <section style="z-index: 0" class="section product" id="product" aria-label="product">
         <div class="container" style="margin-top: 30px">
 
           <div class="title-wrapper">
@@ -79,14 +79,36 @@ if ($usertype == '1') {
 
 @foreach ($listings as $listing)
         
-          <div class="product-box bed bedroom">
+          <div style="z-index: 0" class="product-box bed bedroom cont" id="blur">
             <a href="/products/{{$listing['id']}}">
-              <img src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-4.jpg')}}" alt="" class="product-img" width="300" height="300" loading="lazy" >
+              <img style="" src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-4.jpg')}}" alt="" class="product-img" width="300" height="300" loading="lazy" >
             </a>
             <h5 style="font-size: 1rem" class="product-title">{{$listing['name']}}</h5>
             <span class="price">Ksh {{$listing['amount']}}</span>
-            <button class="add-cart" ><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
+            <button class="add-cart" onclick="toggle()"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </div>
+          <div style="z-index: 999" class="pop" id="popup" >
+            <div class="preview">
+                
+                <img src="#" alt="prod img">
+                <h3>Bed</h3>
+                {{-- <div class="stars">
+                  <ion-icon  name="star"></ion-icon>
+                  <ion-icon  name="star"></ion-icon>
+                  <ion-icon  name="star"></ion-icon>
+                  <ion-icon  name="star"></ion-icon>
+                  <ion-icon  name="star"></ion-icon>
+                  
+                </div> --}}
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iusto?</p>
+                <div class="price">200</div>
+                <div class="buttons">
+                    <a href="#" class="buy" onclick="toggle()">back</a>
+                    <a href="#" class="c">checkout</a>
+                </div>
+            </div>
+            
+        </div>
 @endforeach
 </div>
 
@@ -107,4 +129,15 @@ if ($usertype == '1') {
 
 
 @include('components.footer')
+
+{{-- cart popup toggle js 
+   --}}
+<script>
+    function toggle(){
+       var blur = document.getElementById('blur');
+       blur.classList.toggle('active');
+       var popup = document.getElementById('popup');
+       popup.classList.toggle('active');
+   }
+</script>
 
