@@ -21,7 +21,7 @@ if ($usertype == '1') {
 
 
       <section style="z-index: 0" class="section product" id="product" aria-label="product">
-        <div class="container" style="margin-top: 30px">
+        <div class="container" style="margin-top: 20px">
 
           <div class="title-wrapper">
             <h4 class="h5 section-title"> <a href="/allProducts" class="logo">Popular Products</a></h4>
