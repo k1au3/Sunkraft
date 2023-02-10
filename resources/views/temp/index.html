@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9999;
+        }
+
+        .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        }
+
+        .popup-exit-button {
+        float: right;
+        margin-top: -20px;
+        margin-right: -20px;
+        cursor: pointer;
+        }
+
+    </style>
+<body>
+    <!-- Product Item -->
+<div class="product">
+    <img src="product-image.jpg" alt="product name">
+    <h3>Product Name</h3>
+    <p>$100</p>
+    <p>Product description</p>
+    <button class="buy-button">Buy</button>
+  </div>
+  
+  <!-- Pop-up Window -->
+  <div class="popup">
+    <div class="popup-content">
+      <img src="product-image.jpg" alt="product name">
+      <h3>Product Name</h3>
+      <p>$100</p>
+      <p>Product description</p>
+      <button class="popup-buy-button">Buy</button>
+      <button class="popup-exit-button">Exit</button>
+    </div>
+  </div>
+  <script>
+    const buyButton = document.querySelector(".buy-button");
+    const popup = document.querySelector(".popup");
+    const popupExitButton = document.querySelector(".popup-exit-button");
+
+    buyButton.addEventListener("click", function() {
+    popup.style.display = "block";
+    });
+
+    popupExitButton.addEventListener("click", function() {
+    popup.style.display = "none";
+    });
+
+  </script>
+</body>
+</html>
