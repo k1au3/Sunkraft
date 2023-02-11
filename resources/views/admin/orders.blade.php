@@ -35,6 +35,15 @@
               <th>Trx Id</th>
               <th>Payment Status</th>
             </tr>
+            <tr>
+              <td><a href="/users/order">1</a></td>
+              <td>Feb</td>
+              <td>345</td>
+              <td>Dining Chairs</td>
+              <td>6</td>
+              <td>65434567</td>
+              <td>Paid</td>
+            </tr>
           </thead>
           <tbody id="customer_order_list">
            

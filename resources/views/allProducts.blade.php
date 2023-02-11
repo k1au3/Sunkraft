@@ -69,11 +69,15 @@
             <span class="price">Ksh {{$listing['amount']}}</span>
             <button class="add-cart" onclick="toggle()"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button>
           </div>
+
           <div style="z-index: 999" class="pop" id="popup" >
-            <div class="preview">
-                
-                <img src="#" alt="prod img">
-                <h3>Bed</h3>
+              <a href="/products/{{$listing['id']}}">
+                <img style="" src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-4.jpg')}}" alt="" class="product-img" width="300" height="300" loading="lazy" >
+              </a>
+
+              <div class="preview">
+
+                <h3>{{$listing->name}}</h3>
                 {{-- <div class="stars">
                   <ion-icon  name="star"></ion-icon>
                   <ion-icon  name="star"></ion-icon>
@@ -82,11 +86,12 @@
                   <ion-icon  name="star"></ion-icon>
                   
                 </div> --}}
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iusto?</p>
-                <div class="price">200</div>
+                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iusto?</p> --}}
+                <p>{{$listing['description']}}</p>
+                <div class="price">Ksh {{$listing->amount}}</div>
                 <div class="buttons">
                     <a href="#" class="buy" onclick="toggle()">back</a>
-                    <a href="#" class="c">checkout</a>
+                    <a href="/stk/push/simulation" class="c">checkout</a>
                 </div>
             </div>
             

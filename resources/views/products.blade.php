@@ -54,6 +54,8 @@
           <h3>Details <ion-icon class="indent"></ion-icon></h3>
           <p> {{$listing->description}}</p>
 
+
+
           <div class="row">
 
             {{-- <form action="/cart" method="POST">
@@ -96,6 +98,8 @@
      
   @endauth --}}
 
+  
+
   <?php
   if(Auth::check()){
 
@@ -130,8 +134,12 @@
       
       ?>
 
-    <form action="/pay" method="GET">
+{{-- <button class="add-cart" onclick="toggle()"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon>Buy</button> --}}
+
+
+    <form action="/stk/push/simulation" method="GET">
       <button>Buy Now</button>
+      
     </form>
       <?php
     }
@@ -156,3 +164,5 @@
 
 
   @include('components.footer')
+
+
