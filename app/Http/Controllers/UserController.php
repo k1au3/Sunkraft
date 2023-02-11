@@ -84,5 +84,19 @@ class UserController extends Controller
 
         return back()->withErrors(['name' => 'Invalid Credentials'])->onlyInput('name');
 
-    }   
+    } 
+
+    // Show Account Page/Home
+    public function account() {
+        return view('users.account');
+    }
+
+    // Show Order Page/Home
+    public function order() {
+        return view('users.order');
+    }
+    
+    
+
+
 }

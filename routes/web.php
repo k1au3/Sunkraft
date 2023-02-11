@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controller\PayController;
+use App\Http\Controllers\MpesaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -119,3 +120,17 @@ Route::get('/admin/products', [AdminController::class, 'products']);
 // Route::get('/pay', [PayController::class, 'stk']);
 
 Route::get('/pay', [PayController::class, 'pay']);
+
+
+// MPESA STK
+
+Route::get('/stk/push/simulation', [MpesaController::class, 'stkSimulation']);
+
+// USER
+
+// Show User Account Setting
+Route::get('/users/account', [UserController::class, 'account']);
+
+// User Orders
+Route::get('/users/order', [UserController::class, 'order']);
+
