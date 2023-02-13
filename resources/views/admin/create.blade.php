@@ -1,6 +1,6 @@
 @extends('layout')
 
-@include('admin.bar')
+{{-- @include('admin.bar') --}}
 
 
             <section class="product-details">
@@ -9,7 +9,7 @@
 
                     <div class="row">
 
-            <form method="POST" action="/listings" enctype="multipart/form-data">
+            <form method="POST" action="/listingss" enctype="multipart/form-data">
                 @csrf
 
 

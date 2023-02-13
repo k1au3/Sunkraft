@@ -34,7 +34,7 @@ class ProductsController extends Controller
     public function create()
     {
         //show create form
-        return view('create');
+        return view('admin.create');
     }
 
     /**
@@ -61,7 +61,7 @@ class ProductsController extends Controller
  
         Listing::create($formFields);
 
-        return redirect('/allProducts')->with('message', 'Listing Created Successfully');
+        return redirect('/admin/index')->with('message', 'Listing Created Successfully');
     }
 
     /**
@@ -92,7 +92,7 @@ class ProductsController extends Controller
      */
     public function edit(Listing $listing)
     {
-        return view('edit', ['listing' => $listing]);
+        return view('admin.edit', ['listing' => $listing]);
     }
 
     /**
@@ -121,7 +121,7 @@ class ProductsController extends Controller
         $listing->update($formFields);
 
         // return redirect('/');
-        return redirect('/allProducts')->with('message', 'Listing Updated Successfully');
+        return redirect('/admin/index')->with('message', 'Listing Updated Successfully');
         // return redirect()->back();
         // return back();
     }
@@ -136,7 +136,7 @@ class ProductsController extends Controller
     {
         // Delete Product
         $listing->delete();
-        return redirect('/allProducts')->with('message', 'Listing Deleted Sucessfully');
+        return redirect('/admin/index')->with('message', 'Listing Deleted Sucessfully');
 
     }
 
