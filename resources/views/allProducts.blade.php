@@ -20,7 +20,7 @@ if ($usertype == '1') {
 ?>
 
 
-      <section style="z-index: 0" class="section product" id="product" aria-label="product">
+      <section style="z-index: 0" class="section product" id="blur" aria-label="product">
         <div class="container" style="margin-top: 20px">
 
           <div class="title-wrapper">
@@ -79,7 +79,7 @@ if ($usertype == '1') {
 
 @foreach ($listings as $listing)
         
-          <div style="z-index: 0" class="product-box bed bedroom cont" id="blur">
+          <div style="z-index: 0" class="product-box bed bedroom cont" >
             <a href="/products/{{$listing['id']}}">
               <img style="" src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-4.jpg')}}" alt="" class="product-img" width="300" height="300" loading="lazy" >
             </a>
