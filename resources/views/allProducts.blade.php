@@ -115,7 +115,7 @@
       </section>
 
 
-@include('components.footer')
+<!-- @include('components.footer') -->
 
 {{-- cart popup toggle js 
    --}}
