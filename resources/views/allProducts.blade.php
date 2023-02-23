@@ -6,7 +6,7 @@
         <div class="container" style="margin-top: 20px">
 
           <div class="title-wrapper">
-            <h4 class="h5 section-title"> <a href="/allProducts" class="logo">Popular Products</a></h4>
+            <h4 class="h5 section-title"> <a href="/allProducts" class="logo">All Products</a></h4>
 
             <?php
             if(Auth::check()){
@@ -115,7 +115,7 @@
       </section>
 
 
-@include('components.footer')
+<!-- @include('components.footer') -->
 
 {{-- cart popup toggle js 
    --}}
