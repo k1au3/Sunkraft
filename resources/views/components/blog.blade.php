@@ -23,7 +23,7 @@
               <div class="blog-card">
 
                 <div class="card-banner img-holder" style="--width: 374; --height: 243;">
-                  <img src="./assets/img/decor/10.jpg" width="374" height="243" loading="lazy"
+                  <img src="/images/Sun_Craft_Artistic-27.jpg" width="374" height="243" loading="lazy"
                     alt="Unique products that will impress your home in 2022." class="img-cover">
 
                   <a href="#" class="card-btn">
@@ -64,7 +64,7 @@
               <div class="blog-card">
 
                 <div class="card-banner img-holder" style="--width: 374; --height: 243;">
-                  <img src="./assets/sunkraft/SAM_1386.JPG" width="374" height="243" loading="lazy"
+                  <img src="/images/Sun_Craft_Artistic-8.jpg" width="374" height="243" loading="lazy"
                     alt="Wooden stools" class="img-cover">
 
                   <a href="#" class="card-btn">
@@ -105,7 +105,7 @@
               <div class="blog-card">
 
                 <div class="card-banner img-holder" style="--width: 374; --height: 243;">
-                  <img src="#fixed" width="374" height="243" loading="lazy"
+                  <img src="/images/Sun_Craft_Artistic-104.jpg" width="374" height="243" loading="lazy"
                     alt="staff-required" class="img-cover">
 
                   <a href="#" class="card-btn">
@@ -118,7 +118,7 @@
                 <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Meet Our staff @SUNCRAFT</a>
+                    <a href="#" class="card-title">Meet Our founders @SUNKRAFT</a>
                   </h3>
 
                   <ul class="card-meta-list">

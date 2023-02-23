@@ -10,17 +10,17 @@
                   <div class="hero-card">
     
                     <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
-                      <img src="/images/Sun_Craft_Artistic-19.jpg" loading="lazy" width="285" height="396" alt="Art Deco Home"
+                      <img src="/images/Sun_Craft_Artistic-22.jpg" loading="lazy" width="285" height="396" alt="Art Deco Home"
                         class="img-cover">
                         {{-- {{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-17.jpg')}} --}}
                     </figure>
     
                     <div class="card-content">
                       <h3>
-                        <a href="#" style="color: #fff ;" class="card-title">Art Deco Home</a>
+                        <a href="#" style="color: black ;" class="card-title">Art Deco Home</a>
                       </h3>
     
-                      <p style="color: #fff;" class="card-text">Decoration</p>
+                      <p style="color: black;" class="card-text">Decoration</p>
                     </div>
     
                   </div>
@@ -49,13 +49,13 @@
                   <div class="hero-card">
     
                     <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
-                      <img src="/images/Sun_Craft_Artistic-6.jpg" width="285" height="396" loading="lazy" alt="Vase Of Flowers"
+                      <img src="/images/Sun_Craft_Artistic-4.jpg" width="285" height="396" loading="lazy" alt="Vase Of Flowers"
                         class="img-cover">
                     </figure>
     
                     <div class="card-content">
                       <h3>
-                        <a href="#" class="card-title">Diner</a>
+                        <a href="#" class="card-title">Living Room</a>
                       </h3>
     
                       <p class="card-text">Furniture</p>
@@ -67,14 +67,14 @@
                 <li class="colspan-2">
                   <div class="hero-card">
     
-                    <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
-                      <img src="/images/Sun_Craft_Artistic-20.jpg" loading="lazy" width="580" height="213" alt="Wood Eggs"
+                    <figure class="card-banner img-holder" style="--width: 580; --height: 270;">
+                      <img src="/images/Sun_Craft_Artistic-42.jpg" loading="lazy" width="580" height="213" alt="Wood Eggs"
                         class="img-cover">
                     </figure>
     
                     <div class="card-content">
                       <h3>
-                        <a href="#" class="card-title">Tables & Stools</a>
+                        <a href="#" class="card-title">Bedroom</a>
                       </h3>
     
                       <p class="card-text">Furniture</p>
@@ -86,14 +86,14 @@
                 <li class="colspan-2">
                   <div class="hero-card">
     
-                    <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
-                      <img src="/images/Sun_Craft_Artistic-6.jpg" width="580" height="213" alt="Table Wood Pine"
+                    <figure class="card-banner img-holder" style="--width: 580; --height: 270;">
+                      <img src="/images/Sun_Craft_Artistic-46.jpg" width="580" height="213" alt="Table Wood Pine"
                         class="img-cover">
                     </figure>
     
                     <div class="card-content">
                       <h3>
-                        <a href="#" class="card-title">Table Wood Pine</a>
+                        <a href="#" class="card-title">Others</a>
                       </h3>
     
                       <p class="card-text">Furniture</p>
