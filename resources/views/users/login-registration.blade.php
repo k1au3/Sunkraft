@@ -64,7 +64,7 @@
           </div> --}}
 
           <input type="text" class="input-field" placeholder="Username" id="username" name="name"> 
-          <input type="email" class="input-field" placeholder="email" id="email" name="email" required>
+          {{-- <input type="email" class="input-field" placeholder="email" id="email" name="email" required> --}}
           <input type="text" class="input-field" placeholder="Phone Number" id="phoneNumber" name="phoneNumber" required>
           <input type="password" class="input-field" placeholder="Enter Password" required id="password" name="password">
           <input type="password" class="input-field" placeholder="Confirm Password" required id="password_confirmation" name="password_confirmation">
