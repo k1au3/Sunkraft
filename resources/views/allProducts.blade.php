@@ -2,11 +2,11 @@
 
 @include('components.navbar')
 
-      <section style="z-index: 0" class="section product" id="product" aria-label="product">
+      <section style="z-index: 0" class="section product" id="blur" aria-label="product">
         <div class="container" style="margin-top: 20px">
 
           <div class="title-wrapper">
-            <h4 class="h5 section-title"> <a href="/allProducts" class="logo">Popular Products</a></h4>
+            <h4  class="h5 section-title"> <a href="/allProducts" class="logo" style="font-size: 1.2rem">All Products</a></h4>
 
             <?php
             if(Auth::check()){
@@ -61,7 +61,7 @@
 
 @foreach ($listings as $listing)
         
-          <div style="z-index: 0" class="product-box bed bedroom cont" id="blur">
+          <div style="z-index: 0" class="product-box bed bedroom cont" >
             <a href="/products/{{$listing['id']}}">
               <img style="" src="{{$listing->logo ? asset ( 'storage/' . $listing->logo) : asset('/images/Sun_Craft_Artistic-4.jpg')}}" alt="" class="product-img" width="300" height="300" loading="lazy" >
             </a>
@@ -115,7 +115,7 @@
       </section>
 
 
-@include('components.footer')
+<!-- @include('components.footer') -->
 
 {{-- cart popup toggle js 
    --}}

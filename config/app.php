@@ -194,8 +194,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // ...
-        // 'Mpesa' => \Safaricom\Mpesa\MpesaServiceProvider::class
         'Mpesa' => \Safaricom\Mpesa\MpesaServiceProvider::class
+        //'Mpesa' => \Safaricom\Mpesa\MpesaServiceProvider::class
     ])->toArray(),
 
     // 'debug_blacklist' => [

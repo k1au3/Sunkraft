@@ -11,7 +11,7 @@
               <h2 class="h2 section-title">Our Newsletter</h2>
 
               <p class="section-text">
-                Subscribe our newsletter and get discount 50% off
+                Subscribe our newsletter and get promotional emails and tailored deals.
               </p>
             </div>
 

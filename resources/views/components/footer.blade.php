@@ -27,9 +27,9 @@
             </li>
 
             <li class="footer-list-item">
-              <ion-icon name="call-sharp" aria-hidden="true"></ion-icon>
+              <ion-icon name="mail" aria-hidden="true"></ion-icon>
 
-              <a href="/admin/admin-panel">Admin</a>
+              <a href="mailto:sunkraft@gmail.com">sunkraft</a>
             </li>
 
             <li>

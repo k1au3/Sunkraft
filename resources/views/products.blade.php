@@ -38,13 +38,13 @@
 
           {{-- <button class="btn btn-primary"><a href="/allProducts"><ion-icon name="exit-outline" style="font-size: 1rem;"></ion-icon></a>Back</button> --}}
 
-          <p>Home / Furniture / Wood</p>
+          <p>Home / Furniture /</p>
 
           <h1 style="font-size: 1.6rem">{{$listing->name}}</h1>
 
           <h4>Ksh {{$listing->amount}}</h4>
 
-          <input type="number" value="{{$listing->quantity}}" class="cart-quantity">
+          
           
           {{-- <button class="add-cart"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon></button> --}}
 
