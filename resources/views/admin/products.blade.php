@@ -95,6 +95,13 @@
     <form method="POST" action="/listings" enctype="multipart/form-data">
       @csrf
 
+      <div class="col-12">
+        <div class="form-group">
+          <label>Product Image <small>(format: jpg, jpeg, png)</small></label>
+          <input type="file" name="logo" class="form-control">
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-12">
           <div class="form-group">
@@ -102,8 +109,22 @@
             <input type="text" name="name" class="form-control" placeholder="Enter Product Name">
           </div>
         </div>
-        
+
         <div class="col-12">
+          <div class="form-group">
+            <label>Product Price</label>
+            <input type="text" name="amount" class="form-control" placeholder="Enter Product Price">
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="form-group">
+            <label>Quantity</label>
+            <input type="text" name="quantity" class="form-control" placeholder="Enter Quantity Available">
+          </div>
+        </div>
+        
+        {{-- <div class="col-12">
           <div class="form-group">
             <label>Category Name</label>
             <select class="form-control category_list" name="title">
@@ -112,46 +133,25 @@
               <option value="">Bed room</option>
             </select>
           </div>
-        </div>
+        </div> --}}
         
         <div class="col-12">
           <div class="form-group">
-            <label>Product Qty</label>
-            <input type="number" name="quantity" class="form-control" placeholder="Enter Product Quantity">
+            <label>Additional Info</label>
+            <input type="text" name="title" class="form-control" placeholder="Enter Additional Info">
           </div>
         </div>
-        <div class="col-12">
-          <div class="form-group">
-            <label>Product Price</label>
-            <input type="number" name="amount" class="form-control" placeholder="Enter Product Price">
-          </div>
-        </div>
+        
         <div class="col-12">
           <div class="form-group">
             <label>Product Description</label>
             <textarea class="form-control" name="description" placeholder="Enter product desc"></textarea>
           </div>
         </div>
-        {{-- <div class="col-12">
-          <div class="form-group">
-            <label>Product Keywords <small>(eg: bedroom, dining table, curtains)</small></label>
-            <input type="text" name="product_keywords" class="form-control" placeholder="Enter Product Keywords">
-          </div>
-        </div> --}}
-        <div class="col-12">
-          <div class="form-group">
-            <label>Product Image <small>(format: jpg, jpeg, png)</small></label>
-            <input type="file" name="logo" class="form-control">
-          </div>
-        </div>
-        {{-- <input type="hidden" name="add_product" value="1"> --}}
+        
         <div class="col-12">
           {{-- <button type="button" class="btn btn-primary add-product">Add Product</button> --}}
-          <button
-                        class="btn btn-primary add-product"
-                    >
-                        Create Product
-                    </button>
+          <button class="btn btn-primary add-product">Create Product </button>
         </div>
       </div>
       

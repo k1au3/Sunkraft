@@ -136,11 +136,14 @@
 
 {{-- <button class="add-cart" onclick="toggle()"><ion-icon name="bag-handle-outline"  aria-hidden="true"></ion-icon>Buy</button> --}}
 
+<a href="/stk/push/simulation"><button>Buy Now</button></a>
 
-    <form action="/stk/push/simulation" method="GET">
+<button><a href="http://localhost/pamoja/transaction.php?long_string=MTc0Mzc5fFN1bmtyYWZ0fGh0dHBzOi8vNTc2Mi0xOTctMjQ4LTI0Ni0xNDkuaW4ubmdyb2suaW8vTXBlc2FEYXJhamEvZGlyL2Nh&user_id=19">Checkout Now</a></button>
+
+    {{-- <form action="/stk/push/simulation" method="GET">
       <button>Buy Now</button>
       
-    </form>
+    </form> --}}
       <?php
     }
   } else {

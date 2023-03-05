@@ -18,7 +18,7 @@ class MpesaController extends Controller
         $PartyA  = "254701091317"; 
         $PartyB  = "174379"; 
         $PhoneNumber  = "254701091317"; 
-        $CallBackURL  = "https://b726-197-248-246-149.in.ngrok.io/payment/callback.php"; 
+        $CallBackURL  = "https://a7e3-197-248-246-149.in.ngrok.io/payment/callback.php"; 
         $AccountReference  = "Sunkrafts Payment"; 
         $TransactionDesc  = "Lipa na Mpesa";
         $Remarks  = "Thank you for Paying";
