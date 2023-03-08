@@ -15,7 +15,7 @@
             if ($usertype == '1') {
             
               ?>
-            <h5><a href="/">Home</a></h5>
+            <h5><a href="/">HOME</a></h5>
 
             <h5><a href="/create">Add / Create Product</a></h5>
 
